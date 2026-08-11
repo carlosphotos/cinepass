@@ -1,17 +1,23 @@
 
 (() => {
-  const FILMS = window.CINEPASS_FILMS || [];
-  const GUEST_KEY = "cinepass_guest_v2";
-  const FIREBASE = window.CINEPASS_FIREBASE_CONFIG || {};
+  const FILMS = window.REELSTUB_FILMS || window.CINEPASS_FILMS || [];
+  const GUEST_KEY = "reelstub_guest_v1";
+  const LEGACY_GUEST_KEY = "cinepass_guest_v2";
+  const FIREBASE = window.REELSTUB_FIREBASE_CONFIG || window.CINEPASS_FIREBASE_CONFIG || {};
   const $ = (id) => document.getElementById(id);
-  const LANG_KEY = "cinepass_lang_v1";
+  const LANG_KEY = "reelstub_lang_v1";
+  const LEGACY_LANG_KEY = "cinepass_lang_v1";
+  // Preserve progress and language from the CinePass prototype after the rename.
+  if(!localStorage.getItem(GUEST_KEY) && localStorage.getItem(LEGACY_GUEST_KEY)) localStorage.setItem(GUEST_KEY, localStorage.getItem(LEGACY_GUEST_KEY));
+  if(!localStorage.getItem(LANG_KEY) && localStorage.getItem(LEGACY_LANG_KEY)) localStorage.setItem(LANG_KEY, localStorage.getItem(LEGACY_LANG_KEY));
   const I18N = {
     es:{
       heroEyebrow:"TU LOTERÍA PERSONAL DE CINE", heroAdmit:"UNA ENTRADA", heroLede:"Raspa para descubrir la película de esta noche.",
       passport:"Mi pasaporte", login:"Entrar con Google", watched:"✓ Ya la vi", another:"↻ Dame otra", progressCopy:"películas vistas",
       admitOne:"UNA ENTRADA", ticketWord:"BOLETO", tonightsScreening:"FUNCIÓN DE ESTA NOCHE", oneFilmOneNight:"UNA PELÍCULA · UNA NOCHE",
       scratch:"RASPA PARA REVELAR", tonightFilm:"Película de esta noche", scratchToReveal:"Raspa para revelar", director:"Dir. ", rank:"PUESTO #",
-      aboutSummary:"Acerca de la selección", aboutText:"La selección inicial de CinePass corresponde a las 264 películas incluidas en el Top 250 de la encuesta de críticos de Sight & Sound 2022, conservando los empates del ranking.",
+      nameSummary:"¿Por qué ReelStub?", nameText:"Reel hace referencia al rollo de película del cine tradicional, y stub al talón que queda de un boleto después de entrar a una función. ReelStub une ambas ideas: descubrir grandes películas y conservar un pequeño recuerdo de cada una que vas viendo.",
+      aboutSummary:"Acerca de la selección", aboutText:"La selección inicial de ReelStub corresponde a las 264 películas incluidas en el Top 250 de la encuesta de críticos de Sight & Sound 2022, conservando los empates del ranking.",
       libraryEyebrow:"Mi pasaporte", libraryTitle:"Las 264 películas", search:"Buscar película o director…", filters:{all:"Todas",unwatched:"Pendientes",watched:"Vistas",favorites:"Favoritas"},
       seenCount:n=>`${n} vistas`, favCount:n=>`${n} favoritas`, seen:"Vista ✓", markSeen:"Marcar vista", favorite:"Favorita",
       account:"Cuenta", accountCopy:"Tu progreso está sincronizado con esta cuenta.", logout:"Cerrar sesión",
@@ -23,7 +29,8 @@
       passport:"My passport", login:"Sign in with Google", watched:"✓ Seen it", another:"↻ Another film", progressCopy:"films watched",
       admitOne:"ADMIT ONE", ticketWord:"TICKET", tonightsScreening:"TONIGHT'S SCREENING", oneFilmOneNight:"ONE FILM · ONE NIGHT",
       scratch:"SCRATCH TO REVEAL", tonightFilm:"Tonight’s film", scratchToReveal:"Scratch to reveal", director:"Dir. ", rank:"RANK #",
-      aboutSummary:"About the selection", aboutText:"CinePass begins with the 264 films included in the Sight & Sound 2022 critics’ Top 250, preserving the ranking ties.",
+      nameSummary:"Why ReelStub?", nameText:"Reel refers to the traditional roll of film used in cinema, while stub is the part of a ticket kept after admission. ReelStub brings both ideas together: discovering great films and keeping a small memento of each one you watch.",
+      aboutSummary:"About the selection", aboutText:"ReelStub begins with the 264 films included in the Sight & Sound 2022 critics’ Top 250, preserving the ranking ties.",
       libraryEyebrow:"My passport", libraryTitle:"The 264 films", search:"Search film or director…", filters:{all:"All",unwatched:"To watch",watched:"Watched",favorites:"Favorites"},
       seenCount:n=>`${n} watched`, favCount:n=>`${n} favorites`, seen:"Watched ✓", markSeen:"Mark watched", favorite:"Favorite",
       account:"Account", accountCopy:"Your progress is synced with this account.", logout:"Sign out",
@@ -35,7 +42,8 @@
       passport:"Mon passeport", login:"Continuer avec Google", watched:"✓ Déjà vu", another:"↻ Un autre film", progressCopy:"films vus",
       admitOne:"UNE PLACE", ticketWord:"BILLET", tonightsScreening:"SÉANCE DE CE SOIR", oneFilmOneNight:"UN FILM · UNE SOIRÉE",
       scratch:"GRATTEZ POUR RÉVÉLER", tonightFilm:"Film de ce soir", scratchToReveal:"Grattez pour révéler", director:"Réal. ", rank:"RANG #",
-      aboutSummary:"À propos de la sélection", aboutText:"La sélection initiale de CinePass reprend les 264 films du Top 250 des critiques de Sight & Sound 2022, en conservant les ex æquo du classement.",
+      nameSummary:"Pourquoi ReelStub ?", nameText:"Reel évoque la bobine de film du cinéma traditionnel, tandis que stub désigne la partie d’un billet que l’on conserve après l’entrée. ReelStub réunit ces deux idées : découvrir de grands films et garder un petit souvenir de chacun de ceux que vous regardez.",
+      aboutSummary:"À propos de la sélection", aboutText:"La sélection initiale de ReelStub reprend les 264 films du Top 250 des critiques de Sight & Sound 2022, en conservant les ex æquo du classement.",
       libraryEyebrow:"Mon passeport", libraryTitle:"Les 264 films", search:"Rechercher un film ou un réalisateur…", filters:{all:"Tous",unwatched:"À voir",watched:"Vus",favorites:"Favoris"},
       seenCount:n=>`${n} vus`, favCount:n=>`${n} favoris`, seen:"Vu ✓", markSeen:"Marquer comme vu", favorite:"Favori",
       account:"Compte", accountCopy:"Votre progression est synchronisée avec ce compte.", logout:"Se déconnecter",
@@ -66,6 +74,7 @@
     heroEyebrow:$("heroEyebrow"), heroAdmit:$("heroAdmit"), heroLede:$("heroLede"),
     progressCard:$("progressCard"), progressLabel:$("progressLabel"), progressCopy:$("progressCopy"),
     progressBar:$("progressBar"), progressPct:$("progressPct"),
+    nameSummary:$("nameSummary"), nameText:$("nameText"),
     aboutSummary:$("aboutSummary"), aboutText:$("aboutText"),
     library:$("libraryDialog"), closeLibrary:$("closeLibraryBtn"), list:$("filmList"),
     libraryEyebrow:$("libraryEyebrow"), libraryTitle:$("libraryTitle"),
@@ -84,7 +93,7 @@
     document.querySelectorAll('[data-i18n="ticketWord"]').forEach(el=>el.textContent=t("ticketWord"));
     document.querySelectorAll('[data-i18n="tonightsScreening"]').forEach(el=>el.textContent=t("tonightsScreening"));
     document.querySelectorAll('[data-i18n="oneFilmOneNight"]').forEach(el=>el.textContent=t("oneFilmOneNight"));
-    refs.scratchHintText.textContent=t("scratch"); refs.aboutSummary.textContent=t("aboutSummary"); refs.aboutText.textContent=t("aboutText");
+    refs.scratchHintText.textContent=t("scratch"); refs.nameSummary.textContent=t("nameSummary"); refs.nameText.textContent=t("nameText"); refs.aboutSummary.textContent=t("aboutSummary"); refs.aboutText.textContent=t("aboutText");
     refs.libraryEyebrow.textContent=t("libraryEyebrow"); refs.libraryTitle.textContent=t("libraryTitle"); refs.search.placeholder=t("search");
     [...refs.filter.options].forEach(o=>o.textContent=t("filters")[o.value]); refs.accountEyebrow.textContent=t("account"); refs.accountCopy.textContent=t("accountCopy"); refs.logout.textContent=t("logout");
     refs.progressCard?.setAttribute("aria-label", lang==="es"?"Progreso":lang==="fr"?"Progression":"Progress");
@@ -231,9 +240,9 @@
     if(!firebaseConfigured()) return;
     try{
       const [appMod,authMod,storeMod]=await Promise.all([
-        import("https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js"),
-        import("https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js"),
-        import("https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js")
+        import("https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js"),
+        import("https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js"),
+        import("https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js")
       ]);
       const app=appMod.initializeApp(FIREBASE); auth=authMod.getAuth(app); db=storeMod.getFirestore(app);
       fbAuth=authMod;fbStore=storeMod;firebaseReady=true;
