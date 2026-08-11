@@ -166,6 +166,16 @@
 
   function resetScratch(){
     const c=refs.canvas, box=c.getBoundingClientRect(), dpr=Math.min(window.devicePixelRatio||1,2);
+
+    // A new film must always behave like a brand-new scratch ticket.
+    // reveal() fades the canvas out and disables pointer events, so restore
+    // those properties before drawing the fresh silver coating.
+    c.style.transition="none";
+    c.style.opacity="1";
+    c.style.pointerEvents="auto";
+    drawing=false;
+    strokes=0;
+
     c.width=Math.max(1,Math.floor(box.width*dpr)); c.height=Math.max(1,Math.floor(box.height*dpr));
     const ctx=c.getContext("2d"); ctx.setTransform(dpr,0,0,dpr,0,0);
     const grad=ctx.createLinearGradient(0,0,box.width,box.height);
