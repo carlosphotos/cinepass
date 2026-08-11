@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f4efe3">
-<title>CinePass — Admit One</title>
-<meta name="description" content="Raspa tu boleto de CinePass y descubre la película de esta noche.">
+<title>ReelStub — Admit One</title>
+<meta name="description" content="Raspa tu boleto de ReelStub y descubre la película de esta noche.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="#" aria-label="CinePass"><span class="brand-mark">CP</span><span>CinePass</span></a>
+  <a class="brand" href="#" aria-label="ReelStub"><span class="brand-mark">RS</span><span>ReelStub</span></a>
   <div class="top-actions">
     <div class="lang-switch" aria-label="Idioma">
       <button class="lang-btn" data-lang="es" type="button">ES</button>
@@ -26,7 +26,7 @@
 <main>
   <section class="hero">
     <p id="heroEyebrow" class="eyebrow">TU LOTERÍA PERSONAL DE CINE</p>
-    <h1>CinePass</h1>
+    <h1>ReelStub</h1>
     <p id="heroAdmit" class="hero-admit">UNA ENTRADA</p>
     <p id="heroLede" class="lede">Raspa para descubrir la película de esta noche.</p>
   </section>
@@ -40,7 +40,7 @@
   <section class="ticket-wrap">
     <div class="ticket ticket-back" aria-hidden="true">
       <div class="ticket-stub ticket-stub-left">
-        <span class="stub-label">CINEPASS</span>
+        <span class="stub-label">REELSTUB</span>
         <span class="stub-ticket" data-i18n="admitOne">UNA ENTRADA</span>
         <span class="stub-code">2536817</span>
         <span class="stub-star">★</span>
@@ -49,7 +49,7 @@
         <div class="ticket-frame back-frame">
           <div class="ticket-heading">
             <span class="admit-one" data-i18n="admitOne">UNA ENTRADA</span>
-            <strong class="ticket-logo">CINEPASS</strong>
+            <strong class="ticket-logo">REELSTUB</strong>
             <span class="ticket-stars" aria-hidden="true"></span>
           </div>
           <div class="back-ticket-copy" data-i18n="tonightsScreening">FUNCIÓN DE ESTA NOCHE</div>
@@ -57,16 +57,16 @@
         </div>
       </div>
       <div class="ticket-stub ticket-stub-right">
-        <span class="stub-label">CINEPASS</span>
+        <span class="stub-label">REELSTUB</span>
         <span class="stub-ticket" data-i18n="ticketWord">BOLETO</span>
         <span class="stub-code">2536817</span>
         <span class="stub-star">★</span>
       </div>
     </div>
 
-    <article class="ticket ticket-front" aria-label="Boleto CinePass">
+    <article class="ticket ticket-front" aria-label="Boleto ReelStub">
       <div class="ticket-stub ticket-stub-left" aria-hidden="true">
-        <span class="stub-label">CINEPASS</span>
+        <span class="stub-label">REELSTUB</span>
         <span class="stub-ticket" data-i18n="admitOne">UNA ENTRADA</span>
         <span class="stub-code">2536817</span>
         <span class="stub-star">★</span>
@@ -76,7 +76,7 @@
         <div class="ticket-frame">
           <div class="ticket-heading">
             <span class="admit-one" data-i18n="admitOne">UNA ENTRADA</span>
-            <strong class="ticket-logo">CINEPASS</strong>
+            <strong class="ticket-logo">REELSTUB</strong>
             <span class="ticket-stars" aria-hidden="true"></span>
           </div>
 
@@ -97,7 +97,7 @@
       </div>
 
       <div class="ticket-stub ticket-stub-right" aria-hidden="true">
-        <span class="stub-label">CINEPASS</span>
+        <span class="stub-label">REELSTUB</span>
         <span class="stub-ticket" data-i18n="ticketWord">BOLETO</span>
         <span class="stub-code">2536817</span>
         <span class="stub-star">★</span>
@@ -111,9 +111,14 @@
   </section>
   <p id="statusMsg" class="status-msg" role="status"></p>
 
+  <details class="about-source name-story">
+    <summary id="nameSummary">¿Por qué ReelStub?</summary>
+    <p id="nameText"><em>Reel</em> hace referencia al rollo de película del cine tradicional, y <em>stub</em> al talón que queda de un boleto después de entrar a una función. ReelStub une ambas ideas: descubrir grandes películas y conservar un pequeño recuerdo de cada una que vas viendo.</p>
+  </details>
+
   <details class="about-source">
     <summary id="aboutSummary">Acerca de la selección</summary>
-    <p id="aboutText">La selección inicial de CinePass corresponde a las 264 películas incluidas en el Top 250 de la encuesta de críticos de Sight &amp; Sound 2022, conservando los empates del ranking.</p>
+    <p id="aboutText">La selección inicial de ReelStub corresponde a las 264 películas incluidas en el Top 250 de la encuesta de críticos de Sight &amp; Sound 2022, conservando los empates del ranking.</p>
   </details>
 </main>
 
@@ -124,7 +129,7 @@
 <div id="filmList" class="film-list"></div></div></dialog>
 
 <dialog id="accountDialog" class="dialog small-dialog"><div class="dialog-shell">
-<div class="dialog-head"><div><p id="accountEyebrow" class="eyebrow">Cuenta</p><h2 id="accountName">CinePass</h2></div><button id="closeAccountBtn" class="close-btn">×</button></div>
+<div class="dialog-head"><div><p id="accountEyebrow" class="eyebrow">Cuenta</p><h2 id="accountName">ReelStub</h2></div><button id="closeAccountBtn" class="close-btn">×</button></div>
 <p id="accountEmail" class="account-email"></p><p id="accountCopy" class="account-copy">Tu progreso está sincronizado con esta cuenta.</p>
 <button id="logoutBtn" class="secondary-btn full">Cerrar sesión</button></div></dialog>
 

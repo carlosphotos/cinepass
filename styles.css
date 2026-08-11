@@ -82,7 +82,16 @@ main{max-width:1080px;margin:auto;padding:48px 24px 72px}.hero{text-align:center
 
 .ticket-heading{text-align:center;display:flex;flex-direction:column;align-items:center;margin-bottom:13px}
 .admit-one{order:3;margin-top:2px;font:700 14px/1 Georgia,'Times New Roman',serif;letter-spacing:.015em}
-.ticket-logo{order:2;font-family:Impact,'Arial Narrow',Arial,sans-serif;font-size:clamp(42px,7vw,68px);line-height:.86;letter-spacing:-.025em;font-weight:900;text-transform:uppercase}
+.ticket-logo{
+  order:2;
+  font-family:Impact,'Arial Narrow',Arial,sans-serif;
+  font-size:clamp(42px,7vw,68px);
+  line-height:.86;
+  letter-spacing:-.025em;
+  font-weight:900;
+  text-transform:uppercase;
+  color:var(--ink);
+}
 .ticket-stars{order:1;border:0;width:auto;margin:0 0 4px;padding:0;color:var(--ink);font:900 10px/1 Arial,sans-serif;letter-spacing:.20em}
 .ticket-stars:before{content:"★★★  TICKET  ★★★"}.ticket-stars{font-size:0}.ticket-stars:before{font-size:10px}
 
@@ -102,7 +111,7 @@ main{max-width:1080px;margin:auto;padding:48px 24px 72px}.hero{text-align:center
 .ticket-stub-left .stub-label{transform:rotate(180deg)}
 
 .actions{display:flex;justify-content:center;gap:12px;margin:4px 0 6px}.primary-btn,.secondary-btn{padding:13px 20px;border-radius:999px;font-weight:800}.primary-btn{background:var(--red);color:#fff}.primary-btn:hover{background:var(--red-dark)}.secondary-btn{background:transparent;color:var(--ink);border:1px solid rgba(23,20,17,.24)}
-.status-msg{text-align:center;font-size:12px;color:var(--muted);min-height:16px}.about-source{max-width:620px;margin:30px auto 0;color:#81776c;font-size:11px;text-align:center}.about-source summary{cursor:pointer;display:inline-block;border-bottom:1px dotted #aaa195;list-style:none}.about-source summary::-webkit-details-marker{display:none}.about-source p{line-height:1.55;margin:10px auto 0}
+.status-msg{text-align:center;font-size:12px;color:var(--muted);min-height:16px}.about-source{max-width:620px;margin:30px auto 0;color:#81776c;font-size:11px;text-align:center}.about-source summary{cursor:pointer;display:inline-block;border-bottom:1px dotted #aaa195;list-style:none}.about-source summary::-webkit-details-marker{display:none}.about-source p{line-height:1.55;margin:10px auto 0}.about-source + .about-source{margin-top:12px}.name-story{color:#74695d}.name-story em{font-family:Georgia,'Times New Roman',serif;color:#51483f}
 
 .dialog{border:1px solid rgba(255,255,255,.12);padding:0;background:#1b1713;color:#f6f0df;border-radius:18px;width:min(760px,calc(100% - 24px));max-height:84vh;box-shadow:0 30px 90px rgba(0,0,0,.55)}.dialog::backdrop{background:rgba(0,0,0,.68);backdrop-filter:blur(5px)}.dialog-shell{padding:24px}.dialog-head{display:flex;justify-content:space-between;align-items:flex-start}.dialog-head h2{font-family:Georgia,'Times New Roman',serif;font-size:34px;margin:0}.dialog .eyebrow{color:#d97970}.close-btn{background:transparent;color:#f6f0df;font-size:32px;line-height:1}.library-summary{display:flex;gap:16px;color:#a99e92;font-size:13px;margin:18px 0}.library-summary strong{color:#f6f0df}.library-tools{display:grid;grid-template-columns:1fr 150px;gap:10px;margin-bottom:14px}.library-tools input,.library-tools select{width:100%;border:1px solid rgba(243,228,196,.16);background:#110e0b;color:#f6f0df;border-radius:10px;padding:11px 12px;outline:none}.film-list{display:flex;flex-direction:column;gap:1px;max-height:52vh;overflow:auto;border-top:1px solid rgba(243,228,196,.1)}.film-row{display:grid;grid-template-columns:50px 1fr auto auto;gap:12px;align-items:center;padding:11px 4px;border-bottom:1px solid rgba(243,228,196,.07)}.film-rank{font-size:11px;color:#d97970}.film-name strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:15px}.film-name span{font-size:11px;color:#a99e92}.icon-btn{background:transparent;color:#f6f0df;font-size:20px;padding:6px}.watch-toggle{font-size:12px;padding:7px 10px;border-radius:999px;background:transparent;color:#a99e92;border:1px solid rgba(243,228,196,.14)}.watch-toggle.on{background:#2c4b37;color:#d9f3df;border-color:#3c674a}.account-email,.account-copy{font-size:14px;color:#a99e92}.full{width:100%;margin-top:10px}.small-dialog{width:min(440px,calc(100% - 24px))}.dialog .secondary-btn{color:#f6f0df;border-color:rgba(243,228,196,.25)}
 
