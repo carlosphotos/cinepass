@@ -12,6 +12,11 @@
 <header class="topbar">
   <a class="brand" href="#" aria-label="CinePass"><span class="brand-mark">CP</span><span>CinePass</span></a>
   <div class="top-actions">
+    <div class="lang-switch" aria-label="Idioma">
+      <button class="lang-btn" data-lang="es" type="button">ES</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+      <button class="lang-btn" data-lang="fr" type="button">FR</button>
+    </div>
     <button id="libraryBtn" class="ghost-btn">Mi pasaporte</button>
     <button id="loginBtn" class="login-btn">Entrar con Google</button>
     <button id="userBtn" class="user-btn hidden" aria-label="Cuenta"></button>
@@ -20,14 +25,14 @@
 
 <main>
   <section class="hero">
-    <p class="eyebrow">YOUR PERSONAL FILM LOTTERY</p>
+    <p id="heroEyebrow" class="eyebrow">TU LOTERÍA PERSONAL DE CINE</p>
     <h1>CinePass</h1>
-    <p class="hero-admit">ADMIT ONE</p>
-    <p class="lede">Scratch to reveal tonight’s film.</p>
+    <p id="heroAdmit" class="hero-admit">UNA ENTRADA</p>
+    <p id="heroLede" class="lede">Raspa para descubrir la película de esta noche.</p>
   </section>
 
-  <section class="progress-card" aria-label="Progreso">
-    <div><span id="progressLabel" class="progress-number">0 / 264</span><span class="progress-copy">películas vistas</span></div>
+  <section id="progressCard" class="progress-card" aria-label="Progreso">
+    <div><span id="progressLabel" class="progress-number">0 / 264</span><span id="progressCopy" class="progress-copy">películas vistas</span></div>
     <div class="progress-track"><span id="progressBar"></span></div>
     <span id="progressPct" class="progress-pct">0%</span>
   </section>
@@ -36,24 +41,24 @@
     <div class="ticket ticket-back" aria-hidden="true">
       <div class="ticket-stub ticket-stub-left">
         <span class="stub-label">CINEPASS</span>
-        <span class="stub-ticket">ADMIT ONE</span>
+        <span class="stub-ticket" data-i18n="admitOne">UNA ENTRADA</span>
         <span class="stub-code">2536817</span>
         <span class="stub-star">★</span>
       </div>
       <div class="ticket-main">
         <div class="ticket-frame back-frame">
           <div class="ticket-heading">
-            <span class="admit-one">ADMIT ONE</span>
+            <span class="admit-one" data-i18n="admitOne">UNA ENTRADA</span>
             <strong class="ticket-logo">CINEPASS</strong>
             <span class="ticket-stars" aria-hidden="true"></span>
           </div>
-          <div class="back-ticket-copy">TONIGHT'S SCREENING</div>
-          <div class="ticket-foot"><span>ONE FILM · ONE NIGHT</span><span>No. 253681</span></div>
+          <div class="back-ticket-copy" data-i18n="tonightsScreening">FUNCIÓN DE ESTA NOCHE</div>
+          <div class="ticket-foot"><span data-i18n="oneFilmOneNight">UNA PELÍCULA · UNA NOCHE</span><span>No. 253681</span></div>
         </div>
       </div>
       <div class="ticket-stub ticket-stub-right">
         <span class="stub-label">CINEPASS</span>
-        <span class="stub-ticket">TICKET</span>
+        <span class="stub-ticket" data-i18n="ticketWord">BOLETO</span>
         <span class="stub-code">2536817</span>
         <span class="stub-star">★</span>
       </div>
@@ -62,7 +67,7 @@
     <article class="ticket ticket-front" aria-label="Boleto CinePass">
       <div class="ticket-stub ticket-stub-left" aria-hidden="true">
         <span class="stub-label">CINEPASS</span>
-        <span class="stub-ticket">ADMIT ONE</span>
+        <span class="stub-ticket" data-i18n="admitOne">UNA ENTRADA</span>
         <span class="stub-code">2536817</span>
         <span class="stub-star">★</span>
       </div>
@@ -70,22 +75,22 @@
       <div class="ticket-main">
         <div class="ticket-frame">
           <div class="ticket-heading">
-            <span class="admit-one">ADMIT ONE</span>
+            <span class="admit-one" data-i18n="admitOne">UNA ENTRADA</span>
             <strong class="ticket-logo">CINEPASS</strong>
             <span class="ticket-stars" aria-hidden="true"></span>
           </div>
 
           <div class="reveal-card">
             <div class="film-meta"><span id="filmRank">RANK #—</span><span id="filmYear">—</span></div>
-            <h2 id="filmTitle">Tonight’s film</h2>
-            <p id="filmDirector">Scratch to reveal</p>
+            <h2 id="filmTitle">Película de esta noche</h2>
+            <p id="filmDirector">Raspa para revelar</p>
             <button id="favoriteBtn" class="favorite-btn" aria-label="Favorita">☆</button>
             <canvas id="scratchCanvas" aria-label="Área para raspar"></canvas>
-            <div class="scratch-hint" id="scratchHint"><span>★</span> SCRATCH TO REVEAL <span>★</span></div>
+            <div class="scratch-hint" id="scratchHint"><span>★</span> <span id="scratchHintText">RASPA PARA REVELAR</span> <span>★</span></div>
           </div>
 
           <div class="ticket-foot">
-            <span>ONE FILM · ONE NIGHT</span>
+            <span data-i18n="oneFilmOneNight">UNA PELÍCULA · UNA NOCHE</span>
             <span id="ticketNo">No. 000001</span>
           </div>
         </div>
@@ -93,7 +98,7 @@
 
       <div class="ticket-stub ticket-stub-right" aria-hidden="true">
         <span class="stub-label">CINEPASS</span>
-        <span class="stub-ticket">TICKET</span>
+        <span class="stub-ticket" data-i18n="ticketWord">BOLETO</span>
         <span class="stub-code">2536817</span>
         <span class="stub-star">★</span>
       </div>
@@ -107,20 +112,20 @@
   <p id="statusMsg" class="status-msg" role="status"></p>
 
   <details class="about-source">
-    <summary>Acerca de la selección</summary>
-    <p>La selección inicial de CinePass corresponde a las 264 películas incluidas en el Top 250 de la encuesta de críticos de Sight &amp; Sound 2022, conservando los empates del ranking.</p>
+    <summary id="aboutSummary">Acerca de la selección</summary>
+    <p id="aboutText">La selección inicial de CinePass corresponde a las 264 películas incluidas en el Top 250 de la encuesta de críticos de Sight &amp; Sound 2022, conservando los empates del ranking.</p>
   </details>
 </main>
 
 <dialog id="libraryDialog" class="dialog"><div class="dialog-shell">
-<div class="dialog-head"><div><p class="eyebrow">Mi pasaporte</p><h2>Las 264 películas</h2></div><button id="closeLibraryBtn" class="close-btn">×</button></div>
+<div class="dialog-head"><div><p id="libraryEyebrow" class="eyebrow">Mi pasaporte</p><h2 id="libraryTitle">Las 264 películas</h2></div><button id="closeLibraryBtn" class="close-btn">×</button></div>
 <div class="library-summary"><strong id="dialogProgress">0 vistas</strong><span id="dialogFavorites">0 favoritas</span></div>
 <div class="library-tools"><input id="searchInput" type="search" placeholder="Buscar película o director…"><select id="libraryFilter"><option value="all">Todas</option><option value="unwatched">Pendientes</option><option value="watched">Vistas</option><option value="favorites">Favoritas</option></select></div>
 <div id="filmList" class="film-list"></div></div></dialog>
 
 <dialog id="accountDialog" class="dialog small-dialog"><div class="dialog-shell">
-<div class="dialog-head"><div><p class="eyebrow">Cuenta</p><h2 id="accountName">CinePass</h2></div><button id="closeAccountBtn" class="close-btn">×</button></div>
-<p id="accountEmail" class="account-email"></p><p class="account-copy">Tu progreso está sincronizado con esta cuenta.</p>
+<div class="dialog-head"><div><p id="accountEyebrow" class="eyebrow">Cuenta</p><h2 id="accountName">CinePass</h2></div><button id="closeAccountBtn" class="close-btn">×</button></div>
+<p id="accountEmail" class="account-email"></p><p id="accountCopy" class="account-copy">Tu progreso está sincronizado con esta cuenta.</p>
 <button id="logoutBtn" class="secondary-btn full">Cerrar sesión</button></div></dialog>
 
 <script src="films.js"></script><script src="firebase-config.js"></script><script src="app.js"></script>

@@ -4,6 +4,51 @@
   const GUEST_KEY = "cinepass_guest_v2";
   const FIREBASE = window.CINEPASS_FIREBASE_CONFIG || {};
   const $ = (id) => document.getElementById(id);
+  const LANG_KEY = "cinepass_lang_v1";
+  const I18N = {
+    es:{
+      heroEyebrow:"TU LOTERÍA PERSONAL DE CINE", heroAdmit:"UNA ENTRADA", heroLede:"Raspa para descubrir la película de esta noche.",
+      passport:"Mi pasaporte", login:"Entrar con Google", watched:"✓ Ya la vi", another:"↻ Dame otra", progressCopy:"películas vistas",
+      admitOne:"UNA ENTRADA", ticketWord:"BOLETO", tonightsScreening:"FUNCIÓN DE ESTA NOCHE", oneFilmOneNight:"UNA PELÍCULA · UNA NOCHE",
+      scratch:"RASPA PARA REVELAR", tonightFilm:"Película de esta noche", scratchToReveal:"Raspa para revelar", director:"Dir. ", rank:"PUESTO #",
+      aboutSummary:"Acerca de la selección", aboutText:"La selección inicial de CinePass corresponde a las 264 películas incluidas en el Top 250 de la encuesta de críticos de Sight & Sound 2022, conservando los empates del ranking.",
+      libraryEyebrow:"Mi pasaporte", libraryTitle:"Las 264 películas", search:"Buscar película o director…", filters:{all:"Todas",unwatched:"Pendientes",watched:"Vistas",favorites:"Favoritas"},
+      seenCount:n=>`${n} vistas`, favCount:n=>`${n} favoritas`, seen:"Vista ✓", markSeen:"Marcar vista", favorite:"Favorita",
+      account:"Cuenta", accountCopy:"Tu progreso está sincronizado con esta cuenta.", logout:"Cerrar sesión",
+      completed:"¡Completaste las 264! Puedes seguir revisando tu pasaporte.", markedSeen:"Marcada como vista ✓",
+      firebaseFail:"No se pudo iniciar Firebase. El modo invitado sigue funcionando.", synced:"Progreso sincronizado con tu cuenta.", configFirebase:"Primero pega la configuración de Firebase en firebase-config.js.", firebaseNotReady:"Firebase aún no está listo.", loginFail:"No se pudo iniciar sesión con Google.", loggedOut:"Sesión cerrada. Ahora estás en modo invitado."
+    },
+    en:{
+      heroEyebrow:"YOUR PERSONAL FILM LOTTERY", heroAdmit:"ADMIT ONE", heroLede:"Scratch to reveal tonight’s film.",
+      passport:"My passport", login:"Sign in with Google", watched:"✓ Seen it", another:"↻ Another film", progressCopy:"films watched",
+      admitOne:"ADMIT ONE", ticketWord:"TICKET", tonightsScreening:"TONIGHT'S SCREENING", oneFilmOneNight:"ONE FILM · ONE NIGHT",
+      scratch:"SCRATCH TO REVEAL", tonightFilm:"Tonight’s film", scratchToReveal:"Scratch to reveal", director:"Dir. ", rank:"RANK #",
+      aboutSummary:"About the selection", aboutText:"CinePass begins with the 264 films included in the Sight & Sound 2022 critics’ Top 250, preserving the ranking ties.",
+      libraryEyebrow:"My passport", libraryTitle:"The 264 films", search:"Search film or director…", filters:{all:"All",unwatched:"To watch",watched:"Watched",favorites:"Favorites"},
+      seenCount:n=>`${n} watched`, favCount:n=>`${n} favorites`, seen:"Watched ✓", markSeen:"Mark watched", favorite:"Favorite",
+      account:"Account", accountCopy:"Your progress is synced with this account.", logout:"Sign out",
+      completed:"You completed all 264! You can keep browsing your passport.", markedSeen:"Marked as watched ✓",
+      firebaseFail:"Firebase could not start. Guest mode still works.", synced:"Progress synced with your account.", configFirebase:"First add your Firebase configuration in firebase-config.js.", firebaseNotReady:"Firebase is not ready yet.", loginFail:"Could not sign in with Google.", loggedOut:"Signed out. You are now using guest mode."
+    },
+    fr:{
+      heroEyebrow:"VOTRE LOTERIE PERSONNELLE DE CINÉMA", heroAdmit:"UNE PLACE", heroLede:"Grattez pour découvrir le film de ce soir.",
+      passport:"Mon passeport", login:"Continuer avec Google", watched:"✓ Déjà vu", another:"↻ Un autre film", progressCopy:"films vus",
+      admitOne:"UNE PLACE", ticketWord:"BILLET", tonightsScreening:"SÉANCE DE CE SOIR", oneFilmOneNight:"UN FILM · UNE SOIRÉE",
+      scratch:"GRATTEZ POUR RÉVÉLER", tonightFilm:"Film de ce soir", scratchToReveal:"Grattez pour révéler", director:"Réal. ", rank:"RANG #",
+      aboutSummary:"À propos de la sélection", aboutText:"La sélection initiale de CinePass reprend les 264 films du Top 250 des critiques de Sight & Sound 2022, en conservant les ex æquo du classement.",
+      libraryEyebrow:"Mon passeport", libraryTitle:"Les 264 films", search:"Rechercher un film ou un réalisateur…", filters:{all:"Tous",unwatched:"À voir",watched:"Vus",favorites:"Favoris"},
+      seenCount:n=>`${n} vus`, favCount:n=>`${n} favoris`, seen:"Vu ✓", markSeen:"Marquer comme vu", favorite:"Favori",
+      account:"Compte", accountCopy:"Votre progression est synchronisée avec ce compte.", logout:"Se déconnecter",
+      completed:"Vous avez terminé les 264 ! Vous pouvez continuer à parcourir votre passeport.", markedSeen:"Marqué comme vu ✓",
+      firebaseFail:"Impossible de démarrer Firebase. Le mode invité reste disponible.", synced:"Progression synchronisée avec votre compte.", configFirebase:"Ajoutez d’abord la configuration Firebase dans firebase-config.js.", firebaseNotReady:"Firebase n’est pas encore prêt.", loginFail:"Impossible de se connecter avec Google.", loggedOut:"Déconnecté. Vous êtes maintenant en mode invité."
+    }
+  };
+  function initialLang(){
+    const saved=localStorage.getItem(LANG_KEY); if(I18N[saved]) return saved;
+    const n=(navigator.language||"es").toLowerCase(); if(n.startsWith("fr"))return "fr"; if(n.startsWith("en"))return "en"; return "es";
+  }
+  let lang=initialLang();
+  const t=(key)=>I18N[lang][key];
 
   let state = { watched: [], favorites: [], currentId: null };
   let currentFilm = null;
@@ -15,14 +60,47 @@
   const refs = {
     loginBtn:$("loginBtn"), userBtn:$("userBtn"), libraryBtn:$("libraryBtn"),
     watchedBtn:$("watchedBtn"), anotherBtn:$("anotherBtn"), favoriteBtn:$("favoriteBtn"),
-    canvas:$("scratchCanvas"), hint:$("scratchHint"), title:$("filmTitle"), director:$("filmDirector"),
-    rank:$("filmRank"), year:$("filmYear"), no:$("ticketNo"), status:$("statusMsg"),
-    progressLabel:$("progressLabel"), progressBar:$("progressBar"), progressPct:$("progressPct"),
+    canvas:$("scratchCanvas"), hint:$("scratchHint"), scratchHintText:$("scratchHintText"),
+    title:$("filmTitle"), director:$("filmDirector"), rank:$("filmRank"), year:$("filmYear"),
+    no:$("ticketNo"), status:$("statusMsg"),
+    heroEyebrow:$("heroEyebrow"), heroAdmit:$("heroAdmit"), heroLede:$("heroLede"),
+    progressCard:$("progressCard"), progressLabel:$("progressLabel"), progressCopy:$("progressCopy"),
+    progressBar:$("progressBar"), progressPct:$("progressPct"),
+    aboutSummary:$("aboutSummary"), aboutText:$("aboutText"),
     library:$("libraryDialog"), closeLibrary:$("closeLibraryBtn"), list:$("filmList"),
+    libraryEyebrow:$("libraryEyebrow"), libraryTitle:$("libraryTitle"),
     search:$("searchInput"), filter:$("libraryFilter"), dialogProgress:$("dialogProgress"),
     dialogFavorites:$("dialogFavorites"), account:$("accountDialog"), closeAccount:$("closeAccountBtn"),
-    accountName:$("accountName"), accountEmail:$("accountEmail"), logout:$("logoutBtn")
+    accountEyebrow:$("accountEyebrow"), accountName:$("accountName"), accountEmail:$("accountEmail"),
+    accountCopy:$("accountCopy"), logout:$("logoutBtn")
   };
+
+  function applyLanguage(){
+    document.documentElement.lang=lang;
+    document.querySelectorAll(".lang-btn").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
+    refs.heroEyebrow.textContent=t("heroEyebrow"); refs.heroAdmit.textContent=t("heroAdmit"); refs.heroLede.textContent=t("heroLede");
+    refs.libraryBtn.textContent=t("passport"); refs.loginBtn.textContent=t("login"); refs.watchedBtn.textContent=t("watched"); refs.anotherBtn.textContent=t("another"); refs.progressCopy.textContent=t("progressCopy");
+    document.querySelectorAll('[data-i18n="admitOne"]').forEach(el=>el.textContent=t("admitOne"));
+    document.querySelectorAll('[data-i18n="ticketWord"]').forEach(el=>el.textContent=t("ticketWord"));
+    document.querySelectorAll('[data-i18n="tonightsScreening"]').forEach(el=>el.textContent=t("tonightsScreening"));
+    document.querySelectorAll('[data-i18n="oneFilmOneNight"]').forEach(el=>el.textContent=t("oneFilmOneNight"));
+    refs.scratchHintText.textContent=t("scratch"); refs.aboutSummary.textContent=t("aboutSummary"); refs.aboutText.textContent=t("aboutText");
+    refs.libraryEyebrow.textContent=t("libraryEyebrow"); refs.libraryTitle.textContent=t("libraryTitle"); refs.search.placeholder=t("search");
+    [...refs.filter.options].forEach(o=>o.textContent=t("filters")[o.value]); refs.accountEyebrow.textContent=t("account"); refs.accountCopy.textContent=t("accountCopy"); refs.logout.textContent=t("logout");
+    refs.progressCard?.setAttribute("aria-label", lang==="es"?"Progreso":lang==="fr"?"Progression":"Progress");
+    refs.favoriteBtn?.setAttribute("aria-label",t("favorite"));
+    if(currentFilm){
+      refs.title.textContent=currentFilm.title;
+      refs.director.textContent=t("director")+currentFilm.director;
+      refs.rank.textContent=t("rank")+currentFilm.rank;
+    } else {
+      refs.title.textContent=t("tonightFilm");
+      refs.director.textContent=t("scratchToReveal");
+    }
+    updateProgress();
+    if(refs.library?.open) renderLibrary();
+  }
+  document.querySelectorAll(".lang-btn").forEach(btn=>btn.addEventListener("click",()=>{lang=btn.dataset.lang;localStorage.setItem(LANG_KEY,lang);applyLanguage();}));
 
   function cleanState(raw={}) {
     const valid = new Set(FILMS.map(f=>f.id));
@@ -48,7 +126,7 @@
   function pickFilm(forceNew=false){
     const watched = new Set(state.watched);
     let pool = FILMS.filter(f=>!watched.has(f.id));
-    if(!pool.length){ showStatus("¡Completaste las 264! Puedes seguir revisando tu pasaporte."); pool=FILMS; }
+    if(!pool.length){ showStatus(t("completed")); pool=FILMS; }
     if(forceNew && currentFilm && pool.length>1) pool=pool.filter(f=>f.id!==currentFilm.id);
     currentFilm = pool[Math.floor(Math.random()*pool.length)];
     state.currentId=currentFilm.id;
@@ -58,8 +136,8 @@
   function renderFilm(){
     if(!currentFilm) return;
     refs.title.textContent=currentFilm.title;
-    refs.director.textContent="Dir. "+currentFilm.director;
-    refs.rank.textContent="RANK #"+currentFilm.rank;
+    refs.director.textContent=t("director")+currentFilm.director;
+    refs.rank.textContent=t("rank")+currentFilm.rank;
     refs.year.textContent=currentFilm.year;
     refs.no.textContent="No. "+String(Math.floor(Math.random()*999999)).padStart(6,"0");
     refs.favoriteBtn.textContent=state.favorites.includes(currentFilm.id)?"★":"☆";
@@ -71,8 +149,8 @@
     const n=state.watched.length, pct=Math.round(n/FILMS.length*100);
     refs.progressLabel.textContent=`${n} / ${FILMS.length}`;
     refs.progressBar.style.width=pct+"%"; refs.progressPct.textContent=pct+"%";
-    refs.dialogProgress.textContent=`${n} vistas`;
-    refs.dialogFavorites.textContent=`${state.favorites.length} favoritas`;
+    refs.dialogProgress.textContent=t("seenCount")(n);
+    refs.dialogFavorites.textContent=t("favCount")(state.favorites.length);
   }
 
   function showStatus(msg){ refs.status.textContent=msg; clearTimeout(showStatus.t); showStatus.t=setTimeout(()=>refs.status.textContent="",3500); }
@@ -82,10 +160,10 @@
     c.width=Math.max(1,Math.floor(box.width*dpr)); c.height=Math.max(1,Math.floor(box.height*dpr));
     const ctx=c.getContext("2d"); ctx.setTransform(dpr,0,0,dpr,0,0);
     const grad=ctx.createLinearGradient(0,0,box.width,box.height);
-    grad.addColorStop(0,"#9d2e24"); grad.addColorStop(.5,"#7f211c"); grad.addColorStop(1,"#a63a2b");
+    grad.addColorStop(0,"#c8c5bd"); grad.addColorStop(.5,"#aaa79f"); grad.addColorStop(1,"#d5d2ca");
     ctx.globalCompositeOperation="source-over";ctx.fillStyle=grad;ctx.fillRect(0,0,box.width,box.height);
-    ctx.globalAlpha=.18;ctx.fillStyle="#f3e4c4";
-    for(let i=0;i<140;i++){ctx.beginPath();ctx.arc(Math.random()*box.width,Math.random()*box.height,Math.random()*1.4+.3,0,Math.PI*2);ctx.fill()}
+    ctx.globalAlpha=.22;ctx.fillStyle="#f7f5ef";
+    for(let i=0;i<170;i++){ctx.beginPath();ctx.arc(Math.random()*box.width,Math.random()*box.height,Math.random()*1.25+.25,0,Math.PI*2);ctx.fill()}
     ctx.globalAlpha=1; refs.hint.classList.remove("done");
   }
 
@@ -103,7 +181,7 @@
   refs.watchedBtn.addEventListener("click",async()=>{
     if(!currentFilm)return;
     if(!state.watched.includes(currentFilm.id)) state.watched.push(currentFilm.id);
-    await saveState(); showStatus("Marcada como vista ✓"); pickFilm(true); renderLibrary();
+    await saveState(); showStatus(t("markedSeen")); pickFilm(true); renderLibrary();
   });
   refs.anotherBtn.addEventListener("click",()=>pickFilm(true));
   refs.favoriteBtn.addEventListener("click",async()=>{
@@ -128,8 +206,8 @@
       <div class="film-row" data-id="${f.id}">
         <span class="film-rank">#${f.rank}</span>
         <div class="film-name"><strong>${escapeHtml(f.title)}</strong><span>${f.year} · ${escapeHtml(f.director)}</span></div>
-        <button class="icon-btn fav-row" title="Favorita">${fav.has(f.id)?"★":"☆"}</button>
-        <button class="watch-toggle ${seen.has(f.id)?"on":""}">${seen.has(f.id)?"Vista ✓":"Marcar vista"}</button>
+        <button class="icon-btn fav-row" title="${escapeHtml(t("favorite"))}">${fav.has(f.id)?"★":"☆"}</button>
+        <button class="watch-toggle ${seen.has(f.id)?"on":""}">${seen.has(f.id)?t("seen"):t("markSeen")}</button>
       </div>`).join("");
     updateProgress();
   }
@@ -160,7 +238,7 @@
       const app=appMod.initializeApp(FIREBASE); auth=authMod.getAuth(app); db=storeMod.getFirestore(app);
       fbAuth=authMod;fbStore=storeMod;firebaseReady=true;
       authMod.onAuthStateChanged(auth,handleAuthState);
-    }catch(err){console.error(err);showStatus("No se pudo iniciar Firebase. El modo invitado sigue funcionando.");}
+    }catch(err){console.error(err);showStatus(t("firebaseFail"));}
   }
 
   async function handleAuthState(u){
@@ -181,18 +259,18 @@
       favorites:[...cloud.favorites,...guest.favorites],
       currentId:cloud.currentId||guest.currentId
     });
-    await saveState();loadCurrent();showStatus("Progreso sincronizado con tu cuenta.");
+    await saveState();loadCurrent();showStatus(t("synced"));
   }
 
   refs.loginBtn.addEventListener("click",async()=>{
-    if(!firebaseConfigured()){showStatus("Primero pega la configuración de Firebase en firebase-config.js.");return}
-    if(!firebaseReady){showStatus("Firebase aún no está listo.");return}
+    if(!firebaseConfigured()){showStatus(t("configFirebase"));return}
+    if(!firebaseReady){showStatus(t("firebaseNotReady"));return}
     try{const provider=new fbAuth.GoogleAuthProvider();await fbAuth.signInWithPopup(auth,provider)}
-    catch(e){console.error(e);showStatus("No se pudo iniciar sesión con Google.");}
+    catch(e){console.error(e);showStatus(t("loginFail"));}
   });
   refs.userBtn.addEventListener("click",()=>refs.account.showModal());
   refs.closeAccount.addEventListener("click",()=>refs.account.close());
-  refs.logout.addEventListener("click",async()=>{await fbAuth.signOut(auth);refs.account.close();showStatus("Sesión cerrada. Ahora estás en modo invitado.")});
+  refs.logout.addEventListener("click",async()=>{await fbAuth.signOut(auth);refs.account.close();showStatus(t("loggedOut"))});
 
   function loadCurrent(){
     updateProgress();
@@ -201,5 +279,8 @@
   }
 
   window.addEventListener("resize",()=>{if(currentFilm&&!revealed){refs.canvas.style.opacity="1";refs.canvas.style.pointerEvents="auto";resetScratch()}});
-  state=readGuest();loadCurrent();initFirebase();
+  state=readGuest();
+  loadCurrent();
+  applyLanguage();
+  initFirebase();
 })();
