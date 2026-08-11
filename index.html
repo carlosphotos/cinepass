@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#17120e"><title>CinePass — Tu próxima gran película</title>
+<meta name="description" content="Raspa un boleto y descubre una película de Sight & Sound 2022.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="#"><span class="brand-mark">CP</span><span>CinePass</span></a>
+<div class="top-actions">
+<button id="libraryBtn" class="ghost-btn">Mi pasaporte</button>
+<button id="loginBtn" class="login-btn">Entrar con Google</button>
+<button id="userBtn" class="user-btn hidden" aria-label="Cuenta"></button>
+</div>
+</header>
+<main>
+<section class="hero"><p class="eyebrow">Sight & Sound · Critics’ Poll 2022</p>
+<h1>Tu próxima gran película<br><em>está bajo la tinta.</em></h1>
+<p class="lede">Raspa el boleto. Si ya la viste, márcala y no volverá a salir. Tu recorrido es tuyo.</p></section>
+<section class="progress-card">
+<div><span id="progressLabel" class="progress-number">0 / 264</span><span class="progress-copy">películas vistas</span></div>
+<div class="progress-track"><span id="progressBar"></span></div><span id="progressPct" class="progress-pct">0%</span>
+</section>
+<section class="ticket-wrap">
+<article class="ticket">
+<div class="ticket-stub left-stub"><span>ADMIT</span><strong>ONE</strong><small>∞</small></div>
+<div class="ticket-main">
+<div class="ticket-head"><span>CINEPASS SOCIETY</span><span id="ticketNo">No. 000001</span></div>
+<div class="reveal-card">
+<div class="film-meta"><span id="filmRank">RANK #—</span><span id="filmYear">—</span></div>
+<h2 id="filmTitle">Tu película de hoy</h2><p id="filmDirector">Raspa para descubrirla</p>
+<button id="favoriteBtn" class="favorite-btn" aria-label="Favorita">☆</button>
+<canvas id="scratchCanvas" aria-label="Área para raspar"></canvas>
+<div class="scratch-hint" id="scratchHint"><span>✦</span> RASPA AQUÍ <span>✦</span></div>
+</div>
+<div class="ticket-foot"><span>GOOD FOR ONE GREAT FILM</span><span>NO EXPIRATION</span></div>
+</div>
+<div class="ticket-stub right-stub"><span>S&amp;S</span><strong>2022</strong><small>★</small></div>
+</article>
+</section>
+<section class="actions"><button id="watchedBtn" class="primary-btn">✓ Ya la vi</button><button id="anotherBtn" class="secondary-btn">↻ Dame otra</button></section>
+<p id="statusMsg" class="status-msg" role="status"></p>
+<p class="source-note">Basado en la encuesta de críticos de Sight & Sound 2022. Los empates se conservan.</p>
+</main>
+
+<dialog id="libraryDialog" class="dialog"><div class="dialog-shell">
+<div class="dialog-head"><div><p class="eyebrow">Mi pasaporte</p><h2>Las 264 películas</h2></div><button id="closeLibraryBtn" class="close-btn">×</button></div>
+<div class="library-summary"><strong id="dialogProgress">0 vistas</strong><span id="dialogFavorites">0 favoritas</span></div>
+<div class="library-tools"><input id="searchInput" type="search" placeholder="Buscar película o director…"><select id="libraryFilter"><option value="all">Todas</option><option value="unwatched">Pendientes</option><option value="watched">Vistas</option><option value="favorites">Favoritas</option></select></div>
+<div id="filmList" class="film-list"></div></div></dialog>
+
+<dialog id="accountDialog" class="dialog small-dialog"><div class="dialog-shell">
+<div class="dialog-head"><div><p class="eyebrow">Cuenta</p><h2 id="accountName">CinePass</h2></div><button id="closeAccountBtn" class="close-btn">×</button></div>
+<p id="accountEmail" class="account-email"></p><p class="account-copy">Tu progreso está sincronizado con esta cuenta.</p>
+<button id="logoutBtn" class="secondary-btn full">Cerrar sesión</button></div></dialog>
+
+<script src="films.js"></script><script src="firebase-config.js"></script><script src="app.js"></script>
+</body></html>
