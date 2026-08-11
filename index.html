@@ -33,13 +33,46 @@
   </section>
 
   <section class="ticket-wrap">
-    <article class="ticket" aria-label="Boleto CinePass">
+    <div class="ticket ticket-back" aria-hidden="true">
+      <div class="ticket-stub ticket-stub-left">
+        <span class="stub-label">CINEPASS</span>
+        <span class="stub-ticket">ADMIT ONE</span>
+        <span class="stub-code">2536817</span>
+        <span class="stub-star">★</span>
+      </div>
+      <div class="ticket-main">
+        <div class="ticket-frame back-frame">
+          <div class="ticket-heading">
+            <span class="admit-one">ADMIT ONE</span>
+            <strong class="ticket-logo">CINEPASS</strong>
+            <span class="ticket-stars" aria-hidden="true"></span>
+          </div>
+          <div class="back-ticket-copy">TONIGHT'S SCREENING</div>
+          <div class="ticket-foot"><span>ONE FILM · ONE NIGHT</span><span>No. 253681</span></div>
+        </div>
+      </div>
+      <div class="ticket-stub ticket-stub-right">
+        <span class="stub-label">CINEPASS</span>
+        <span class="stub-ticket">TICKET</span>
+        <span class="stub-code">2536817</span>
+        <span class="stub-star">★</span>
+      </div>
+    </div>
+
+    <article class="ticket ticket-front" aria-label="Boleto CinePass">
+      <div class="ticket-stub ticket-stub-left" aria-hidden="true">
+        <span class="stub-label">CINEPASS</span>
+        <span class="stub-ticket">ADMIT ONE</span>
+        <span class="stub-code">2536817</span>
+        <span class="stub-star">★</span>
+      </div>
+
       <div class="ticket-main">
         <div class="ticket-frame">
           <div class="ticket-heading">
             <span class="admit-one">ADMIT ONE</span>
             <strong class="ticket-logo">CINEPASS</strong>
-            <span class="ticket-stars">★ &nbsp; CP &nbsp; ★</span>
+            <span class="ticket-stars" aria-hidden="true"></span>
           </div>
 
           <div class="reveal-card">
@@ -48,7 +81,7 @@
             <p id="filmDirector">Scratch to reveal</p>
             <button id="favoriteBtn" class="favorite-btn" aria-label="Favorita">☆</button>
             <canvas id="scratchCanvas" aria-label="Área para raspar"></canvas>
-            <div class="scratch-hint" id="scratchHint"><span>✦</span> SCRATCH HERE <span>✦</span></div>
+            <div class="scratch-hint" id="scratchHint"><span>★</span> SCRATCH TO REVEAL <span>★</span></div>
           </div>
 
           <div class="ticket-foot">
@@ -58,10 +91,10 @@
         </div>
       </div>
 
-      <div class="ticket-stub">
+      <div class="ticket-stub ticket-stub-right" aria-hidden="true">
         <span class="stub-label">CINEPASS</span>
-        <div class="barcode" aria-hidden="true"></div>
-        <span class="stub-code">CP 1345699</span>
+        <span class="stub-ticket">TICKET</span>
+        <span class="stub-code">2536817</span>
         <span class="stub-star">★</span>
       </div>
     </article>
