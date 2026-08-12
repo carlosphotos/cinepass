@@ -22,7 +22,7 @@
       seenCount:n=>`${n} vistas`, favCount:n=>`${n} favoritas`, seen:"Vista ✓", markSeen:"Marcar vista", favorite:"Favorita",
       account:"Cuenta", accountCopy:"Tu progreso está sincronizado con esta cuenta.", logout:"Cerrar sesión",
       completed:"¡Completaste las 264! Puedes seguir revisando tu pasaporte.", markedSeen:"Marcada como vista ✓",
-      whereToWatch:"DÓNDE VERLA", countryLabel:"País", streamingLoading:"Buscando disponibilidad…", streamingNone:"No encontramos opciones disponibles para este país.", subscription:"Incluida con suscripción", rent:"Renta", buy:"Compra", from:"desde", upTo:"hasta", openService:"Abrir", streamingSource:"Disponibilidad proporcionada por Streaming Availability API by Movie of the Night.", firebaseFail:"No se pudo iniciar Firebase. El modo invitado sigue funcionando.", synced:"Progreso sincronizado con tu cuenta.", configFirebase:"Primero pega la configuración de Firebase en firebase-config.js.", firebaseNotReady:"Firebase aún no está listo.", loginFail:"No se pudo iniciar sesión con Google.", loggedOut:"Sesión cerrada. Ahora estás en modo invitado.", badges:[{id:"first",title:"Primera función",desc:"1 película"},{id:"ten",title:"Diez boletos",desc:"10 películas"},{id:"time",title:"Viajero del tiempo",desc:"8 décadas"},{id:"fifty",title:"Media centena",desc:"50 películas"},{id:"century",title:"Club de las 100",desc:"100 películas"},{id:"top25",title:"Top 25 completo",desc:"Todos los puestos 1–25"},{id:"all",title:"Pasaporte completo",desc:"264 películas"}]
+      whereToWatch:"DÓNDE VERLA", countryLabel:"País", streamingLoading:"Buscando disponibilidad…", streamingNone:"No encontramos opciones disponibles para este país.", subscription:"Incluida con suscripción", free:"Gratis", rent:"Renta", buy:"Compra", from:"desde", qualityAvailable:"disponible", openService:"Abrir", streamingSource:"Disponibilidad proporcionada por Streaming Availability API by Movie of the Night.", firebaseFail:"No se pudo iniciar Firebase. El modo invitado sigue funcionando.", synced:"Progreso sincronizado con tu cuenta.", configFirebase:"Primero pega la configuración de Firebase en firebase-config.js.", firebaseNotReady:"Firebase aún no está listo.", loginFail:"No se pudo iniciar sesión con Google.", loggedOut:"Sesión cerrada. Ahora estás en modo invitado.", badges:[{id:"first",title:"Primera función",desc:"1 película"},{id:"ten",title:"Diez boletos",desc:"10 películas"},{id:"time",title:"Viajero del tiempo",desc:"8 décadas"},{id:"fifty",title:"Media centena",desc:"50 películas"},{id:"century",title:"Club de las 100",desc:"100 películas"},{id:"top25",title:"Top 25 completo",desc:"Todos los puestos 1–25"},{id:"all",title:"Pasaporte completo",desc:"264 películas"}]
     },
     en:{
       heroEyebrow:"YOUR PERSONAL FILM LOTTERY", heroAdmit:"ADMIT ONE", heroLede:"Scratch to reveal tonight’s film.",
@@ -35,7 +35,7 @@
       seenCount:n=>`${n} watched`, favCount:n=>`${n} favorites`, seen:"Watched ✓", markSeen:"Mark watched", favorite:"Favorite",
       account:"Account", accountCopy:"Your progress is synced with this account.", logout:"Sign out",
       completed:"You completed all 264! You can keep browsing your passport.", markedSeen:"Marked as watched ✓",
-      whereToWatch:"WHERE TO WATCH", countryLabel:"Country", streamingLoading:"Checking availability…", streamingNone:"No viewing options were found for this country.", subscription:"Included with subscription", rent:"Rent", buy:"Buy", from:"from", upTo:"up to", openService:"Open", streamingSource:"Streaming availability provided by Streaming Availability API by Movie of the Night.", firebaseFail:"Firebase could not start. Guest mode still works.", synced:"Progress synced with your account.", configFirebase:"First add your Firebase configuration in firebase-config.js.", firebaseNotReady:"Firebase is not ready yet.", loginFail:"Could not sign in with Google.", loggedOut:"Signed out. You are now using guest mode.", badges:[{id:"first",title:"First screening",desc:"1 film"},{id:"ten",title:"Ten tickets",desc:"10 films"},{id:"time",title:"Time traveller",desc:"8 decades"},{id:"fifty",title:"Half century",desc:"50 films"},{id:"century",title:"The 100 club",desc:"100 films"},{id:"top25",title:"Top 25 complete",desc:"All ranks 1–25"},{id:"all",title:"Passport complete",desc:"264 films"}]
+      whereToWatch:"WHERE TO WATCH", countryLabel:"Country", streamingLoading:"Checking availability…", streamingNone:"No viewing options were found for this country.", subscription:"Included with subscription", free:"Free", rent:"Rent", buy:"Buy", from:"from", qualityAvailable:"available", openService:"Open", streamingSource:"Streaming availability provided by Streaming Availability API by Movie of the Night.", firebaseFail:"Firebase could not start. Guest mode still works.", synced:"Progress synced with your account.", configFirebase:"First add your Firebase configuration in firebase-config.js.", firebaseNotReady:"Firebase is not ready yet.", loginFail:"Could not sign in with Google.", loggedOut:"Signed out. You are now using guest mode.", badges:[{id:"first",title:"First screening",desc:"1 film"},{id:"ten",title:"Ten tickets",desc:"10 films"},{id:"time",title:"Time traveller",desc:"8 decades"},{id:"fifty",title:"Half century",desc:"50 films"},{id:"century",title:"The 100 club",desc:"100 films"},{id:"top25",title:"Top 25 complete",desc:"All ranks 1–25"},{id:"all",title:"Passport complete",desc:"264 films"}]
     },
     fr:{
       heroEyebrow:"VOTRE LOTERIE PERSONNELLE DE CINÉMA", heroAdmit:"UNE PLACE", heroLede:"Grattez pour découvrir le film de ce soir.",
@@ -48,7 +48,7 @@
       seenCount:n=>`${n} vus`, favCount:n=>`${n} favoris`, seen:"Vu ✓", markSeen:"Marquer comme vu", favorite:"Favori",
       account:"Compte", accountCopy:"Votre progression est synchronisée avec ce compte.", logout:"Se déconnecter",
       completed:"Vous avez terminé les 264 ! Vous pouvez continuer à parcourir votre passeport.", markedSeen:"Marqué comme vu ✓",
-      whereToWatch:"OÙ LE VOIR", countryLabel:"Pays", streamingLoading:"Recherche des disponibilités…", streamingNone:"Aucune option de visionnage trouvée pour ce pays.", subscription:"Inclus avec l’abonnement", rent:"Location", buy:"Achat", from:"à partir de", upTo:"jusqu’à", openService:"Ouvrir", streamingSource:"Disponibilité fournie par Streaming Availability API by Movie of the Night.", firebaseFail:"Impossible de démarrer Firebase. Le mode invité reste disponible.", synced:"Progression synchronisée avec votre compte.", configFirebase:"Ajoutez d’abord la configuration Firebase dans firebase-config.js.", firebaseNotReady:"Firebase n’est pas encore prêt.", loginFail:"Impossible de se connecter avec Google.", loggedOut:"Déconnecté. Vous êtes maintenant en mode invité.", badges:[{id:"first",title:"Première séance",desc:"1 film"},{id:"ten",title:"Dix billets",desc:"10 films"},{id:"time",title:"Voyageur du temps",desc:"8 décennies"},{id:"fifty",title:"Demi-centaine",desc:"50 films"},{id:"century",title:"Le club des 100",desc:"100 films"},{id:"top25",title:"Top 25 terminé",desc:"Tous les rangs 1–25"},{id:"all",title:"Passeport complet",desc:"264 films"}]
+      whereToWatch:"OÙ LE VOIR", countryLabel:"Pays", streamingLoading:"Recherche des disponibilités…", streamingNone:"Aucune option de visionnage trouvée pour ce pays.", subscription:"Inclus avec l’abonnement", free:"Gratuit", rent:"Location", buy:"Achat", from:"à partir de", qualityAvailable:"disponible", openService:"Ouvrir", streamingSource:"Disponibilité fournie par Streaming Availability API by Movie of the Night.", firebaseFail:"Impossible de démarrer Firebase. Le mode invité reste disponible.", synced:"Progression synchronisée avec votre compte.", configFirebase:"Ajoutez d’abord la configuration Firebase dans firebase-config.js.", firebaseNotReady:"Firebase n’est pas encore prêt.", loginFail:"Impossible de se connecter avec Google.", loggedOut:"Déconnecté. Vous êtes maintenant en mode invité.", badges:[{id:"first",title:"Première séance",desc:"1 film"},{id:"ten",title:"Dix billets",desc:"10 films"},{id:"time",title:"Voyageur du temps",desc:"8 décennies"},{id:"fifty",title:"Demi-centaine",desc:"50 films"},{id:"century",title:"Le club des 100",desc:"100 films"},{id:"top25",title:"Top 25 terminé",desc:"Tous les rangs 1–25"},{id:"all",title:"Passeport complet",desc:"264 films"}]
     }
   };
   function initialLang(){
@@ -61,6 +61,7 @@
   const SUPPORTED_COUNTRIES=["MX","US","FR","ES","CA"];
   const DEFAULT_COUNTRY="MX";
   const COUNTRY_LANG={MX:"es",ES:"es",US:"en",CA:"en",FR:"fr"};
+  const COUNTRY_FLAGS={MX:"🇲🇽",US:"🇺🇸",FR:"🇫🇷",ES:"🇪🇸",CA:"🇨🇦"};
   const STREAM_TEST_MODE=new URLSearchParams(location.search).get("streamtest")==="1";
   let streamingData=null;
   let state = { watched: [], favorites: [], watchedDates: {}, currentId: null, country: DEFAULT_COUNTRY };
@@ -107,6 +108,7 @@
     refs.favoriteBtn?.setAttribute("aria-label",t("favorite"));
     if(refs.streamingEyebrow) refs.streamingEyebrow.textContent=t("whereToWatch");
     if(refs.countryLabel) refs.countryLabel.textContent=t("countryLabel");
+    if(refs.countrySelect){[...refs.countrySelect.options].forEach(o=>{o.textContent=`${COUNTRY_FLAGS[o.value]||""} ${countryName(o.value)}`.trim()});refs.countrySelect.setAttribute("aria-label",t("countryLabel"));}
     if(currentFilm){
       refs.title.textContent=currentFilm.title;
       refs.director.textContent=t("director")+currentFilm.director;
@@ -249,17 +251,17 @@
   function reveal(){ if(revealed)return; revealed=true;refs.hint.classList.add("done"); refs.canvas.style.transition="opacity .35s";refs.canvas.style.opacity="0";setTimeout(()=>{refs.canvas.style.pointerEvents="none"},360); renderStreamingDetails(); }
 
 
-  function isStreamingTestFilm(f){return !!f && f.title==="Do the Right Thing" && Number(f.year)===1989;}
   function hideStreamingDetails(){
     if(!refs.streamingPanel)return;
     refs.streamingPanel.classList.add("hidden");
     refs.streamingServices.innerHTML="";
     refs.streamingEmpty.classList.add("hidden");
+    refs.streamingPoster.removeAttribute("src");
   }
   async function loadStreamingData(){
     if(streamingData)return streamingData;
-    const response=await fetch("data/streaming-test.json",{cache:"no-cache"});
-    if(!response.ok)throw new Error(`streaming-test.json ${response.status}`);
+    const response=await fetch("data/streaming-catalog.json",{cache:"no-cache"});
+    if(!response.ok)throw new Error(`streaming-catalog.json ${response.status}`);
     streamingData=await response.json();
     return streamingData;
   }
@@ -269,16 +271,20 @@
   }
   function money(value,currency){
     const num=Number(value); if(!Number.isFinite(num))return "";
+    const cur=String(currency||"MXN").toUpperCase();
     const locale=lang==="fr"?"fr-FR":lang==="en"?"en-US":"es-MX";
-    try{return new Intl.NumberFormat(locale,{style:"currency",currency:currency||"MXN",maximumFractionDigits:0}).format(num)}catch{return `${num} ${currency||""}`.trim()}
+    try{
+      const valueText=new Intl.NumberFormat(locale,{style:"currency",currency:cur,currencyDisplay:"narrowSymbol",maximumFractionDigits:Number.isInteger(num)?0:2}).format(num);
+      return ["MXN","USD","CAD"].includes(cur)?`${valueText} ${cur}`:valueText;
+    }catch{return `${num} ${cur}`.trim()}
   }
-  function qualityRank(q){return ({sd:1,hd:2,uhd:3,4:3})[String(q||"").toLowerCase()]||0}
+  function qualityRank(q){return ({sd:1,hd:2,uhd:3,4:3,"4k":3})[String(q||"").toLowerCase()]||0}
   function groupStreamingOptions(options=[]){
     const groups=new Map();
     for(const opt of options){
       if(!opt||opt.type==="addon")continue;
       const key=opt.serviceId||opt.service||"service";
-      if(!groups.has(key))groups.set(key,{name:opt.service||key,logo:opt.serviceLogo||null,link:opt.link||null,offers:{subscription:[],rent:[],buy:[]}});
+      if(!groups.has(key))groups.set(key,{name:opt.service||key,logo:opt.serviceLogo||null,link:opt.link||null,offers:{free:[],subscription:[],rent:[],buy:[]}});
       const g=groups.get(key); if(!g.logo&&opt.serviceLogo)g.logo=opt.serviceLogo;if(!g.link&&opt.link)g.link=opt.link;
       if(g.offers[opt.type])g.offers[opt.type].push(opt);
     }
@@ -286,42 +292,48 @@
   }
   function offerHtml(type,items){
     if(!items?.length)return "";
+    if(type==="free")return `<span class="streaming-offer"><strong>${escapeHtml(t("free"))}</strong></span>`;
     if(type==="subscription")return `<span class="streaming-offer"><strong>${escapeHtml(t("subscription"))}</strong></span>`;
     const prices=items.map(x=>Number(x.price)).filter(Number.isFinite).sort((a,b)=>a-b);
     const cheapest=prices[0]; const currency=items.find(x=>Number.isFinite(Number(x.price)))?.currency||"MXN";
     const qualities=[...new Set(items.map(x=>String(x.quality||"").toUpperCase()).filter(Boolean))].sort((a,b)=>qualityRank(a)-qualityRank(b));
     const best=qualities.at(-1); const prefix=type==="rent"?t("rent"):t("buy"); const hasMultiple=[...new Set(prices)].length>1;
-    const price=Number.isFinite(cheapest)?`${type==="rent"&&hasMultiple?t("from")+" ":""}${money(cheapest,currency)}`:"";
-    const quality=best?`<span class="streaming-quality">${escapeHtml(t("upTo"))} ${escapeHtml(best)}</span>`:"";
-    return `<span class="streaming-offer"><strong>${escapeHtml(prefix)}</strong>${price?` · ${escapeHtml(price)}`:""}${quality}</span>`;
+    const price=Number.isFinite(cheapest)?`${hasMultiple?t("from")+" ":""}${money(cheapest,currency)}`:"";
+    const quality=best?`<span class="streaming-quality">${escapeHtml(best)} ${escapeHtml(t("qualityAvailable"))}</span>`:"";
+    return `<span class="streaming-offer"><strong>${escapeHtml(prefix)}</strong>${price?` · ${escapeHtml(price)}`:""}${quality?` · ${quality}`:""}</span>`;
   }
-  function renderStreamingPayload(payload){
+  function renderStreamingFilm(filmPayload){
     const code=state.country||DEFAULT_COUNTRY;
     refs.countrySelect.value=code;
-    const countryPayload=payload.countries?.[code] || (payload.country===code?{localizedTitle:payload.movie?.title,poster:payload.movie?.poster,streamingOptions:payload.movie?.streamingOptions||[]}:null);
-    refs.streamingOriginalTitle.textContent=payload.movie?.originalTitle||payload.query?.title||currentFilm?.title||"";
-    const localized=countryPayload?.localizedTitle||"";
-    const canShowLocalized=COUNTRY_LANG[code]===lang && localized && localized!==refs.streamingOriginalTitle.textContent;
+    refs.streamingOriginalTitle.textContent=currentFilm?.title||filmPayload?.title||"";
+    const localized=filmPayload?.localizedTitle||"";
+    const canShowLocalized=lang==="es" && localized && localized!==refs.streamingOriginalTitle.textContent;
     refs.streamingLocalTitle.textContent=localized; refs.streamingLocalTitle.classList.toggle("hidden",!canShowLocalized);
-    if(countryPayload?.poster){refs.streamingPoster.src=countryPayload.poster;refs.streamingPoster.alt=refs.streamingOriginalTitle.textContent;}else{refs.streamingPoster.removeAttribute("src");refs.streamingPoster.alt="";}
-    const groups=groupStreamingOptions(countryPayload?.streamingOptions||[]);
+    if(filmPayload?.poster){refs.streamingPoster.src=filmPayload.poster;refs.streamingPoster.alt=refs.streamingOriginalTitle.textContent;}else{refs.streamingPoster.removeAttribute("src");refs.streamingPoster.alt="";}
+    const groups=groupStreamingOptions(filmPayload?.countries?.[code]?.streamingOptions||[]);
     refs.streamingServices.innerHTML=groups.map(g=>{
       const brand=g.logo?`<img class="streaming-service-logo" src="${escapeHtml(g.logo)}" alt="${escapeHtml(g.name)}">`:`<span class="streaming-service-name">${escapeHtml(g.name)}</span>`;
-      const offers=offerHtml("subscription",g.offers.subscription)+offerHtml("rent",g.offers.rent)+offerHtml("buy",g.offers.buy);
+      const offers=offerHtml("free",g.offers.free)+offerHtml("subscription",g.offers.subscription)+offerHtml("rent",g.offers.rent)+offerHtml("buy",g.offers.buy);
       const open=g.link?`<a class="streaming-open" href="${escapeHtml(g.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(t("openService"))}</a>`:"";
       return `<article class="streaming-service"><div class="streaming-service-brand">${brand}</div><div class="streaming-offers">${offers}</div>${open}</article>`;
     }).join("");
     refs.streamingEmpty.textContent=t("streamingNone"); refs.streamingEmpty.classList.toggle("hidden",groups.length>0);
-    refs.streamingAttribution.textContent=payload.attribution||t("streamingSource");
+    refs.streamingAttribution.textContent=t("streamingSource");
   }
   async function renderStreamingDetails(){
-    if(!refs.streamingPanel||!revealed||!isStreamingTestFilm(currentFilm)){hideStreamingDetails();return;}
+    if(!refs.streamingPanel||!revealed||!currentFilm){hideStreamingDetails();return;}
     refs.streamingPanel.classList.remove("hidden");
     refs.streamingOriginalTitle.textContent=currentFilm.title;
+    refs.streamingLocalTitle.classList.add("hidden");
     refs.streamingServices.innerHTML=`<div class="streaming-loading">${escapeHtml(t("streamingLoading"))}</div>`;
     refs.streamingEmpty.classList.add("hidden"); refs.streamingAttribution.textContent="";
-    try{const payload=await loadStreamingData();if(!isStreamingTestFilm(currentFilm)||!revealed)return;renderStreamingPayload(payload)}
-    catch(err){console.warn(err);refs.streamingServices.innerHTML="";refs.streamingEmpty.textContent=t("streamingNone");refs.streamingEmpty.classList.remove("hidden")}
+    try{
+      const payload=await loadStreamingData();
+      if(!currentFilm||!revealed)return;
+      const filmPayload=payload.films?.[currentFilm.id];
+      if(!filmPayload){refs.streamingServices.innerHTML="";refs.streamingPoster.removeAttribute("src");refs.streamingEmpty.textContent=t("streamingNone");refs.streamingEmpty.classList.remove("hidden");refs.streamingAttribution.textContent=t("streamingSource");return;}
+      renderStreamingFilm(filmPayload);
+    }catch(err){console.warn(err);refs.streamingServices.innerHTML="";refs.streamingPoster.removeAttribute("src");refs.streamingEmpty.textContent=t("streamingNone");refs.streamingEmpty.classList.remove("hidden")}
   }
   if(refs.countrySelect){
     refs.countrySelect.value=state.country||DEFAULT_COUNTRY;
