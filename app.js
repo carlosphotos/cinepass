@@ -22,7 +22,7 @@
       seenCount:n=>`${n} vistas`, favCount:n=>`${n} favoritas`, seen:"Vista ✓", markSeen:"Marcar vista", favorite:"Favorita",
       account:"Cuenta", accountCopy:"Tu progreso está sincronizado con esta cuenta.", logout:"Cerrar sesión",
       completed:"¡Completaste las 264! Puedes seguir revisando tu pasaporte.", markedSeen:"Marcada como vista ✓",
-      whereToWatch:"DÓNDE VERLA", countryLabel:"País", streamingLoading:"Buscando disponibilidad…", streamingNone:"No encontramos opciones disponibles para este país.", subscription:"Incluida con suscripción", free:"Gratis", rent:"Renta", buy:"Compra", from:"desde", qualityAvailable:"disponible", openService:"Abrir", streamingSource:"Disponibilidad proporcionada por Streaming Availability API by Movie of the Night.", firebaseFail:"No se pudo iniciar Firebase. El modo invitado sigue funcionando.", synced:"Progreso sincronizado con tu cuenta.", configFirebase:"Primero pega la configuración de Firebase en firebase-config.js.", firebaseNotReady:"Firebase aún no está listo.", loginFail:"No se pudo iniciar sesión con Google.", loggedOut:"Sesión cerrada. Ahora estás en modo invitado.", badges:[{id:"first",title:"Primera función",desc:"1 película"},{id:"ten",title:"Diez boletos",desc:"10 películas"},{id:"time",title:"Viajero del tiempo",desc:"8 décadas"},{id:"fifty",title:"Media centena",desc:"50 películas"},{id:"century",title:"Club de las 100",desc:"100 películas"},{id:"top25",title:"Top 25 completo",desc:"Todos los puestos 1–25"},{id:"all",title:"Pasaporte completo",desc:"264 películas"}]
+      whereToWatch:"DÓNDE VERLA", countryLabel:"País", streamingLoading:"Buscando disponibilidad…", streamingNone:"No encontramos opciones disponibles para este país.", trailerFallback:"Mientras tanto, puedes buscar el tráiler en YouTube.", trailerButton:"Ver tráiler en YouTube", subscription:"Incluida con suscripción", free:"Gratis", rent:"Renta", buy:"Compra", from:"desde", qualityAvailable:"disponible", openService:"Abrir", streamingSource:"Disponibilidad proporcionada por Streaming Availability API by Movie of the Night.", firebaseFail:"No se pudo iniciar Firebase. El modo invitado sigue funcionando.", synced:"Progreso sincronizado con tu cuenta.", configFirebase:"Primero pega la configuración de Firebase en firebase-config.js.", firebaseNotReady:"Firebase aún no está listo.", loginFail:"No se pudo iniciar sesión con Google.", loggedOut:"Sesión cerrada. Ahora estás en modo invitado.", badges:[{id:"first",title:"Primera función",desc:"1 película"},{id:"ten",title:"Diez boletos",desc:"10 películas"},{id:"time",title:"Viajero del tiempo",desc:"8 décadas"},{id:"fifty",title:"Media centena",desc:"50 películas"},{id:"century",title:"Club de las 100",desc:"100 películas"},{id:"top25",title:"Top 25 completo",desc:"Todos los puestos 1–25"},{id:"all",title:"Pasaporte completo",desc:"264 películas"}]
     },
     en:{
       heroEyebrow:"YOUR PERSONAL FILM LOTTERY", heroAdmit:"ADMIT ONE", heroLede:"Scratch to reveal tonight’s film.",
@@ -35,7 +35,7 @@
       seenCount:n=>`${n} watched`, favCount:n=>`${n} favorites`, seen:"Watched ✓", markSeen:"Mark watched", favorite:"Favorite",
       account:"Account", accountCopy:"Your progress is synced with this account.", logout:"Sign out",
       completed:"You completed all 264! You can keep browsing your passport.", markedSeen:"Marked as watched ✓",
-      whereToWatch:"WHERE TO WATCH", countryLabel:"Country", streamingLoading:"Checking availability…", streamingNone:"No viewing options were found for this country.", subscription:"Included with subscription", free:"Free", rent:"Rent", buy:"Buy", from:"from", qualityAvailable:"available", openService:"Open", streamingSource:"Streaming availability provided by Streaming Availability API by Movie of the Night.", firebaseFail:"Firebase could not start. Guest mode still works.", synced:"Progress synced with your account.", configFirebase:"First add your Firebase configuration in firebase-config.js.", firebaseNotReady:"Firebase is not ready yet.", loginFail:"Could not sign in with Google.", loggedOut:"Signed out. You are now using guest mode.", badges:[{id:"first",title:"First screening",desc:"1 film"},{id:"ten",title:"Ten tickets",desc:"10 films"},{id:"time",title:"Time traveller",desc:"8 decades"},{id:"fifty",title:"Half century",desc:"50 films"},{id:"century",title:"The 100 club",desc:"100 films"},{id:"top25",title:"Top 25 complete",desc:"All ranks 1–25"},{id:"all",title:"Passport complete",desc:"264 films"}]
+      whereToWatch:"WHERE TO WATCH", countryLabel:"Country", streamingLoading:"Checking availability…", streamingNone:"No viewing options were found for this country.", trailerFallback:"In the meantime, you can look for the trailer on YouTube.", trailerButton:"Watch trailer on YouTube", subscription:"Included with subscription", free:"Free", rent:"Rent", buy:"Buy", from:"from", qualityAvailable:"available", openService:"Open", streamingSource:"Streaming availability provided by Streaming Availability API by Movie of the Night.", firebaseFail:"Firebase could not start. Guest mode still works.", synced:"Progress synced with your account.", configFirebase:"First add your Firebase configuration in firebase-config.js.", firebaseNotReady:"Firebase is not ready yet.", loginFail:"Could not sign in with Google.", loggedOut:"Signed out. You are now using guest mode.", badges:[{id:"first",title:"First screening",desc:"1 film"},{id:"ten",title:"Ten tickets",desc:"10 films"},{id:"time",title:"Time traveller",desc:"8 decades"},{id:"fifty",title:"Half century",desc:"50 films"},{id:"century",title:"The 100 club",desc:"100 films"},{id:"top25",title:"Top 25 complete",desc:"All ranks 1–25"},{id:"all",title:"Passport complete",desc:"264 films"}]
     },
     fr:{
       heroEyebrow:"VOTRE LOTERIE PERSONNELLE DE CINÉMA", heroAdmit:"UNE PLACE", heroLede:"Grattez pour découvrir le film de ce soir.",
@@ -48,7 +48,7 @@
       seenCount:n=>`${n} vus`, favCount:n=>`${n} favoris`, seen:"Vu ✓", markSeen:"Marquer comme vu", favorite:"Favori",
       account:"Compte", accountCopy:"Votre progression est synchronisée avec ce compte.", logout:"Se déconnecter",
       completed:"Vous avez terminé les 264 ! Vous pouvez continuer à parcourir votre passeport.", markedSeen:"Marqué comme vu ✓",
-      whereToWatch:"OÙ LE VOIR", countryLabel:"Pays", streamingLoading:"Recherche des disponibilités…", streamingNone:"Aucune option de visionnage trouvée pour ce pays.", subscription:"Inclus avec l’abonnement", free:"Gratuit", rent:"Location", buy:"Achat", from:"à partir de", qualityAvailable:"disponible", openService:"Ouvrir", streamingSource:"Disponibilité fournie par Streaming Availability API by Movie of the Night.", firebaseFail:"Impossible de démarrer Firebase. Le mode invité reste disponible.", synced:"Progression synchronisée avec votre compte.", configFirebase:"Ajoutez d’abord la configuration Firebase dans firebase-config.js.", firebaseNotReady:"Firebase n’est pas encore prêt.", loginFail:"Impossible de se connecter avec Google.", loggedOut:"Déconnecté. Vous êtes maintenant en mode invité.", badges:[{id:"first",title:"Première séance",desc:"1 film"},{id:"ten",title:"Dix billets",desc:"10 films"},{id:"time",title:"Voyageur du temps",desc:"8 décennies"},{id:"fifty",title:"Demi-centaine",desc:"50 films"},{id:"century",title:"Le club des 100",desc:"100 films"},{id:"top25",title:"Top 25 terminé",desc:"Tous les rangs 1–25"},{id:"all",title:"Passeport complet",desc:"264 films"}]
+      whereToWatch:"OÙ LE VOIR", countryLabel:"Pays", streamingLoading:"Recherche des disponibilités…", streamingNone:"Aucune option de visionnage trouvée pour ce pays.", trailerFallback:"En attendant, vous pouvez rechercher la bande-annonce sur YouTube.", trailerButton:"Voir la bande-annonce sur YouTube", subscription:"Inclus avec l’abonnement", free:"Gratuit", rent:"Location", buy:"Achat", from:"à partir de", qualityAvailable:"disponible", openService:"Ouvrir", streamingSource:"Disponibilité fournie par Streaming Availability API by Movie of the Night.", firebaseFail:"Impossible de démarrer Firebase. Le mode invité reste disponible.", synced:"Progression synchronisée avec votre compte.", configFirebase:"Ajoutez d’abord la configuration Firebase dans firebase-config.js.", firebaseNotReady:"Firebase n’est pas encore prêt.", loginFail:"Impossible de se connecter avec Google.", loggedOut:"Déconnecté. Vous êtes maintenant en mode invité.", badges:[{id:"first",title:"Première séance",desc:"1 film"},{id:"ten",title:"Dix billets",desc:"10 films"},{id:"time",title:"Voyageur du temps",desc:"8 décennies"},{id:"fifty",title:"Demi-centaine",desc:"50 films"},{id:"century",title:"Le club des 100",desc:"100 films"},{id:"top25",title:"Top 25 terminé",desc:"Tous les rangs 1–25"},{id:"all",title:"Passeport complet",desc:"264 films"}]
     }
   };
   function initialLang(){
@@ -302,6 +302,17 @@
     const quality=best?`<span class="streaming-quality">${escapeHtml(best)} ${escapeHtml(t("qualityAvailable"))}</span>`:"";
     return `<span class="streaming-offer"><strong>${escapeHtml(prefix)}</strong>${price?` · ${escapeHtml(price)}`:""}${quality?` · ${quality}`:""}</span>`;
   }
+  function trailerSearchUrl(){
+    const title=currentFilm?.title||"";
+    const year=currentFilm?.year||"";
+    const query=`${title} ${year} trailer`.trim();
+    return `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+  }
+  function renderStreamingFallback(){
+    refs.streamingEmpty.innerHTML=`<span>${escapeHtml(t("streamingNone"))}</span><span class="trailer-fallback-copy">${escapeHtml(t("trailerFallback"))}</span><a class="trailer-fallback-button" href="${escapeHtml(trailerSearchUrl())}" target="_blank" rel="noopener noreferrer">▶ ${escapeHtml(t("trailerButton"))}</a>`;
+    refs.streamingEmpty.classList.remove("hidden");
+  }
+
   function renderStreamingFilm(filmPayload){
     const code=state.country||DEFAULT_COUNTRY;
     refs.countrySelect.value=code;
@@ -317,7 +328,12 @@
       const open=g.link?`<a class="streaming-open" href="${escapeHtml(g.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(t("openService"))}</a>`:"";
       return `<article class="streaming-service"><div class="streaming-service-brand">${brand}</div><div class="streaming-offers">${offers}</div>${open}</article>`;
     }).join("");
-    refs.streamingEmpty.textContent=t("streamingNone"); refs.streamingEmpty.classList.toggle("hidden",groups.length>0);
+    if(groups.length){
+      refs.streamingEmpty.classList.add("hidden");
+      refs.streamingEmpty.innerHTML="";
+    }else{
+      renderStreamingFallback();
+    }
     refs.streamingAttribution.textContent=t("streamingSource");
   }
   async function renderStreamingDetails(){
@@ -331,9 +347,9 @@
       const payload=await loadStreamingData();
       if(!currentFilm||!revealed)return;
       const filmPayload=payload.films?.[currentFilm.id];
-      if(!filmPayload){refs.streamingServices.innerHTML="";refs.streamingPoster.removeAttribute("src");refs.streamingEmpty.textContent=t("streamingNone");refs.streamingEmpty.classList.remove("hidden");refs.streamingAttribution.textContent=t("streamingSource");return;}
+      if(!filmPayload){refs.streamingServices.innerHTML="";refs.streamingPoster.removeAttribute("src");renderStreamingFallback();refs.streamingAttribution.textContent=t("streamingSource");return;}
       renderStreamingFilm(filmPayload);
-    }catch(err){console.warn(err);refs.streamingServices.innerHTML="";refs.streamingPoster.removeAttribute("src");refs.streamingEmpty.textContent=t("streamingNone");refs.streamingEmpty.classList.remove("hidden")}
+    }catch(err){console.warn(err);refs.streamingServices.innerHTML="";refs.streamingPoster.removeAttribute("src");renderStreamingFallback()}
   }
   if(refs.countrySelect){
     refs.countrySelect.value=state.country||DEFAULT_COUNTRY;
