@@ -1,0 +1,37 @@
+name: Probar datos de streaming
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Consultar Do the Right Thing en México
+        env:
+          MOVIE_NIGHT_API_KEY: ${{ secrets.MOVIE_NIGHT_API_KEY }}
+        run: python scripts/fetch_streaming_test.py
+
+      - name: Guardar resultado en el repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/streaming-test.json
+          if git diff --cached --quiet; then
+            echo "No hay cambios que guardar."
+            exit 0
+          fi
+          git commit -m "Actualizar prueba de streaming"
+          git push
