@@ -1,4 +1,4 @@
-name: Actualizar catálogo de streaming
+name: Actualizar catálogo global de streaming
 
 on:
   workflow_dispatch:
@@ -42,5 +42,5 @@ jobs:
             echo "No hay cambios que guardar."
             exit 0
           fi
-          git commit -m "Actualizar catálogo de streaming"
+          git commit -m "Actualizar catálogo global de streaming"
           git push

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Build ReelStub's static streaming catalog without exposing the API key.
 
-One global API request is made per ReelStub title. By omitting the country
-parameter, the response can include streamingOptions for all supported regions.
-We request Spanish localization because Mexico is ReelStub's default region;
-the site's interface itself remains available in ES/EN/FR.
+Each title is first identified through title search (which requires a country),
+then fetched again by IMDb/API id without a country parameter. That second
+request returns global streamingOptions for all supported regions. We request
+Spanish localization because Mexico is ReelStub's default region; the site's
+interface itself remains available in ES/EN/FR.
 """
 import difflib
 import json
@@ -165,7 +166,7 @@ def request_json(url, attempts=4):
     headers = {
         "X-API-Key": API_KEY,
         "Accept": "application/json",
-        "User-Agent": "ReelStub/0.4 (GitHub Actions catalog builder)",
+        "User-Agent": "ReelStub/0.5 (GitHub Actions global catalog builder)",
     }
     last = None
     for attempt in range(attempts):
@@ -184,7 +185,16 @@ def request_json(url, attempts=4):
 
 
 def fetch_show(film):
+    """Find the title, then refetch the matched show with GLOBAL availability.
+
+    Search-by-title requires a country and is only used to identify the right
+    show. Once we have an API/IMDb id, GET /shows/{id} without `country`
+    returns streamingOptions for every supported country where it is available.
+    """
     last_error = None
+    matched = None
+
+    # 1) Identify the correct title. Search endpoint requires a country.
     for search_country in SEARCH_COUNTRIES:
         params = {
             "title": film["title"],
@@ -196,8 +206,6 @@ def fetch_show(film):
             payload = request_json(url)
         except urllib.error.HTTPError as exc:
             last_error = exc
-            # A 400 here is a request problem, not a title miss: surface it
-            # immediately instead of burning quota against every country.
             if exc.code == 400:
                 raise
             continue
@@ -211,15 +219,39 @@ def fetch_show(film):
         best = max(results, key=lambda r: score_result(film, r))
         score = score_result(film, best)
         if score >= 82:
-            return best
+            matched = best
+            break
         last_error = RuntimeError(
             f"coincidencia dudosa en {search_country.upper()}: "
             f"{best.get('title')} ({best.get('releaseYear')})"
         )
-    if last_error:
-        raise last_error
-    raise RuntimeError("sin resultados en los países de búsqueda")
 
+    if not matched:
+        if last_error:
+            raise last_error
+        raise RuntimeError("sin resultados en los países de búsqueda")
+
+    # 2) Refetch WITHOUT country to obtain global streamingOptions.
+    # Prefer IMDb because it is unambiguous and URL-safe; API id is fallback.
+    show_id = matched.get("imdbId") or matched.get("id")
+    if not show_id:
+        # Extremely rare fallback: keep the search response rather than losing
+        # poster/metadata entirely, even though options may be country-limited.
+        return matched
+
+    params = {"output_language": OUTPUT_LANGUAGE}
+    url = f"{BASE_URL}/shows/{urllib.parse.quote(str(show_id), safe='')}?{urllib.parse.urlencode(params)}"
+    try:
+        global_show = request_json(url)
+        if isinstance(global_show, dict) and global_show.get("title"):
+            return global_show
+    except Exception as exc:
+        # Preserve useful metadata if global refetch transiently fails.
+        print(
+            f"AVISO global {film['title']}: {exc} · uso respuesta de búsqueda",
+            file=sys.stderr,
+        )
+    return matched
 
 def load_existing():
     if not OUTPUT_FILE.exists():
@@ -270,6 +302,17 @@ def main():
                 print(f"[{index:03}/{len(films)}] AVISO {film['title']}: {exc}", file=sys.stderr)
         time.sleep(0.12)
 
+    country_stats = {}
+    for code in COUNTRIES:
+        with_any = 0
+        option_count = 0
+        for item in catalog.values():
+            options = (((item.get("countries") or {}).get(code) or {}).get("streamingOptions") or [])
+            if options:
+                with_any += 1
+                option_count += len(options)
+        country_stats[code] = {"filmsWithOptions": with_any, "optionCount": option_count}
+
     output = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "defaultCountry": "MX",
@@ -277,6 +320,7 @@ def main():
         "localizationLanguage": OUTPUT_LANGUAGE,
         "filmCount": len(catalog),
         "sourceFilmCount": len(films),
+        "countryStats": country_stats,
         "films": catalog,
         "errors": errors,
         "attribution": "Streaming availability data provided by Streaming Availability API by Movie of the Night.",
@@ -284,6 +328,8 @@ def main():
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"\nCatálogo: {len(catalog)}/{len(films)} · errores nuevos: {len(errors)}")
+    for code, stat in country_stats.items():
+        print(f"  {code}: {stat['filmsWithOptions']}/{len(catalog)} películas con opciones · {stat['optionCount']} opciones")
 
     # Do not let GitHub Actions show a misleading green run if the API request
     # shape breaks again. A handful of unmatched classics is acceptable; a
