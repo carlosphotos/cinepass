@@ -179,3 +179,13 @@ main{max-width:1080px;margin:auto;padding:48px 24px 72px}.hero{text-align:center
 .streaming-open{display:inline-flex;align-items:center;justify-content:center;padding:8px 10px;border:1px solid rgba(191,61,52,.34);border-radius:999px;color:var(--red-dark);text-decoration:none;font:900 8px/1 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}.streaming-open:hover{background:var(--red);color:#fff;border-color:var(--red)}
 .streaming-empty{margin:17px 0 4px;color:var(--muted);font-size:12px}.streaming-empty:not(.hidden){display:flex;flex-direction:column;align-items:flex-start;gap:7px}.trailer-fallback-copy{font-size:10px;color:#85786b}.trailer-fallback-button{display:inline-flex;align-items:center;justify-content:center;margin-top:3px;padding:9px 12px;border:1px solid rgba(191,61,52,.42);border-radius:999px;color:var(--red-dark);text-decoration:none;font:900 8px/1 Arial,sans-serif;letter-spacing:.07em;text-transform:uppercase;background:rgba(243,228,194,.34)}.trailer-fallback-button:hover{background:var(--red);color:#fff;border-color:var(--red)}.streaming-attribution{margin:10px 0 0;color:#968c82;font-size:7px;line-height:1.35;opacity:.78}.streaming-loading{padding:18px 0;color:var(--muted);font-size:12px}
 @media(max-width:720px){.streaming-panel{margin-top:17px}.streaming-card{grid-template-columns:108px minmax(0,1fr);gap:13px;padding:12px}.streaming-head{display:block}.country-picker{margin-top:11px}.country-picker select{width:100%;min-width:0}.streaming-service{grid-template-columns:1fr auto;gap:8px}.streaming-service-brand{grid-column:1/3}.streaming-offers{display:grid;gap:4px}.streaming-open{align-self:end}.streaming-head h3{font-size:23px}.streaming-poster-wrap{border-radius:6px}}
+
+
+/* ReelStub name story — quicker to scan */
+.name-story{max-width:760px;margin-left:auto;margin-right:auto}
+.name-list{list-style:none;margin:14px auto 2px;padding:0;max-width:680px;display:grid;gap:9px;text-align:left}
+.name-list li{display:grid;grid-template-columns:86px minmax(0,1fr);gap:13px;align-items:start;padding:8px 12px;border-top:1px solid rgba(191,61,52,.16)}
+.name-list li:first-child{border-top:0}
+.name-list strong{color:var(--red-dark);font:900 11px/1.35 Arial,sans-serif;letter-spacing:.08em;text-transform:none}
+.name-list span{color:#766b5e;font-size:12px;line-height:1.45}
+@media(max-width:560px){.name-list li{grid-template-columns:72px 1fr;gap:9px;padding:8px 4px}.name-list strong{font-size:10px}.name-list span{font-size:11px}}
