@@ -58,12 +58,13 @@
   let lang=initialLang();
   const t=(key)=>I18N[lang][key];
 
-  const SUPPORTED_COUNTRIES=["MX","US","FR","ES","CA"];
+  const SUPPORTED_COUNTRIES=["MX","US","GB","FR","ES","CA"];
   const DEFAULT_COUNTRY="MX";
-  const COUNTRY_LANG={MX:"es",ES:"es",US:"en",CA:"en",FR:"fr"};
-  const COUNTRY_FLAGS={MX:"🇲🇽",US:"🇺🇸",FR:"🇫🇷",ES:"🇪🇸",CA:"🇨🇦"};
+  const COUNTRY_LANG={MX:"es",ES:"es",US:"en",GB:"en",CA:"en",FR:"fr"};
+  const COUNTRY_FLAGS={MX:"🇲🇽",US:"🇺🇸",GB:"🇬🇧",FR:"🇫🇷",ES:"🇪🇸",CA:"🇨🇦"};
   const STREAM_TEST_MODE=new URLSearchParams(location.search).get("streamtest")==="1";
   let streamingData=null;
+  let passportPosterLoadStarted=false;
   let state = { watched: [], favorites: [], watchedDates: {}, currentId: null, country: DEFAULT_COUNTRY };
   let currentFilm = null;
   let user = null;
@@ -275,7 +276,7 @@
     const locale=lang==="fr"?"fr-FR":lang==="en"?"en-US":"es-MX";
     try{
       const valueText=new Intl.NumberFormat(locale,{style:"currency",currency:cur,currencyDisplay:"narrowSymbol",maximumFractionDigits:Number.isInteger(num)?0:2}).format(num);
-      return ["MXN","USD","CAD"].includes(cur)?`${valueText} ${cur}`:valueText;
+      return ["MXN","USD","GBP","CAD"].includes(cur)?`${valueText} ${cur}`:valueText;
     }catch{return `${num} ${cur}`.trim()}
   }
   function qualityRank(q){return ({sd:1,hd:2,uhd:3,4:3,"4k":3})[String(q||"").toLowerCase()]||0}
@@ -369,6 +370,10 @@
     refs.favoriteBtn.textContent=i>=0?"☆":"★";await saveState();renderLibrary();
   });
 
+  function passportPosterFor(film){
+    return streamingData?.films?.[film.id]?.poster || "";
+  }
+
   function renderLibrary(){
     if(!refs.list)return;
     const q=refs.search.value.trim().toLowerCase(), filter=refs.filter.value;
@@ -383,12 +388,14 @@
 
     refs.list.innerHTML=rows.map(f=>{
       const isSeen=seen.has(f.id), isFav=fav.has(f.id);
+      const poster=isSeen?passportPosterFor(f):"";
       const serial=String(f.rank).padStart(3,"0")+"-"+String(FILMS.indexOf(f)+1).padStart(3,"0");
       return `
       <article class="passport-stub-card ${isSeen?"collected":"pending"}" data-id="${f.id}">
         <div class="passport-stub-body">
           <div class="passport-card-top"><span class="passport-mini-brand">REELSTUB</span><span class="passport-rank">#${f.rank}</span></div>
-          <div class="passport-card-main">
+          <div class="passport-card-main ${poster?"":"no-poster"}">
+            ${poster?`<span class="passport-mini-poster-wrap"><img class="passport-mini-poster" src="${escapeHtml(poster)}" alt="" loading="lazy"></span>`:""}
             <div class="passport-film-copy">
               <h3>${escapeHtml(f.title)}</h3>
               <p>${f.year} · ${escapeHtml(f.director)}</p>
@@ -405,6 +412,12 @@
       </article>`;
     }).join("");
     updateProgress();
+    if(!streamingData && state.watched.length && !passportPosterLoadStarted){
+      passportPosterLoadStarted=true;
+      loadStreamingData().then(()=>{
+        if(refs.library?.open) renderLibrary();
+      }).catch(err=>console.warn("Passport posters unavailable",err));
+    }
   }
   function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
   refs.list.addEventListener("click",async e=>{

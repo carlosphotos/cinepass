@@ -6,11 +6,11 @@
 <meta name="theme-color" content="#f4efe3">
 <title>ReelStub — Admit One</title>
 <meta name="description" content="Raspa tu boleto de ReelStub y descubre la película de esta noche.">
-<link rel="stylesheet" href="styles.css?v=name-story-1">
+<link rel="stylesheet" href="styles.css?v=uk-1">
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="#" aria-label="ReelStub"><span class="brand-mark">RS</span><span>ReelStub</span></a>
+  <a class="brand" href="#" aria-label="ReelStub"><span class="brand-mark">RS</span><span class="brand-wordmark" aria-hidden="true"><span>Reel</span><span>Stub</span></span></a>
   <div class="top-actions">
     <div class="lang-switch" aria-label="Idioma">
       <button class="lang-btn" data-lang="es" type="button">ES</button>
@@ -128,6 +128,7 @@
             <select id="countrySelect" aria-label="País">
               <option value="MX">🇲🇽 México</option>
               <option value="US">🇺🇸 Estados Unidos</option>
+              <option value="GB">🇬🇧 Reino Unido</option>
               <option value="FR">🇫🇷 France</option>
               <option value="ES">🇪🇸 España</option>
               <option value="CA">🇨🇦 Canada</option>
@@ -143,11 +144,7 @@
 
   <details class="about-source name-story">
     <summary id="nameSummary">¿Por qué ReelStub?</summary>
-    <ul id="nameText" class="name-list">
-      <li><strong>Reel</strong><span>hace referencia al rollo de película del cine tradicional.</span></li>
-      <li><strong>Stub</strong><span>es el talón que queda de un boleto después de entrar a una función.</span></li>
-      <li><strong>ReelStub</strong><span>une ambas ideas: descubrir grandes películas y guardar un pequeño recuerdo de cada una.</span></li>
-    </ul>
+    <p id="nameText"><em>Reel</em> hace referencia al rollo de película del cine tradicional, y <em>stub</em> al talón que queda de un boleto después de entrar a una función. ReelStub une ambas ideas: descubrir grandes películas y conservar un pequeño recuerdo de cada una que vas viendo.</p>
   </details>
 
   <details class="about-source">
@@ -183,6 +180,6 @@
 <p id="accountEmail" class="account-email"></p><p id="accountCopy" class="account-copy">Tu progreso está sincronizado con esta cuenta.</p>
 <button id="logoutBtn" class="secondary-btn full">Cerrar sesión</button></div></dialog>
 
-<script src="films.js"></script><script src="firebase-config.js"></script><script src="app.js?v=name-story-1"></script>
+<script src="films.js"></script><script src="firebase-config.js"></script><script src="app.js?v=uk-1"></script>
 </body>
 </html>

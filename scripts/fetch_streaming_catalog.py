@@ -25,11 +25,11 @@ if not API_KEY:
     sys.exit(1)
 
 BASE_URL = "https://api.movieofthenight.com/v4"
-COUNTRIES = ["MX", "US", "FR", "ES", "CA"]
+COUNTRIES = ["MX", "US", "GB", "FR", "ES", "CA"]
 # The title-search endpoint requires a country. Try broad catalogs first and
 # stop as soon as we get a usable match. The returned Show object still uses
 # the normal streamingOptions map keyed by country.
-SEARCH_COUNTRIES = ["us", "mx", "fr", "es", "ca"]
+SEARCH_COUNTRIES = ["us", "gb", "mx", "fr", "es", "ca"]
 OUTPUT_LANGUAGE = "es"
 FILMS_FILE = Path("films.js")
 OUTPUT_FILE = Path("data/streaming-catalog.json")
