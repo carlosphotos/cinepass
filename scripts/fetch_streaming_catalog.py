@@ -25,6 +25,10 @@ if not API_KEY:
 
 BASE_URL = "https://api.movieofthenight.com/v4"
 COUNTRIES = ["MX", "US", "FR", "ES", "CA"]
+# The title-search endpoint requires a country. Try broad catalogs first and
+# stop as soon as we get a usable match. The returned Show object still uses
+# the normal streamingOptions map keyed by country.
+SEARCH_COUNTRIES = ["us", "mx", "fr", "es", "ca"]
 OUTPUT_LANGUAGE = "es"
 FILMS_FILE = Path("films.js")
 OUTPUT_FILE = Path("data/streaming-catalog.json")
@@ -180,19 +184,41 @@ def request_json(url, attempts=4):
 
 
 def fetch_show(film):
-    params = {
-        "title": film["title"],
-        "output_language": OUTPUT_LANGUAGE,
-    }
-    url = f"{BASE_URL}/shows/search/title?{urllib.parse.urlencode(params)}"
-    payload = request_json(url)
-    results = extract_results(payload)
-    if not results:
-        raise RuntimeError("sin resultados")
-    best = max(results, key=lambda r: score_result(film, r))
-    if score_result(film, best) < 82:
-        raise RuntimeError(f"coincidencia dudosa: {best.get('title')} ({best.get('releaseYear')})")
-    return best
+    last_error = None
+    for search_country in SEARCH_COUNTRIES:
+        params = {
+            "title": film["title"],
+            "country": search_country,
+            "output_language": OUTPUT_LANGUAGE,
+        }
+        url = f"{BASE_URL}/shows/search/title?{urllib.parse.urlencode(params)}"
+        try:
+            payload = request_json(url)
+        except urllib.error.HTTPError as exc:
+            last_error = exc
+            # A 400 here is a request problem, not a title miss: surface it
+            # immediately instead of burning quota against every country.
+            if exc.code == 400:
+                raise
+            continue
+        except Exception as exc:
+            last_error = exc
+            continue
+
+        results = extract_results(payload)
+        if not results:
+            continue
+        best = max(results, key=lambda r: score_result(film, r))
+        score = score_result(film, best)
+        if score >= 82:
+            return best
+        last_error = RuntimeError(
+            f"coincidencia dudosa en {search_country.upper()}: "
+            f"{best.get('title')} ({best.get('releaseYear')})"
+        )
+    if last_error:
+        raise last_error
+    raise RuntimeError("sin resultados en los países de búsqueda")
 
 
 def load_existing():
@@ -258,6 +284,18 @@ def main():
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"\nCatálogo: {len(catalog)}/{len(films)} · errores nuevos: {len(errors)}")
+
+    # Do not let GitHub Actions show a misleading green run if the API request
+    # shape breaks again. A handful of unmatched classics is acceptable; a
+    # mostly empty catalog is not.
+    minimum_ok = max(50, int(len(films) * 0.50))
+    if len(catalog) < minimum_ok:
+        print(
+            f"ERROR: solo se construyeron {len(catalog)} de {len(films)} títulos; "
+            "no guardaré este catálogo como una actualización válida.",
+            file=sys.stderr,
+        )
+        sys.exit(4)
     print(f"Archivo: {OUTPUT_FILE}")
 
 

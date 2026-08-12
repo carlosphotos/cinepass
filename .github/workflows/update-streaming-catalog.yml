@@ -15,7 +15,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
 
     steps:
       - name: Descargar repositorio
@@ -28,7 +28,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Actualizar catálogo de las 264 películas
+      - name: Actualizar catálogo de las 264 películas (corregido)
         env:
           MOVIE_NIGHT_API_KEY: ${{ secrets.MOVIE_NIGHT_API_KEY }}
         run: python scripts/fetch_streaming_catalog.py
