@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T03:38:19.836456+00:00",
+  "generatedAt": "2026-08-12T04:09:28.377166+00:00",
   "defaultCountry": "MX",
   "availableCountries": [
     "MX",
@@ -96,6 +96,1327 @@
       "updatedAt": "2026-08-12T03:38:19.836456+00:00"
     }
   },
-  "errors": [],
+  "errors": [
+    {
+      "id": "film-001",
+      "title": "Jeanne Dielman, 23 Quai du Commerce, 1080 Bruxelles",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-002",
+      "title": "Vertigo",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-003",
+      "title": "Citizen Kane",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-004",
+      "title": "Tokyo Story",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-005",
+      "title": "In the Mood for Love",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-006",
+      "title": "2001: A Space Odyssey",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-007",
+      "title": "Beau travail",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-008",
+      "title": "Mulholland Dr.",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-009",
+      "title": "Man with a Movie Camera",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-010",
+      "title": "Singin' in the Rain",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-011",
+      "title": "Sunrise: A Song of Two Humans",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-012",
+      "title": "The Godfather",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-013",
+      "title": "La Règle du jeu",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-014",
+      "title": "Cléo from 5 to 7",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-015",
+      "title": "The Searchers",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-016",
+      "title": "Meshes of the Afternoon",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-017",
+      "title": "Close-up",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-018",
+      "title": "Persona",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-019",
+      "title": "Apocalypse Now",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-020",
+      "title": "Seven Samurai",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-021",
+      "title": "Late Spring",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-022",
+      "title": "The Passion of Joan of Arc",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-023",
+      "title": "Playtime",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-024",
+      "title": "Do the Right Thing",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-025",
+      "title": "Au hasard Balthazar",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-026",
+      "title": "The Night of the Hunter",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-027",
+      "title": "Shoah",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-028",
+      "title": "Daisies",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-029",
+      "title": "Taxi Driver",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-030",
+      "title": "Portrait of a Lady on Fire",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-031",
+      "title": "8 1/2",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-032",
+      "title": "Mirror",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-033",
+      "title": "Psycho",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-034",
+      "title": "L'Atalante",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-035",
+      "title": "Pather Panchali",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-036",
+      "title": "City Lights",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-037",
+      "title": "M",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-038",
+      "title": "Rear Window",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-039",
+      "title": "Some Like It Hot",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-040",
+      "title": "À bout de souffle",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-041",
+      "title": "Bicycle Thieves",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-042",
+      "title": "Rashomon",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-043",
+      "title": "Killer of Sheep",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-044",
+      "title": "Stalker",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-045",
+      "title": "Barry Lyndon",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-046",
+      "title": "North by Northwest",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-047",
+      "title": "The Battle of Algiers",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-048",
+      "title": "Ordet",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-049",
+      "title": "Wanda",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-050",
+      "title": "The 400 Blows",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-051",
+      "title": "The Piano",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-052",
+      "title": "Fear Eats the Soul",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-053",
+      "title": "News from Home",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-054",
+      "title": "Battleship Potemkin",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-055",
+      "title": "Blade Runner",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-056",
+      "title": "Le Mépris",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-057",
+      "title": "Sherlock Jr.",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-058",
+      "title": "The Apartment",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-059",
+      "title": "Sans Soleil",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-060",
+      "title": "Daughters of the Dust",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-061",
+      "title": "La dolce vita",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-062",
+      "title": "Moonlight",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-063",
+      "title": "Casablanca",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-064",
+      "title": "GoodFellas",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-065",
+      "title": "The Third Man",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-066",
+      "title": "Touki Bouki",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-067",
+      "title": "Andrei Rublev",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-068",
+      "title": "La Jetée",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-069",
+      "title": "Metropolis",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-070",
+      "title": "The Gleaners and I",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-071",
+      "title": "The Red Shoes",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-072",
+      "title": "Journey to Italy",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-073",
+      "title": "L'avventura",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-074",
+      "title": "My Neighbour Totoro",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-075",
+      "title": "Imitation of Life",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-076",
+      "title": "Sansho the Bailiff",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-077",
+      "title": "Spirited Away",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-078",
+      "title": "A Brighter Summer Day",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-079",
+      "title": "A Matter of Life and Death",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-080",
+      "title": "Céline and Julie Go Boating",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-081",
+      "title": "Histoire(s) du Cinéma",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-082",
+      "title": "Modern Times",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-083",
+      "title": "Sunset Blvd.",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-084",
+      "title": "Sátántangó",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-085",
+      "title": "Blue Velvet",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-086",
+      "title": "Pierrot le fou",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-087",
+      "title": "The Spirit of the Beehive",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-088",
+      "title": "Chungking Express",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-089",
+      "title": "The Shining",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-090",
+      "title": "Madame de...",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-091",
+      "title": "Parasite",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-092",
+      "title": "The Leopard",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-093",
+      "title": "Ugetsu Monogatari",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-094",
+      "title": "Yi Yi",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-095",
+      "title": "A Man Escaped",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-096",
+      "title": "Black Girl",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-097",
+      "title": "Get Out",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-098",
+      "title": "Once upon a Time in the West",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-099",
+      "title": "The General",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-100",
+      "title": "Tropical Malady",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-101",
+      "title": "Rio Bravo",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-102",
+      "title": "The House Is Black",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-103",
+      "title": "Vagabond",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-104",
+      "title": "Come and See",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-105",
+      "title": "Jaws",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-106",
+      "title": "La Maman et la Putain",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-107",
+      "title": "Bringing Up Baby",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-108",
+      "title": "Goodbye, Dragon Inn",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-109",
+      "title": "The Godfather Part II",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-110",
+      "title": "The Man Who Shot Liberty Valance",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-111",
+      "title": "The Wizard of Oz",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-112",
+      "title": "Touch of Evil",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-113",
+      "title": "Wild Strawberries",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-114",
+      "title": "A Woman under the Influence",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-115",
+      "title": "Don't Look Now",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-116",
+      "title": "Nashville",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-117",
+      "title": "To Be or Not to Be",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-118",
+      "title": "Aguirre, Wrath of God",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-119",
+      "title": "The Conformist",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-120",
+      "title": "The Texas Chain Saw Massacre",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-121",
+      "title": "The Thing",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-122",
+      "title": "Johnny Guitar",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-123",
+      "title": "Only Angels Have Wings",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-124",
+      "title": "The Colour of Pomegranates",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-125",
+      "title": "The Matrix",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-126",
+      "title": "The Umbrellas of Cherbourg",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-127",
+      "title": "There Will Be Blood",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-128",
+      "title": "The Ascent",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-129",
+      "title": "Fanny and Alexander",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-130",
+      "title": "His Girl Friday",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-131",
+      "title": "Pulp Fiction",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-132",
+      "title": "Raging Bull",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-133",
+      "title": "It's a Wonderful Life",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-134",
+      "title": "Lawrence of Arabia",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-135",
+      "title": "Notorious",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-136",
+      "title": "All That Heaven Allows",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-137",
+      "title": "Gertrud",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-138",
+      "title": "La ciénaga",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-139",
+      "title": "Les Enfants du paradis",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-140",
+      "title": "Partie de campagne",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-141",
+      "title": "Pickpocket",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-142",
+      "title": "Sambizanga",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-143",
+      "title": "The Seventh Seal",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-144",
+      "title": "The Wild Bunch",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-145",
+      "title": "Trouble in Paradise",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-146",
+      "title": "Alien",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-147",
+      "title": "Chinatown",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-148",
+      "title": "India Song",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-149",
+      "title": "La Grande Illusion",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-150",
+      "title": "The Watermelon Woman",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-151",
+      "title": "Vampyr",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-152",
+      "title": "Days of Heaven",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-153",
+      "title": "Le Bonheur",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-154",
+      "title": "Meghe Dhaka Tara",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-155",
+      "title": "Twin Peaks: The Return",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-156",
+      "title": "West Indies: The Fugitive Slaves of Liberty",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-157",
+      "title": "A City of Sadness",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-158",
+      "title": "All about My Mother",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-159",
+      "title": "Amarcord",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-160",
+      "title": "Ikiru",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-161",
+      "title": "Los olvidados",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-162",
+      "title": "Once upon a Time in America",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-163",
+      "title": "Orlando",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-164",
+      "title": "Out of the Past",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-165",
+      "title": "The Gospel According to St. Matthew",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-166",
+      "title": "Vivre sa vie",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-167",
+      "title": "West of the Tracks",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-168",
+      "title": "Where Is the Friend's House?",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-169",
+      "title": "Black Narcissus",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-170",
+      "title": "Charulata",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-171",
+      "title": "Heat",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-172",
+      "title": "Hiroshima mon amour",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-173",
+      "title": "L'Argent",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-174",
+      "title": "Last Year at Marienbad",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-175",
+      "title": "Letter from an Unknown Woman",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-176",
+      "title": "Memories of Underdevelopment",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-177",
+      "title": "Out 1",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-178",
+      "title": "Red Desert",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-179",
+      "title": "Symbiopsychotaxiplasm: Take One",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-180",
+      "title": "The Exterminating Angel",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-181",
+      "title": "The Good, the Bad and the Ugly",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-182",
+      "title": "The Magnificent Ambersons",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-183",
+      "title": "Un chien andalou",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-184",
+      "title": "Under the Skin",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-185",
+      "title": "An Autumn Afternoon",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-186",
+      "title": "Greed",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-187",
+      "title": "Les Demoiselles de Rochefort",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-188",
+      "title": "Love Streams",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-189",
+      "title": "Magnolia",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-190",
+      "title": "Paris, Texas",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-191",
+      "title": "Pyaasa",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-192",
+      "title": "Ran",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-193",
+      "title": "The Birds",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-194",
+      "title": "The River",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-195",
+      "title": "Wings of Desire",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-196",
+      "title": "Double Indemnity",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-197",
+      "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-198",
+      "title": "I Know Where I'm Going!",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-199",
+      "title": "L' eclisse",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-200",
+      "title": "Mad Max: Fury Road",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-201",
+      "title": "Nosferatu",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-202",
+      "title": "One Way or Another",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-203",
+      "title": "Paisan",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-204",
+      "title": "Paris Is Burning",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-205",
+      "title": "The Headless Woman",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-206",
+      "title": "The Life and Death of Colonel Blimp",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-207",
+      "title": "The Tree of Life",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-208",
+      "title": "Uncle Boonmee Who Can Recall His Past Lives",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-209",
+      "title": "Wavelength",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-210",
+      "title": "Zama",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-211",
+      "title": "All about Eve",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-212",
+      "title": "Army of Shadows",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-213",
+      "title": "Brief Encounter",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-214",
+      "title": "By the Bluest of Seas",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-215",
+      "title": "Duck Soup",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-216",
+      "title": "In a Lonely Place",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-217",
+      "title": "Limite",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-218",
+      "title": "Melancholia",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-219",
+      "title": "Pink Flamingos",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-220",
+      "title": "Raiders of the Lost Ark",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-221",
+      "title": "Suspiria",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-222",
+      "title": "The Deer Hunter",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-223",
+      "title": "Twenty Years Later",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-224",
+      "title": "Twin Peaks: Fire Walk With Me",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-225",
+      "title": "A Touch of Zen",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-226",
+      "title": "As I Was Moving Ahead, Occasionally I Saw Brief Glimpses of Beauty",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-227",
+      "title": "Blue",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-228",
+      "title": "Crash",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-229",
+      "title": "Cries and Whispers",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-230",
+      "title": "Europa '51",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-231",
+      "title": "Flowers of Shanghai",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-232",
+      "title": "Grave of the Fireflies",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-233",
+      "title": "Happy Together",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-234",
+      "title": "Harlan County USA",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-235",
+      "title": "Intolerance",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-236",
+      "title": "Je, tu, il, elle",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-237",
+      "title": "Napoléon",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-238",
+      "title": "Petite maman",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-239",
+      "title": "Star Wars",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-240",
+      "title": "The Crowd",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-241",
+      "title": "The Green Ray",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-242",
+      "title": "The Hour of the Furnaces",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-243",
+      "title": "A Canterbury Tale",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-244",
+      "title": "A Clockwork Orange",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-245",
+      "title": "Annie Hall",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-246",
+      "title": "Born in Flames",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-247",
+      "title": "Distant Voices, Still Lives",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-248",
+      "title": "Earth",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-249",
+      "title": "In Vanda's Room",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-250",
+      "title": "Morvern Callar",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-251",
+      "title": "Mouchette",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-252",
+      "title": "My Darling Clementine",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-253",
+      "title": "Nostalgia for the Light",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-254",
+      "title": "Pandora's Box",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-255",
+      "title": "Possession",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-256",
+      "title": "Soleil Ô",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-257",
+      "title": "Sullivan's Travels",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-258",
+      "title": "Syndromes and a Century",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-259",
+      "title": "Taste of Cherry",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-260",
+      "title": "The Intruder",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-261",
+      "title": "The Last Laugh",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-262",
+      "title": "The Quince Tree Sun",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-263",
+      "title": "Videodrome",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "film-264",
+      "title": "Werckmeister Harmonies",
+      "error": "HTTP Error 400: Bad Request"
+    }
+  ],
   "attribution": "Streaming availability data provided by Streaming Availability API by Movie of the Night."
 }
