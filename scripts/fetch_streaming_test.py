@@ -1,177 +1,82 @@
 #!/usr/bin/env python3
-import json
-import os
-import sys
-import urllib.parse
-import urllib.request
+import json, os, sys, urllib.parse, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-API_KEY = os.environ.get("MOVIE_NIGHT_API_KEY", "").strip()
+API_KEY=os.environ.get("MOVIE_NIGHT_API_KEY","").strip()
 if not API_KEY:
-    print("ERROR: MOVIE_NIGHT_API_KEY no está definido.", file=sys.stderr)
-    sys.exit(1)
+    print("ERROR: MOVIE_NIGHT_API_KEY no está definido.",file=sys.stderr);sys.exit(1)
 
-TITLE = "Do the Right Thing"
-YEAR = 1989
-COUNTRY = "mx"
-BASE_URL = "https://api.movieofthenight.com/v4"
+TITLE="Do the Right Thing"; YEAR=1989; BASE_URL="https://api.movieofthenight.com/v4"
+COUNTRIES={"MX":"es","US":"en","FR":"fr","ES":"es","CA":"en"}
 
-params = {
-    "title": TITLE,
-    "country": COUNTRY,
-    "show_type": "movie",
-    "output_language": "es",
-}
-url = f"{BASE_URL}/shows/search/title?{urllib.parse.urlencode(params)}"
-req = urllib.request.Request(
-    url,
-    headers={
-        "X-API-Key": API_KEY,
-        "Accept": "application/json",
-        "User-Agent": "ReelStub/0.1 (GitHub Actions test)",
-    },
-)
-
-try:
-    with urllib.request.urlopen(req, timeout=30) as response:
-        payload = json.loads(response.read().decode("utf-8"))
-except Exception as exc:
-    print(f"ERROR consultando Streaming Availability API: {exc}", file=sys.stderr)
-    sys.exit(2)
-
-# La API puede devolver una lista directamente o envolverla en un campo.
+def norm(v):return str(v or "").strip().casefold()
 def extract_results(obj):
-    if isinstance(obj, list):
-        return obj
-    if isinstance(obj, dict):
-        for key in ("shows", "results", "items"):
-            if isinstance(obj.get(key), list):
-                return obj[key]
-        # En caso de que el endpoint devuelva un único show.
-        if obj.get("title"):
-            return [obj]
+    if isinstance(obj,list):return obj
+    if isinstance(obj,dict):
+        for key in ("shows","results","items"):
+            if isinstance(obj.get(key),list):return obj[key]
+        if obj.get("title"):return [obj]
     return []
-
-results = extract_results(payload)
-if not results:
-    print("ERROR: la API respondió, pero no encontré resultados de películas.", file=sys.stderr)
-    print(json.dumps(payload, ensure_ascii=False, indent=2)[:4000], file=sys.stderr)
-    sys.exit(3)
-
-# Elegir primero coincidencia exacta de título + año; luego título exacto; finalmente el primer resultado.
-def norm(value):
-    return str(value or "").strip().casefold()
-
-wanted = norm(TITLE)
-show = next(
-    (r for r in results if norm(r.get("title")) == wanted and int(r.get("releaseYear") or 0) == YEAR),
-    None,
-)
-if show is None:
-    show = next((r for r in results if norm(r.get("title")) == wanted), None)
-if show is None:
-    show = results[0]
-
-# Elegir un póster vertical de resolución intermedia si está disponible.
 def first_url(value):
-    if isinstance(value, str):
-        return value
-    if isinstance(value, dict):
-        # La API suele ofrecer varios tamaños. Priorizamos ~360/480 para la web.
-        for key in ("w360", "360", "w480", "480", "w240", "240", "w600", "600", "w720", "720"):
-            v = value.get(key)
-            if isinstance(v, str):
-                return v
+    if isinstance(value,str):return value
+    if isinstance(value,dict):
+        for key in ("w360","360","w480","480","w240","240","w600","600","w720","720"):
+            if isinstance(value.get(key),str):return value[key]
         for v in value.values():
-            if isinstance(v, str) and v.startswith("http"):
-                return v
+            if isinstance(v,str) and v.startswith("http"):return v
     return None
+def poster_for(show):
+    images=show.get("imageSet") or show.get("images") or {}
+    if isinstance(images,dict):
+        for key in ("verticalPoster","verticalPosterUrl","poster","posterUrl"):
+            u=first_url(images.get(key))
+            if u:return u
+    for key in ("verticalPoster","poster","posterUrl","image"):
+        u=first_url(show.get(key))
+        if u:return u
+    return None
+def compact_options(show,country):
+    streaming=show.get("streamingOptions") or {}
+    opts=(streaming.get(country.lower()) or streaming.get(country.upper()) or []) if isinstance(streaming,dict) else streaming if isinstance(streaming,list) else []
+    out=[]
+    for opt in opts:
+        if not isinstance(opt,dict):continue
+        service=opt.get("service") or {}
+        if isinstance(service,str): name=sid=service;logo=None
+        else:
+            name=service.get("name") or service.get("id");sid=service.get("id");logo=None
+            image_set=service.get("imageSet") or service.get("images") or {}
+            if isinstance(image_set,dict):
+                for lk in ("lightThemeImage","darkThemeImage","whiteImage","logo"):
+                    logo=first_url(image_set.get(lk))
+                    if logo:break
+        price=opt.get("price")
+        if isinstance(price,dict):amount=price.get("amount") or price.get("value");currency=price.get("currency")
+        else:amount=price;currency=opt.get("currency")
+        out.append({"service":name,"serviceId":sid,"type":opt.get("type"),"link":opt.get("link") or opt.get("url"),"price":amount,"currency":currency,"quality":opt.get("quality"),"serviceLogo":logo})
+    return out
 
-images = show.get("imageSet") or show.get("images") or {}
-poster = None
-if isinstance(images, dict):
-    for key in ("verticalPoster", "verticalPosterUrl", "poster", "posterUrl"):
-        if key in images:
-            poster = first_url(images[key])
-            if poster:
-                break
-if not poster:
-    for key in ("verticalPoster", "poster", "posterUrl", "image"):
-        poster = first_url(show.get(key))
-        if poster:
-            break
+def fetch(country,language):
+    params={"title":TITLE,"country":country.lower(),"show_type":"movie","output_language":language}
+    req=urllib.request.Request(f"{BASE_URL}/shows/search/title?{urllib.parse.urlencode(params)}",headers={"X-API-Key":API_KEY,"Accept":"application/json","User-Agent":"ReelStub/0.2 (GitHub Actions test)"})
+    with urllib.request.urlopen(req,timeout=30) as response: payload=json.loads(response.read().decode("utf-8"))
+    results=extract_results(payload)
+    if not results:raise RuntimeError(f"Sin resultados para {country}")
+    wanted=norm(TITLE)
+    show=next((r for r in results if int(r.get("releaseYear") or 0)==YEAR and (norm(r.get("title"))==wanted or norm(r.get("originalTitle"))==wanted)),None)
+    if show is None:show=next((r for r in results if int(r.get("releaseYear") or 0)==YEAR),results[0])
+    return show
 
-streaming = show.get("streamingOptions") or {}
-mx_options = []
-if isinstance(streaming, dict):
-    mx_options = streaming.get(COUNTRY) or streaming.get(COUNTRY.upper()) or []
-elif isinstance(streaming, list):
-    mx_options = streaming
-
-# Convertir cada opción a un formato pequeño y estable para ReelStub.
-options = []
-for opt in mx_options if isinstance(mx_options, list) else []:
-    if not isinstance(opt, dict):
-        continue
-    service = opt.get("service") or {}
-    if isinstance(service, str):
-        service_name = service
-        service_id = service
-        service_logo = None
-    else:
-        service_name = service.get("name") or service.get("id")
-        service_id = service.get("id")
-        logo_set = service.get("imageSet") or service.get("images") or {}
-        service_logo = None
-        if isinstance(logo_set, dict):
-            for lk in ("lightThemeImage", "darkThemeImage", "whiteImage", "logo"):
-                service_logo = first_url(logo_set.get(lk))
-                if service_logo:
-                    break
-
-    price = opt.get("price")
-    if isinstance(price, dict):
-        price_value = price.get("amount") or price.get("value")
-        currency = price.get("currency")
-    else:
-        price_value = price
-        currency = opt.get("currency")
-
-    options.append({
-        "service": service_name,
-        "serviceId": service_id,
-        "type": opt.get("type"),
-        "link": opt.get("link") or opt.get("url"),
-        "price": price_value,
-        "currency": currency,
-        "quality": opt.get("quality"),
-        "serviceLogo": service_logo,
-    })
-
-output = {
-    "generatedAt": datetime.now(timezone.utc).isoformat(),
-    "country": COUNTRY.upper(),
-    "query": {"title": TITLE, "year": YEAR},
-    "movie": {
-        "id": show.get("id"),
-        "imdbId": show.get("imdbId"),
-        "tmdbId": show.get("tmdbId"),
-        "title": show.get("title"),
-        "originalTitle": show.get("originalTitle"),
-        "releaseYear": show.get("releaseYear"),
-        "overview": show.get("overview"),
-        "poster": poster,
-        "streamingOptions": options,
-    },
-    "attribution": "Streaming availability data provided by Streaming Availability API by Movie of the Night.",
-}
-
-out_path = Path("data/streaming-test.json")
-out_path.parent.mkdir(parents=True, exist_ok=True)
-out_path.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-print(f"OK: {output['movie']['title']} ({output['movie']['releaseYear']})")
-print(f"Póster: {'sí' if poster else 'no'}")
-print(f"Opciones MX: {len(options)}")
-print(f"Archivo: {out_path}")
+countries={};canonical=None
+for country,language in COUNTRIES.items():
+    try:
+        show=fetch(country,language);canonical=canonical or show
+        countries[country]={"localizedTitle":show.get("title"),"overview":show.get("overview"),"poster":poster_for(show),"streamingOptions":compact_options(show,country)}
+        print(f"OK {country}: {show.get('title')} · {len(countries[country]['streamingOptions'])} opciones")
+    except Exception as exc:
+        print(f"AVISO {country}: {exc}",file=sys.stderr);countries[country]={"localizedTitle":None,"overview":None,"poster":None,"streamingOptions":[]}
+if not canonical:sys.exit(2)
+output={"generatedAt":datetime.now(timezone.utc).isoformat(),"defaultCountry":"MX","availableCountries":list(COUNTRIES),"query":{"title":TITLE,"year":YEAR},"movie":{"id":canonical.get("id"),"imdbId":canonical.get("imdbId"),"tmdbId":canonical.get("tmdbId"),"title":TITLE,"originalTitle":canonical.get("originalTitle") or TITLE,"releaseYear":canonical.get("releaseYear")},"countries":countries,"attribution":"Streaming availability data provided by Streaming Availability API by Movie of the Night."}
+path=Path("data/streaming-test.json");path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+print(f"Archivo: {path}")

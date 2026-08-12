@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#f4efe3">
 <title>ReelStub — Admit One</title>
 <meta name="description" content="Raspa tu boleto de ReelStub y descubre la película de esta noche.">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=streaming-ui-1">
 </head>
 <body>
 <header class="topbar">
@@ -111,6 +111,36 @@
   </section>
   <p id="statusMsg" class="status-msg" role="status"></p>
 
+  <section id="streamingPanel" class="streaming-panel hidden" aria-live="polite">
+    <div class="streaming-card">
+      <div class="streaming-poster-wrap">
+        <img id="streamingPoster" class="streaming-poster" alt="" loading="lazy">
+      </div>
+      <div class="streaming-content">
+        <div class="streaming-head">
+          <div>
+            <p id="streamingEyebrow" class="streaming-eyebrow">DÓNDE VERLA</p>
+            <h3 id="streamingOriginalTitle">Do the Right Thing</h3>
+            <p id="streamingLocalTitle" class="streaming-local-title hidden"></p>
+          </div>
+          <label class="country-picker">
+            <span id="countryLabel">País</span>
+            <select id="countrySelect" aria-label="País">
+              <option value="MX">🇲🇽 México</option>
+              <option value="US">🇺🇸 Estados Unidos</option>
+              <option value="FR">🇫🇷 France</option>
+              <option value="ES">🇪🇸 España</option>
+              <option value="CA">🇨🇦 Canada</option>
+            </select>
+          </label>
+        </div>
+        <div id="streamingServices" class="streaming-services"></div>
+        <p id="streamingEmpty" class="streaming-empty hidden"></p>
+        <p id="streamingAttribution" class="streaming-attribution"></p>
+      </div>
+    </div>
+  </section>
+
   <details class="about-source name-story">
     <summary id="nameSummary">¿Por qué ReelStub?</summary>
     <p id="nameText"><em>Reel</em> hace referencia al rollo de película del cine tradicional, y <em>stub</em> al talón que queda de un boleto después de entrar a una función. ReelStub une ambas ideas: descubrir grandes películas y conservar un pequeño recuerdo de cada una que vas viendo.</p>
@@ -122,17 +152,33 @@
   </details>
 </main>
 
-<dialog id="libraryDialog" class="dialog"><div class="dialog-shell">
-<div class="dialog-head"><div><p id="libraryEyebrow" class="eyebrow">Mi pasaporte</p><h2 id="libraryTitle">Las 264 películas</h2></div><button id="closeLibraryBtn" class="close-btn">×</button></div>
-<div class="library-summary"><strong id="dialogProgress">0 vistas</strong><span id="dialogFavorites">0 favoritas</span></div>
-<div class="library-tools"><input id="searchInput" type="search" placeholder="Buscar película o director…"><select id="libraryFilter"><option value="all">Todas</option><option value="unwatched">Pendientes</option><option value="watched">Vistas</option><option value="favorites">Favoritas</option></select></div>
-<div id="filmList" class="film-list"></div></div></dialog>
+<dialog id="libraryDialog" class="dialog passport-dialog"><div class="dialog-shell passport-shell">
+<div class="dialog-head passport-head">
+  <div class="passport-heading-group"><span class="passport-emblem" aria-hidden="true">RS</span><div><p id="libraryEyebrow" class="eyebrow">Mi pasaporte</p><h2 id="libraryTitle">Las 264 películas</h2></div></div>
+  <button id="closeLibraryBtn" class="close-btn" aria-label="Cerrar">×</button>
+</div>
+<p id="passportIntro" class="passport-intro">Cada película vista se convierte en un talón coleccionable dentro de tu pasaporte.</p>
+<div class="library-summary passport-summary"><strong id="dialogProgress">0 vistas</strong><span id="dialogFavorites">0 favoritas</span></div>
+<div class="passport-stats" aria-label="Estadísticas">
+  <div class="passport-stat"><strong id="statWatched">0</strong><span id="statWatchedLabel">VISTAS</span></div>
+  <div class="passport-stat"><strong id="statFavorites">0</strong><span id="statFavoritesLabel">FAVORITAS</span></div>
+  <div class="passport-stat"><strong id="statDecades">0</strong><span id="statDecadesLabel">DÉCADAS</span></div>
+  <div class="passport-stat"><strong id="statTop25">0 / 26</strong><span id="statTop25Label">TOP 25</span></div>
+</div>
+<section class="passport-achievements" aria-labelledby="achievementsTitle">
+  <h3 id="achievementsTitle">Logros</h3>
+  <div id="achievementList" class="achievement-list"></div>
+</section>
+<div class="passport-divider"><span>REELSTUB · FILM PASSPORT</span></div>
+<div class="library-tools passport-tools"><input id="searchInput" type="search" placeholder="Buscar película o director…"><select id="libraryFilter"><option value="all">Todas</option><option value="unwatched">Pendientes</option><option value="watched">Vistas</option><option value="favorites">Favoritas</option></select></div>
+<div id="filmList" class="passport-grid"></div>
+</div></dialog>
 
 <dialog id="accountDialog" class="dialog small-dialog"><div class="dialog-shell">
 <div class="dialog-head"><div><p id="accountEyebrow" class="eyebrow">Cuenta</p><h2 id="accountName">ReelStub</h2></div><button id="closeAccountBtn" class="close-btn">×</button></div>
 <p id="accountEmail" class="account-email"></p><p id="accountCopy" class="account-copy">Tu progreso está sincronizado con esta cuenta.</p>
 <button id="logoutBtn" class="secondary-btn full">Cerrar sesión</button></div></dialog>
 
-<script src="films.js"></script><script src="firebase-config.js"></script><script src="app.js"></script>
+<script src="films.js"></script><script src="firebase-config.js"></script><script src="app.js?v=streaming-ui-1"></script>
 </body>
 </html>

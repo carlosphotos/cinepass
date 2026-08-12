@@ -18,11 +18,11 @@
       scratch:"RASPA PARA REVELAR", tonightFilm:"Película de esta noche", scratchToReveal:"Raspa para revelar", director:"Dir. ", rank:"PUESTO #",
       nameSummary:"¿Por qué ReelStub?", nameText:"Reel hace referencia al rollo de película del cine tradicional, y stub al talón que queda de un boleto después de entrar a una función. ReelStub une ambas ideas: descubrir grandes películas y conservar un pequeño recuerdo de cada una que vas viendo.",
       aboutSummary:"Acerca de la selección", aboutText:"La selección inicial de ReelStub corresponde a las 264 películas incluidas en el Top 250 de la encuesta de críticos de Sight & Sound 2022, conservando los empates del ranking.",
-      libraryEyebrow:"Mi pasaporte", libraryTitle:"Las 264 películas", search:"Buscar película o director…", filters:{all:"Todas",unwatched:"Pendientes",watched:"Vistas",favorites:"Favoritas"},
+      libraryEyebrow:"Mi pasaporte", libraryTitle:"Las 264 películas", passportIntro:"Cada película vista se convierte en un talón coleccionable dentro de tu pasaporte.", passportStamp:"VISTA", passportPending:"PENDIENTE", dateUnknown:"SIN FECHA", statsWatched:"VISTAS", statsFavorites:"FAVORITAS", statsDecades:"DÉCADAS", statsTop25:"TOP 25", achievements:"LOGROS", search:"Buscar película o director…", filters:{all:"Todas",unwatched:"Pendientes",watched:"Vistas",favorites:"Favoritas"},
       seenCount:n=>`${n} vistas`, favCount:n=>`${n} favoritas`, seen:"Vista ✓", markSeen:"Marcar vista", favorite:"Favorita",
       account:"Cuenta", accountCopy:"Tu progreso está sincronizado con esta cuenta.", logout:"Cerrar sesión",
       completed:"¡Completaste las 264! Puedes seguir revisando tu pasaporte.", markedSeen:"Marcada como vista ✓",
-      firebaseFail:"No se pudo iniciar Firebase. El modo invitado sigue funcionando.", synced:"Progreso sincronizado con tu cuenta.", configFirebase:"Primero pega la configuración de Firebase en firebase-config.js.", firebaseNotReady:"Firebase aún no está listo.", loginFail:"No se pudo iniciar sesión con Google.", loggedOut:"Sesión cerrada. Ahora estás en modo invitado."
+      whereToWatch:"DÓNDE VERLA", countryLabel:"País", streamingLoading:"Buscando disponibilidad…", streamingNone:"No encontramos opciones disponibles para este país.", subscription:"Incluida con suscripción", rent:"Renta", buy:"Compra", from:"desde", upTo:"hasta", openService:"Abrir", streamingSource:"Disponibilidad proporcionada por Streaming Availability API by Movie of the Night.", firebaseFail:"No se pudo iniciar Firebase. El modo invitado sigue funcionando.", synced:"Progreso sincronizado con tu cuenta.", configFirebase:"Primero pega la configuración de Firebase en firebase-config.js.", firebaseNotReady:"Firebase aún no está listo.", loginFail:"No se pudo iniciar sesión con Google.", loggedOut:"Sesión cerrada. Ahora estás en modo invitado.", badges:[{id:"first",title:"Primera función",desc:"1 película"},{id:"ten",title:"Diez boletos",desc:"10 películas"},{id:"time",title:"Viajero del tiempo",desc:"8 décadas"},{id:"fifty",title:"Media centena",desc:"50 películas"},{id:"century",title:"Club de las 100",desc:"100 películas"},{id:"top25",title:"Top 25 completo",desc:"Todos los puestos 1–25"},{id:"all",title:"Pasaporte completo",desc:"264 películas"}]
     },
     en:{
       heroEyebrow:"YOUR PERSONAL FILM LOTTERY", heroAdmit:"ADMIT ONE", heroLede:"Scratch to reveal tonight’s film.",
@@ -31,11 +31,11 @@
       scratch:"SCRATCH TO REVEAL", tonightFilm:"Tonight’s film", scratchToReveal:"Scratch to reveal", director:"Dir. ", rank:"RANK #",
       nameSummary:"Why ReelStub?", nameText:"Reel refers to the traditional roll of film used in cinema, while stub is the part of a ticket kept after admission. ReelStub brings both ideas together: discovering great films and keeping a small memento of each one you watch.",
       aboutSummary:"About the selection", aboutText:"ReelStub begins with the 264 films included in the Sight & Sound 2022 critics’ Top 250, preserving the ranking ties.",
-      libraryEyebrow:"My passport", libraryTitle:"The 264 films", search:"Search film or director…", filters:{all:"All",unwatched:"To watch",watched:"Watched",favorites:"Favorites"},
+      libraryEyebrow:"My passport", libraryTitle:"The 264 films", passportIntro:"Every film you watch becomes a collectible ticket stub inside your passport.", passportStamp:"WATCHED", passportPending:"TO WATCH", dateUnknown:"NO DATE", statsWatched:"WATCHED", statsFavorites:"FAVORITES", statsDecades:"DECADES", statsTop25:"TOP 25", achievements:"ACHIEVEMENTS", search:"Search film or director…", filters:{all:"All",unwatched:"To watch",watched:"Watched",favorites:"Favorites"},
       seenCount:n=>`${n} watched`, favCount:n=>`${n} favorites`, seen:"Watched ✓", markSeen:"Mark watched", favorite:"Favorite",
       account:"Account", accountCopy:"Your progress is synced with this account.", logout:"Sign out",
       completed:"You completed all 264! You can keep browsing your passport.", markedSeen:"Marked as watched ✓",
-      firebaseFail:"Firebase could not start. Guest mode still works.", synced:"Progress synced with your account.", configFirebase:"First add your Firebase configuration in firebase-config.js.", firebaseNotReady:"Firebase is not ready yet.", loginFail:"Could not sign in with Google.", loggedOut:"Signed out. You are now using guest mode."
+      whereToWatch:"WHERE TO WATCH", countryLabel:"Country", streamingLoading:"Checking availability…", streamingNone:"No viewing options were found for this country.", subscription:"Included with subscription", rent:"Rent", buy:"Buy", from:"from", upTo:"up to", openService:"Open", streamingSource:"Streaming availability provided by Streaming Availability API by Movie of the Night.", firebaseFail:"Firebase could not start. Guest mode still works.", synced:"Progress synced with your account.", configFirebase:"First add your Firebase configuration in firebase-config.js.", firebaseNotReady:"Firebase is not ready yet.", loginFail:"Could not sign in with Google.", loggedOut:"Signed out. You are now using guest mode.", badges:[{id:"first",title:"First screening",desc:"1 film"},{id:"ten",title:"Ten tickets",desc:"10 films"},{id:"time",title:"Time traveller",desc:"8 decades"},{id:"fifty",title:"Half century",desc:"50 films"},{id:"century",title:"The 100 club",desc:"100 films"},{id:"top25",title:"Top 25 complete",desc:"All ranks 1–25"},{id:"all",title:"Passport complete",desc:"264 films"}]
     },
     fr:{
       heroEyebrow:"VOTRE LOTERIE PERSONNELLE DE CINÉMA", heroAdmit:"UNE PLACE", heroLede:"Grattez pour découvrir le film de ce soir.",
@@ -44,11 +44,11 @@
       scratch:"GRATTEZ POUR RÉVÉLER", tonightFilm:"Film de ce soir", scratchToReveal:"Grattez pour révéler", director:"Réal. ", rank:"RANG #",
       nameSummary:"Pourquoi ReelStub ?", nameText:"Reel évoque la bobine de film du cinéma traditionnel, tandis que stub désigne la partie d’un billet que l’on conserve après l’entrée. ReelStub réunit ces deux idées : découvrir de grands films et garder un petit souvenir de chacun de ceux que vous regardez.",
       aboutSummary:"À propos de la sélection", aboutText:"La sélection initiale de ReelStub reprend les 264 films du Top 250 des critiques de Sight & Sound 2022, en conservant les ex æquo du classement.",
-      libraryEyebrow:"Mon passeport", libraryTitle:"Les 264 films", search:"Rechercher un film ou un réalisateur…", filters:{all:"Tous",unwatched:"À voir",watched:"Vus",favorites:"Favoris"},
+      libraryEyebrow:"Mon passeport", libraryTitle:"Les 264 films", passportIntro:"Chaque film vu devient un talon de billet à collectionner dans votre passeport.", passportStamp:"VU", passportPending:"À VOIR", dateUnknown:"SANS DATE", statsWatched:"VUS", statsFavorites:"FAVORIS", statsDecades:"DÉCENNIES", statsTop25:"TOP 25", achievements:"SUCCÈS", search:"Rechercher un film ou un réalisateur…", filters:{all:"Tous",unwatched:"À voir",watched:"Vus",favorites:"Favoris"},
       seenCount:n=>`${n} vus`, favCount:n=>`${n} favoris`, seen:"Vu ✓", markSeen:"Marquer comme vu", favorite:"Favori",
       account:"Compte", accountCopy:"Votre progression est synchronisée avec ce compte.", logout:"Se déconnecter",
       completed:"Vous avez terminé les 264 ! Vous pouvez continuer à parcourir votre passeport.", markedSeen:"Marqué comme vu ✓",
-      firebaseFail:"Impossible de démarrer Firebase. Le mode invité reste disponible.", synced:"Progression synchronisée avec votre compte.", configFirebase:"Ajoutez d’abord la configuration Firebase dans firebase-config.js.", firebaseNotReady:"Firebase n’est pas encore prêt.", loginFail:"Impossible de se connecter avec Google.", loggedOut:"Déconnecté. Vous êtes maintenant en mode invité."
+      whereToWatch:"OÙ LE VOIR", countryLabel:"Pays", streamingLoading:"Recherche des disponibilités…", streamingNone:"Aucune option de visionnage trouvée pour ce pays.", subscription:"Inclus avec l’abonnement", rent:"Location", buy:"Achat", from:"à partir de", upTo:"jusqu’à", openService:"Ouvrir", streamingSource:"Disponibilité fournie par Streaming Availability API by Movie of the Night.", firebaseFail:"Impossible de démarrer Firebase. Le mode invité reste disponible.", synced:"Progression synchronisée avec votre compte.", configFirebase:"Ajoutez d’abord la configuration Firebase dans firebase-config.js.", firebaseNotReady:"Firebase n’est pas encore prêt.", loginFail:"Impossible de se connecter avec Google.", loggedOut:"Déconnecté. Vous êtes maintenant en mode invité.", badges:[{id:"first",title:"Première séance",desc:"1 film"},{id:"ten",title:"Dix billets",desc:"10 films"},{id:"time",title:"Voyageur du temps",desc:"8 décennies"},{id:"fifty",title:"Demi-centaine",desc:"50 films"},{id:"century",title:"Le club des 100",desc:"100 films"},{id:"top25",title:"Top 25 terminé",desc:"Tous les rangs 1–25"},{id:"all",title:"Passeport complet",desc:"264 films"}]
     }
   };
   function initialLang(){
@@ -58,7 +58,12 @@
   let lang=initialLang();
   const t=(key)=>I18N[lang][key];
 
-  let state = { watched: [], favorites: [], currentId: null };
+  const SUPPORTED_COUNTRIES=["MX","US","FR","ES","CA"];
+  const DEFAULT_COUNTRY="MX";
+  const COUNTRY_LANG={MX:"es",ES:"es",US:"en",CA:"en",FR:"fr"};
+  const STREAM_TEST_MODE=new URLSearchParams(location.search).get("streamtest")==="1";
+  let streamingData=null;
+  let state = { watched: [], favorites: [], watchedDates: {}, currentId: null, country: DEFAULT_COUNTRY };
   let currentFilm = null;
   let user = null;
   let firebaseReady = false;
@@ -77,11 +82,12 @@
     nameSummary:$("nameSummary"), nameText:$("nameText"),
     aboutSummary:$("aboutSummary"), aboutText:$("aboutText"),
     library:$("libraryDialog"), closeLibrary:$("closeLibraryBtn"), list:$("filmList"),
-    libraryEyebrow:$("libraryEyebrow"), libraryTitle:$("libraryTitle"),
+    libraryEyebrow:$("libraryEyebrow"), libraryTitle:$("libraryTitle"), passportIntro:$("passportIntro"),
     search:$("searchInput"), filter:$("libraryFilter"), dialogProgress:$("dialogProgress"),
-    dialogFavorites:$("dialogFavorites"), account:$("accountDialog"), closeAccount:$("closeAccountBtn"),
+    dialogFavorites:$("dialogFavorites"), statWatched:$("statWatched"), statFavorites:$("statFavorites"), statDecades:$("statDecades"), statTop25:$("statTop25"), statWatchedLabel:$("statWatchedLabel"), statFavoritesLabel:$("statFavoritesLabel"), statDecadesLabel:$("statDecadesLabel"), statTop25Label:$("statTop25Label"), achievementsTitle:$("achievementsTitle"), achievementList:$("achievementList"), account:$("accountDialog"), closeAccount:$("closeAccountBtn"),
     accountEyebrow:$("accountEyebrow"), accountName:$("accountName"), accountEmail:$("accountEmail"),
-    accountCopy:$("accountCopy"), logout:$("logoutBtn")
+    accountCopy:$("accountCopy"), logout:$("logoutBtn"),
+    streamingPanel:$("streamingPanel"), streamingPoster:$("streamingPoster"), streamingEyebrow:$("streamingEyebrow"), streamingOriginalTitle:$("streamingOriginalTitle"), streamingLocalTitle:$("streamingLocalTitle"), countryLabel:$("countryLabel"), countrySelect:$("countrySelect"), streamingServices:$("streamingServices"), streamingEmpty:$("streamingEmpty"), streamingAttribution:$("streamingAttribution")
   };
 
   function applyLanguage(){
@@ -94,10 +100,13 @@
     document.querySelectorAll('[data-i18n="tonightsScreening"]').forEach(el=>el.textContent=t("tonightsScreening"));
     document.querySelectorAll('[data-i18n="oneFilmOneNight"]').forEach(el=>el.textContent=t("oneFilmOneNight"));
     refs.scratchHintText.textContent=t("scratch"); refs.nameSummary.textContent=t("nameSummary"); refs.nameText.textContent=t("nameText"); refs.aboutSummary.textContent=t("aboutSummary"); refs.aboutText.textContent=t("aboutText");
-    refs.libraryEyebrow.textContent=t("libraryEyebrow"); refs.libraryTitle.textContent=t("libraryTitle"); refs.search.placeholder=t("search");
+    refs.libraryEyebrow.textContent=t("libraryEyebrow"); refs.libraryTitle.textContent=t("libraryTitle"); refs.passportIntro.textContent=t("passportIntro"); refs.search.placeholder=t("search");
+    refs.statWatchedLabel.textContent=t("statsWatched"); refs.statFavoritesLabel.textContent=t("statsFavorites"); refs.statDecadesLabel.textContent=t("statsDecades"); refs.statTop25Label.textContent=t("statsTop25"); refs.achievementsTitle.textContent=t("achievements");
     [...refs.filter.options].forEach(o=>o.textContent=t("filters")[o.value]); refs.accountEyebrow.textContent=t("account"); refs.accountCopy.textContent=t("accountCopy"); refs.logout.textContent=t("logout");
     refs.progressCard?.setAttribute("aria-label", lang==="es"?"Progreso":lang==="fr"?"Progression":"Progress");
     refs.favoriteBtn?.setAttribute("aria-label",t("favorite"));
+    if(refs.streamingEyebrow) refs.streamingEyebrow.textContent=t("whereToWatch");
+    if(refs.countryLabel) refs.countryLabel.textContent=t("countryLabel");
     if(currentFilm){
       refs.title.textContent=currentFilm.title;
       refs.director.textContent=t("director")+currentFilm.director;
@@ -107,16 +116,25 @@
       refs.director.textContent=t("scratchToReveal");
     }
     updateProgress();
+    if(revealed) renderStreamingDetails();
     if(refs.library?.open) renderLibrary();
   }
   document.querySelectorAll(".lang-btn").forEach(btn=>btn.addEventListener("click",()=>{lang=btn.dataset.lang;localStorage.setItem(LANG_KEY,lang);applyLanguage();}));
 
   function cleanState(raw={}) {
     const valid = new Set(FILMS.map(f=>f.id));
+    const watched=[...new Set(raw.watched || [])].filter(x=>valid.has(x));
+    const watchedSet=new Set(watched);
+    const watchedDates={};
+    if(raw.watchedDates && typeof raw.watchedDates==="object") Object.entries(raw.watchedDates).forEach(([id,date])=>{
+      if(watchedSet.has(id) && /^\d{4}-\d{2}-\d{2}$/.test(String(date))) watchedDates[id]=String(date);
+    });
     return {
-      watched: [...new Set(raw.watched || [])].filter(x=>valid.has(x)),
+      watched,
       favorites: [...new Set(raw.favorites || [])].filter(x=>valid.has(x)),
-      currentId: valid.has(raw.currentId) ? raw.currentId : null
+      watchedDates,
+      currentId: valid.has(raw.currentId) ? raw.currentId : null,
+      country: SUPPORTED_COUNTRIES.includes(String(raw.country||"").toUpperCase()) ? String(raw.country).toUpperCase() : DEFAULT_COUNTRY
     };
   }
   function readGuest(){ try{return cleanState(JSON.parse(localStorage.getItem(GUEST_KEY)||"{}"))}catch{return cleanState({})} }
@@ -125,7 +143,7 @@
   async function saveState(){
     if(user && firebaseReady){
       await fbStore.setDoc(fbStore.doc(db,"users",user.uid), {
-        watched:state.watched, favorites:state.favorites, currentId:state.currentId,
+        watched:state.watched, favorites:state.favorites, watchedDates:state.watchedDates, currentId:state.currentId, country:state.country,
         updatedAt:fbStore.serverTimestamp()
       }, {merge:true});
     } else writeGuest();
@@ -151,7 +169,39 @@
     refs.no.textContent="No. "+String(Math.floor(Math.random()*999999)).padStart(6,"0");
     refs.favoriteBtn.textContent=state.favorites.includes(currentFilm.id)?"★":"☆";
     revealed=false;
+    hideStreamingDetails();
     resetScratch();
+  }
+
+  function todayLocal(){
+    const d=new Date(), y=d.getFullYear(), m=String(d.getMonth()+1).padStart(2,"0"), day=String(d.getDate()).padStart(2,"0");
+    return `${y}-${m}-${day}`;
+  }
+  function formatWatchDate(value){
+    if(!value)return t("dateUnknown");
+    const [y,m,d]=value.split("-").map(Number);
+    const date=new Date(y,m-1,d);
+    const locale=lang==="fr"?"fr-FR":lang==="en"?"en-US":"es-MX";
+    return new Intl.DateTimeFormat(locale,{day:"2-digit",month:"short",year:"numeric"}).format(date).replace(/\./g,"").toUpperCase();
+  }
+  function markWatched(id,withDate=true){
+    if(!state.watched.includes(id))state.watched.push(id);
+    if(withDate && !state.watchedDates[id])state.watchedDates[id]=todayLocal();
+  }
+  function unmarkWatched(id){
+    const i=state.watched.indexOf(id); if(i>=0)state.watched.splice(i,1);
+    delete state.watchedDates[id];
+  }
+  function updatePassportStats(){
+    if(!refs.statWatched)return;
+    const watchedFilms=FILMS.filter(f=>state.watched.includes(f.id));
+    const decades=new Set(watchedFilms.map(f=>Math.floor(f.year/10)*10));
+    const top25=FILMS.filter(f=>f.rank<=25);
+    const top25Seen=top25.filter(f=>state.watched.includes(f.id)).length;
+    refs.statWatched.textContent=state.watched.length; refs.statFavorites.textContent=state.favorites.length;
+    refs.statDecades.textContent=decades.size; refs.statTop25.textContent=`${top25Seen} / ${top25.length}`;
+    const unlocked={first:state.watched.length>=1,ten:state.watched.length>=10,time:decades.size>=8,fifty:state.watched.length>=50,century:state.watched.length>=100,top25:top25Seen===top25.length,all:state.watched.length===FILMS.length};
+    refs.achievementList.innerHTML=t("badges").map((b,i)=>`<div class="achievement-badge ${unlocked[b.id]?"unlocked":"locked"}"><span class="achievement-seal">${unlocked[b.id]?"✓":String(i+1).padStart(2,"0")}</span><span class="achievement-copy"><strong>${escapeHtml(b.title)}</strong><small>${escapeHtml(b.desc)}</small></span></div>`).join("");
   }
 
   function updateProgress(){
@@ -160,6 +210,7 @@
     refs.progressBar.style.width=pct+"%"; refs.progressPct.textContent=pct+"%";
     refs.dialogProgress.textContent=t("seenCount")(n);
     refs.dialogFavorites.textContent=t("favCount")(state.favorites.length);
+    updatePassportStats();
   }
 
   function showStatus(msg){ refs.status.textContent=msg; clearTimeout(showStatus.t); showStatus.t=setTimeout(()=>refs.status.textContent="",3500); }
@@ -195,11 +246,91 @@
   refs.canvas.addEventListener("pointerdown",e=>{drawing=true;refs.canvas.setPointerCapture(e.pointerId);scratchAt(e.clientX,e.clientY);strokes++});
   refs.canvas.addEventListener("pointermove",e=>{if(drawing){scratchAt(e.clientX,e.clientY);strokes++;if(strokes>28) reveal()}});
   ["pointerup","pointercancel","pointerleave"].forEach(ev=>refs.canvas.addEventListener(ev,()=>drawing=false));
-  function reveal(){ if(revealed)return; revealed=true;refs.hint.classList.add("done"); refs.canvas.style.transition="opacity .35s";refs.canvas.style.opacity="0";setTimeout(()=>{refs.canvas.style.pointerEvents="none"},360); }
+  function reveal(){ if(revealed)return; revealed=true;refs.hint.classList.add("done"); refs.canvas.style.transition="opacity .35s";refs.canvas.style.opacity="0";setTimeout(()=>{refs.canvas.style.pointerEvents="none"},360); renderStreamingDetails(); }
+
+
+  function isStreamingTestFilm(f){return !!f && f.title==="Do the Right Thing" && Number(f.year)===1989;}
+  function hideStreamingDetails(){
+    if(!refs.streamingPanel)return;
+    refs.streamingPanel.classList.add("hidden");
+    refs.streamingServices.innerHTML="";
+    refs.streamingEmpty.classList.add("hidden");
+  }
+  async function loadStreamingData(){
+    if(streamingData)return streamingData;
+    const response=await fetch("data/streaming-test.json",{cache:"no-cache"});
+    if(!response.ok)throw new Error(`streaming-test.json ${response.status}`);
+    streamingData=await response.json();
+    return streamingData;
+  }
+  function countryName(code){
+    const locale=lang==="fr"?"fr-FR":lang==="en"?"en-US":"es-MX";
+    try{return new Intl.DisplayNames([locale],{type:"region"}).of(code)||code}catch{return code}
+  }
+  function money(value,currency){
+    const num=Number(value); if(!Number.isFinite(num))return "";
+    const locale=lang==="fr"?"fr-FR":lang==="en"?"en-US":"es-MX";
+    try{return new Intl.NumberFormat(locale,{style:"currency",currency:currency||"MXN",maximumFractionDigits:0}).format(num)}catch{return `${num} ${currency||""}`.trim()}
+  }
+  function qualityRank(q){return ({sd:1,hd:2,uhd:3,4:3})[String(q||"").toLowerCase()]||0}
+  function groupStreamingOptions(options=[]){
+    const groups=new Map();
+    for(const opt of options){
+      if(!opt||opt.type==="addon")continue;
+      const key=opt.serviceId||opt.service||"service";
+      if(!groups.has(key))groups.set(key,{name:opt.service||key,logo:opt.serviceLogo||null,link:opt.link||null,offers:{subscription:[],rent:[],buy:[]}});
+      const g=groups.get(key); if(!g.logo&&opt.serviceLogo)g.logo=opt.serviceLogo;if(!g.link&&opt.link)g.link=opt.link;
+      if(g.offers[opt.type])g.offers[opt.type].push(opt);
+    }
+    return [...groups.values()];
+  }
+  function offerHtml(type,items){
+    if(!items?.length)return "";
+    if(type==="subscription")return `<span class="streaming-offer"><strong>${escapeHtml(t("subscription"))}</strong></span>`;
+    const prices=items.map(x=>Number(x.price)).filter(Number.isFinite).sort((a,b)=>a-b);
+    const cheapest=prices[0]; const currency=items.find(x=>Number.isFinite(Number(x.price)))?.currency||"MXN";
+    const qualities=[...new Set(items.map(x=>String(x.quality||"").toUpperCase()).filter(Boolean))].sort((a,b)=>qualityRank(a)-qualityRank(b));
+    const best=qualities.at(-1); const prefix=type==="rent"?t("rent"):t("buy"); const hasMultiple=[...new Set(prices)].length>1;
+    const price=Number.isFinite(cheapest)?`${type==="rent"&&hasMultiple?t("from")+" ":""}${money(cheapest,currency)}`:"";
+    const quality=best?`<span class="streaming-quality">${escapeHtml(t("upTo"))} ${escapeHtml(best)}</span>`:"";
+    return `<span class="streaming-offer"><strong>${escapeHtml(prefix)}</strong>${price?` · ${escapeHtml(price)}`:""}${quality}</span>`;
+  }
+  function renderStreamingPayload(payload){
+    const code=state.country||DEFAULT_COUNTRY;
+    refs.countrySelect.value=code;
+    const countryPayload=payload.countries?.[code] || (payload.country===code?{localizedTitle:payload.movie?.title,poster:payload.movie?.poster,streamingOptions:payload.movie?.streamingOptions||[]}:null);
+    refs.streamingOriginalTitle.textContent=payload.movie?.originalTitle||payload.query?.title||currentFilm?.title||"";
+    const localized=countryPayload?.localizedTitle||"";
+    const canShowLocalized=COUNTRY_LANG[code]===lang && localized && localized!==refs.streamingOriginalTitle.textContent;
+    refs.streamingLocalTitle.textContent=localized; refs.streamingLocalTitle.classList.toggle("hidden",!canShowLocalized);
+    if(countryPayload?.poster){refs.streamingPoster.src=countryPayload.poster;refs.streamingPoster.alt=refs.streamingOriginalTitle.textContent;}else{refs.streamingPoster.removeAttribute("src");refs.streamingPoster.alt="";}
+    const groups=groupStreamingOptions(countryPayload?.streamingOptions||[]);
+    refs.streamingServices.innerHTML=groups.map(g=>{
+      const brand=g.logo?`<img class="streaming-service-logo" src="${escapeHtml(g.logo)}" alt="${escapeHtml(g.name)}">`:`<span class="streaming-service-name">${escapeHtml(g.name)}</span>`;
+      const offers=offerHtml("subscription",g.offers.subscription)+offerHtml("rent",g.offers.rent)+offerHtml("buy",g.offers.buy);
+      const open=g.link?`<a class="streaming-open" href="${escapeHtml(g.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(t("openService"))}</a>`:"";
+      return `<article class="streaming-service"><div class="streaming-service-brand">${brand}</div><div class="streaming-offers">${offers}</div>${open}</article>`;
+    }).join("");
+    refs.streamingEmpty.textContent=t("streamingNone"); refs.streamingEmpty.classList.toggle("hidden",groups.length>0);
+    refs.streamingAttribution.textContent=payload.attribution||t("streamingSource");
+  }
+  async function renderStreamingDetails(){
+    if(!refs.streamingPanel||!revealed||!isStreamingTestFilm(currentFilm)){hideStreamingDetails();return;}
+    refs.streamingPanel.classList.remove("hidden");
+    refs.streamingOriginalTitle.textContent=currentFilm.title;
+    refs.streamingServices.innerHTML=`<div class="streaming-loading">${escapeHtml(t("streamingLoading"))}</div>`;
+    refs.streamingEmpty.classList.add("hidden"); refs.streamingAttribution.textContent="";
+    try{const payload=await loadStreamingData();if(!isStreamingTestFilm(currentFilm)||!revealed)return;renderStreamingPayload(payload)}
+    catch(err){console.warn(err);refs.streamingServices.innerHTML="";refs.streamingEmpty.textContent=t("streamingNone");refs.streamingEmpty.classList.remove("hidden")}
+  }
+  if(refs.countrySelect){
+    refs.countrySelect.value=state.country||DEFAULT_COUNTRY;
+    refs.countrySelect.addEventListener("change",async()=>{state.country=SUPPORTED_COUNTRIES.includes(refs.countrySelect.value)?refs.countrySelect.value:DEFAULT_COUNTRY;await saveState();if(revealed)renderStreamingDetails();});
+  }
 
   refs.watchedBtn.addEventListener("click",async()=>{
     if(!currentFilm)return;
-    if(!state.watched.includes(currentFilm.id)) state.watched.push(currentFilm.id);
+    markWatched(currentFilm.id,true);
     await saveState(); showStatus(t("markedSeen")); pickFilm(true); renderLibrary();
   });
   refs.anotherBtn.addEventListener("click",()=>pickFilm(true));
@@ -221,20 +352,37 @@
       if(filter==="favorites"&&!fav.has(f.id))return false;
       return true;
     }).sort((a,b)=>a.rank-b.rank||a.title.localeCompare(b.title));
-    refs.list.innerHTML=rows.map(f=>`
-      <div class="film-row" data-id="${f.id}">
-        <span class="film-rank">#${f.rank}</span>
-        <div class="film-name"><strong>${escapeHtml(f.title)}</strong><span>${f.year} · ${escapeHtml(f.director)}</span></div>
-        <button class="icon-btn fav-row" title="${escapeHtml(t("favorite"))}">${fav.has(f.id)?"★":"☆"}</button>
-        <button class="watch-toggle ${seen.has(f.id)?"on":""}">${seen.has(f.id)?t("seen"):t("markSeen")}</button>
-      </div>`).join("");
+
+    refs.list.innerHTML=rows.map(f=>{
+      const isSeen=seen.has(f.id), isFav=fav.has(f.id);
+      const serial=String(f.rank).padStart(3,"0")+"-"+String(FILMS.indexOf(f)+1).padStart(3,"0");
+      return `
+      <article class="passport-stub-card ${isSeen?"collected":"pending"}" data-id="${f.id}">
+        <div class="passport-stub-body">
+          <div class="passport-card-top"><span class="passport-mini-brand">REELSTUB</span><span class="passport-rank">#${f.rank}</span></div>
+          <div class="passport-card-main">
+            <div class="passport-film-copy">
+              <h3>${escapeHtml(f.title)}</h3>
+              <p>${f.year} · ${escapeHtml(f.director)}</p>
+            </div>
+            ${isSeen?`<span class="passport-stamp" aria-hidden="true"><b>${escapeHtml(t("passportStamp"))}</b><strong>${escapeHtml(formatWatchDate(state.watchedDates[f.id]))}</strong><small>REELSTUB</small></span>`:""}
+          </div>
+          <div class="passport-card-foot"><span>${isSeen?t("passportStamp"):t("passportPending")}</span><span>No. ${serial}</span></div>
+        </div>
+        <div class="passport-stub-side">
+          <span class="passport-side-label">RS</span>
+          <button class="icon-btn fav-row ${isFav?"on":""}" type="button" aria-label="${escapeHtml(t("favorite"))}" title="${escapeHtml(t("favorite"))}">${isFav?"★":"☆"}</button>
+          <button class="watch-toggle ${isSeen?"on":""}" type="button" aria-label="${escapeHtml(isSeen?t("seen"):t("markSeen"))}">${isSeen?"✓":"+"}</button>
+        </div>
+      </article>`;
+    }).join("");
     updateProgress();
   }
   function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
   refs.list.addEventListener("click",async e=>{
-    const row=e.target.closest(".film-row"); if(!row)return; const id=row.dataset.id;
+    const row=e.target.closest(".passport-stub-card"); if(!row)return; const id=row.dataset.id;
     if(e.target.closest(".watch-toggle")){
-      const i=state.watched.indexOf(id); if(i>=0)state.watched.splice(i,1);else state.watched.push(id);
+      const i=state.watched.indexOf(id); if(i>=0)unmarkWatched(id);else markWatched(id,true);
       await saveState();renderLibrary();
     } else if(e.target.closest(".fav-row")){
       const i=state.favorites.indexOf(id);if(i>=0)state.favorites.splice(i,1);else state.favorites.push(id);
@@ -276,7 +424,9 @@
     state=cleanState({
       watched:[...cloud.watched,...guest.watched],
       favorites:[...cloud.favorites,...guest.favorites],
-      currentId:cloud.currentId||guest.currentId
+      watchedDates:{...guest.watchedDates,...cloud.watchedDates},
+      currentId:cloud.currentId||guest.currentId,
+      country:cloud.country||guest.country||DEFAULT_COUNTRY
     });
     await saveState();loadCurrent();showStatus(t("synced"));
   }
@@ -293,6 +443,10 @@
 
   function loadCurrent(){
     updateProgress();
+    if(STREAM_TEST_MODE){
+      currentFilm=FILMS.find(f=>f.title==="Do the Right Thing"&&Number(f.year)===1989)||null;
+      if(currentFilm){state.currentId=currentFilm.id;renderFilm();return;}
+    }
     currentFilm=FILMS.find(f=>f.id===state.currentId&&!state.watched.includes(f.id))||null;
     if(currentFilm)renderFilm();else pickFilm();
   }

@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Consultar Do the Right Thing en México
+      - name: Consultar Do the Right Thing por país
         env:
           MOVIE_NIGHT_API_KEY: ${{ secrets.MOVIE_NIGHT_API_KEY }}
         run: python scripts/fetch_streaming_test.py
