@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#eeebe5">
 <title>ReelStub — Admit One</title>
 <meta name="description" content="Raspa tu boleto de ReelStub y descubre la película de esta noche.">
-<link rel="stylesheet" href="styles.css?v=mobile-vertical-ticket-v1">
+<link rel="stylesheet" href="styles.css?v=passport-nav-mobile-lock-v1">
 </head>
 <body>
 <header class="site-header">
@@ -195,11 +195,15 @@
 </div>
 <p id="passportIntro" class="passport-intro">Cada película vista se convierte en un talón coleccionable dentro de tu pasaporte.</p>
 <div class="library-summary passport-summary"><strong id="dialogProgress">0 vistas</strong><span id="dialogFavorites">0 favoritas</span></div>
-<div class="passport-stats" aria-label="Estadísticas">
-  <div class="passport-stat"><strong id="statWatched">0</strong><span id="statWatchedLabel">VISTAS</span></div>
-  <div class="passport-stat"><strong id="statFavorites">0</strong><span id="statFavoritesLabel">FAVORITAS</span></div>
-  <div class="passport-stat"><strong id="statDecades">0</strong><span id="statDecadesLabel">DÉCADAS</span></div>
-  <div class="passport-stat"><strong id="statTop25">0 / 26</strong><span id="statTop25Label">TOP 25</span></div>
+<div class="passport-nav-sticky">
+  <div class="passport-stats" aria-label="Estadísticas y vistas del pasaporte">
+    <button class="passport-stat active" type="button" data-passport-view="all"><strong id="statAll">264</strong><span id="statAllLabel">TODAS</span></button>
+    <button class="passport-stat" type="button" data-passport-view="watched"><strong id="statWatched">0</strong><span id="statWatchedLabel">VISTAS</span></button>
+    <button class="passport-stat" type="button" data-passport-view="favorites"><strong id="statFavorites">0</strong><span id="statFavoritesLabel">FAVORITAS</span></button>
+    <button class="passport-stat" type="button" data-passport-view="decades"><strong id="statDecades">0</strong><span id="statDecadesLabel">DÉCADAS</span></button>
+    <button class="passport-stat" type="button" data-passport-view="top25"><strong id="statTop25">0 / 26</strong><span id="statTop25Label">TOP 25</span></button>
+  </div>
+  <div id="passportDecadeNav" class="passport-decade-nav hidden" aria-label="Décadas"></div>
 </div>
 <section class="passport-achievements" aria-labelledby="achievementsTitle">
   <h3 id="achievementsTitle">Logros</h3>
@@ -215,6 +219,6 @@
 <p id="accountEmail" class="account-email"></p><p id="accountCopy" class="account-copy">Tu progreso está sincronizado con esta cuenta.</p>
 <button id="logoutBtn" class="secondary-btn full">Cerrar sesión</button></div></dialog>
 
-<script src="films.js"></script><script src="firebase-config.js"></script><script src="app.js?v=editorial-v3"></script>
+<script src="films.js"></script><script src="firebase-config.js"></script><script src="app.js?v=passport-nav-v1"></script>
 </body>
 </html>

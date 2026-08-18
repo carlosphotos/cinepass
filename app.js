@@ -18,7 +18,7 @@
       scratch:"RASPA PARA REVELAR", tonightFilm:"Película de esta noche", scratchToReveal:"Raspa para revelar", director:"Dir. ", rank:"PUESTO #",
       nameSummary:"¿Por qué ReelStub?", nameText:`<li><strong>Reel</strong><span>hace referencia al rollo de película del cine tradicional.</span></li><li><strong>Stub</strong><span>es el talón que queda de un boleto después de entrar a una función.</span></li><li><strong>ReelStub</strong><span>une ambas ideas: descubrir grandes películas y guardar un pequeño recuerdo de cada una.</span></li>`,
       aboutSummary:"Acerca de la selección", aboutText:"La selección inicial de ReelStub corresponde a las 264 películas incluidas en el Top 250 de la encuesta de críticos de Sight & Sound 2022, conservando los empates del ranking.", aboutDataSummary:"Datos y disponibilidad", aboutDataText:"La disponibilidad de streaming se consulta por país y puede cambiar con el tiempo. Los datos son proporcionados por Streaming Availability API by Movie of the Night.",
-      libraryEyebrow:"Mi pasaporte", libraryTitle:"Las 264 películas", passportIntro:"Cada película vista se convierte en un talón coleccionable dentro de tu pasaporte.", passportStamp:"VISTA", passportPending:"PENDIENTE", dateUnknown:"SIN FECHA", statsWatched:"VISTAS", statsFavorites:"FAVORITAS", statsDecades:"DÉCADAS", statsTop25:"TOP 25", achievements:"LOGROS", search:"Buscar película o director…", filters:{all:"Todas",unwatched:"Pendientes",watched:"Vistas",favorites:"Favoritas"},
+      libraryEyebrow:"Mi pasaporte", libraryTitle:"Las 264 películas", passportIntro:"Cada película vista se convierte en un talón coleccionable dentro de tu pasaporte.", passportStamp:"VISTA", passportPending:"PENDIENTE", dateUnknown:"SIN FECHA", statsAll:"TODAS", statsWatched:"VISTAS", statsFavorites:"FAVORITAS", statsDecades:"DÉCADAS", statsTop25:"TOP 25", achievements:"LOGROS", search:"Buscar película o director…", filters:{all:"Todas",unwatched:"Pendientes",watched:"Vistas",favorites:"Favoritas"},
       seenCount:n=>`${n} vistas`, favCount:n=>`${n} favoritas`, seen:"Vista ✓", markSeen:"Marcar vista", favorite:"Favorita",
       account:"Cuenta", accountCopy:"Tu progreso está sincronizado con esta cuenta.", logout:"Cerrar sesión",
       completed:"¡Completaste las 264! Puedes seguir revisando tu pasaporte.", markedSeen:"Marcada como vista ✓",
@@ -31,7 +31,7 @@
       scratch:"SCRATCH TO REVEAL", tonightFilm:"Tonight’s film", scratchToReveal:"Scratch to reveal", director:"Dir. ", rank:"RANK #",
       nameSummary:"Why ReelStub?", nameText:`<li><strong>Reel</strong><span>refers to the roll of film traditionally used in cinema.</span></li><li><strong>Stub</strong><span>is the part of a ticket you keep after entering a screening.</span></li><li><strong>ReelStub</strong><span>brings both ideas together: discovering great films and keeping a small memento of each one.</span></li>`,
       aboutSummary:"About the selection", aboutText:"ReelStub begins with the 264 films included in the Sight & Sound 2022 critics’ Top 250, preserving the ranking ties.", aboutDataSummary:"Data and availability", aboutDataText:"Streaming availability is checked by country and can change over time. Data is provided by Streaming Availability API by Movie of the Night.",
-      libraryEyebrow:"My passport", libraryTitle:"The 264 films", passportIntro:"Every film you watch becomes a collectible ticket stub inside your passport.", passportStamp:"WATCHED", passportPending:"TO WATCH", dateUnknown:"NO DATE", statsWatched:"WATCHED", statsFavorites:"FAVORITES", statsDecades:"DECADES", statsTop25:"TOP 25", achievements:"ACHIEVEMENTS", search:"Search film or director…", filters:{all:"All",unwatched:"To watch",watched:"Watched",favorites:"Favorites"},
+      libraryEyebrow:"My passport", libraryTitle:"The 264 films", passportIntro:"Every film you watch becomes a collectible ticket stub inside your passport.", passportStamp:"WATCHED", passportPending:"TO WATCH", dateUnknown:"NO DATE", statsAll:"ALL", statsWatched:"WATCHED", statsFavorites:"FAVORITES", statsDecades:"DECADES", statsTop25:"TOP 25", achievements:"ACHIEVEMENTS", search:"Search film or director…", filters:{all:"All",unwatched:"To watch",watched:"Watched",favorites:"Favorites"},
       seenCount:n=>`${n} watched`, favCount:n=>`${n} favorites`, seen:"Watched ✓", markSeen:"Mark watched", favorite:"Favorite",
       account:"Account", accountCopy:"Your progress is synced with this account.", logout:"Sign out",
       completed:"You completed all 264! You can keep browsing your passport.", markedSeen:"Marked as watched ✓",
@@ -44,7 +44,7 @@
       scratch:"GRATTEZ POUR RÉVÉLER", tonightFilm:"Film de ce soir", scratchToReveal:"Grattez pour révéler", director:"Réal. ", rank:"RANG #",
       nameSummary:"Pourquoi ReelStub ?", nameText:`<li><strong>Reel</strong><span>fait référence à la bobine de film du cinéma traditionnel.</span></li><li><strong>Stub</strong><span>désigne la partie du billet que l’on conserve après être entré à une séance.</span></li><li><strong>ReelStub</strong><span>réunit ces deux idées : découvrir de grands films et garder un petit souvenir de chacun.</span></li>`,
       aboutSummary:"À propos de la sélection", aboutText:"La sélection initiale de ReelStub reprend les 264 films du Top 250 des critiques de Sight & Sound 2022, en conservant les ex æquo du classement.", aboutDataSummary:"Données et disponibilité", aboutDataText:"La disponibilité en streaming est consultée par pays et peut évoluer. Les données sont fournies par Streaming Availability API by Movie of the Night.",
-      libraryEyebrow:"Mon passeport", libraryTitle:"Les 264 films", passportIntro:"Chaque film vu devient un talon de billet à collectionner dans votre passeport.", passportStamp:"VU", passportPending:"À VOIR", dateUnknown:"SANS DATE", statsWatched:"VUS", statsFavorites:"FAVORIS", statsDecades:"DÉCENNIES", statsTop25:"TOP 25", achievements:"SUCCÈS", search:"Rechercher un film ou un réalisateur…", filters:{all:"Tous",unwatched:"À voir",watched:"Vus",favorites:"Favoris"},
+      libraryEyebrow:"Mon passeport", libraryTitle:"Les 264 films", passportIntro:"Chaque film vu devient un talon de billet à collectionner dans votre passeport.", passportStamp:"VU", passportPending:"À VOIR", dateUnknown:"SANS DATE", statsAll:"TOUS", statsWatched:"VUS", statsFavorites:"FAVORIS", statsDecades:"DÉCENNIES", statsTop25:"TOP 25", achievements:"SUCCÈS", search:"Rechercher un film ou un réalisateur…", filters:{all:"Tous",unwatched:"À voir",watched:"Vus",favorites:"Favoris"},
       seenCount:n=>`${n} vus`, favCount:n=>`${n} favoris`, seen:"Vu ✓", markSeen:"Marquer comme vu", favorite:"Favori",
       account:"Compte", accountCopy:"Votre progression est synchronisée avec ce compte.", logout:"Se déconnecter",
       completed:"Vous avez terminé les 264 ! Vous pouvez continuer à parcourir votre passeport.", markedSeen:"Marqué comme vu ✓",
@@ -109,6 +109,8 @@
   const STREAM_TEST_MODE=new URLSearchParams(location.search).get("streamtest")==="1";
   let streamingData=null;
   let passportPosterLoadStarted=false;
+  let passportView="all";
+  let passportDecade=null;
   let state = { watched: [], favorites: [], watchedDates: {}, currentId: null, country: DEFAULT_COUNTRY };
   let currentFilm = null;
   let user = null;
@@ -131,7 +133,7 @@
     library:$("libraryDialog"), closeLibrary:$("closeLibraryBtn"), list:$("filmList"),
     libraryEyebrow:$("libraryEyebrow"), libraryTitle:$("libraryTitle"), passportIntro:$("passportIntro"),
     search:$("searchInput"), filter:$("libraryFilter"), dialogProgress:$("dialogProgress"),
-    dialogFavorites:$("dialogFavorites"), statWatched:$("statWatched"), statFavorites:$("statFavorites"), statDecades:$("statDecades"), statTop25:$("statTop25"), statWatchedLabel:$("statWatchedLabel"), statFavoritesLabel:$("statFavoritesLabel"), statDecadesLabel:$("statDecadesLabel"), statTop25Label:$("statTop25Label"), achievementsTitle:$("achievementsTitle"), achievementList:$("achievementList"), account:$("accountDialog"), closeAccount:$("closeAccountBtn"),
+    dialogFavorites:$("dialogFavorites"), statAll:$("statAll"), statWatched:$("statWatched"), statFavorites:$("statFavorites"), statDecades:$("statDecades"), statTop25:$("statTop25"), statAllLabel:$("statAllLabel"), statWatchedLabel:$("statWatchedLabel"), statFavoritesLabel:$("statFavoritesLabel"), statDecadesLabel:$("statDecadesLabel"), statTop25Label:$("statTop25Label"), decadeNav:$("passportDecadeNav"), achievementsTitle:$("achievementsTitle"), achievementList:$("achievementList"), account:$("accountDialog"), closeAccount:$("closeAccountBtn"),
     accountEyebrow:$("accountEyebrow"), accountName:$("accountName"), accountEmail:$("accountEmail"),
     accountCopy:$("accountCopy"), logout:$("logoutBtn"),
     streamingPanel:$("streamingPanel"), streamingPoster:$("streamingPoster"), streamingEyebrow:$("streamingEyebrow"), streamingOriginalTitle:$("streamingOriginalTitle"), streamingLocalTitle:$("streamingLocalTitle"), countryLabel:$("countryLabel"), countrySelect:$("countrySelect"), streamingServices:$("streamingServices"), streamingEmpty:$("streamingEmpty"), streamingAttribution:$("streamingAttribution"),
@@ -150,7 +152,7 @@
     refs.scratchHintText.textContent=t("scratch"); refs.nameSummary.textContent=t("nameSummary"); refs.nameText.innerHTML=t("nameText"); refs.aboutSummary.textContent=t("aboutSummary"); refs.aboutText.textContent=t("aboutText");
     if(refs.aboutDataSummary) refs.aboutDataSummary.textContent=t("aboutDataSummary"); if(refs.aboutDataText) refs.aboutDataText.textContent=t("aboutDataText"); if(refs.aboutEyebrow) refs.aboutEyebrow.textContent=t("aboutEyebrow");
     refs.libraryEyebrow.textContent=t("libraryEyebrow"); refs.libraryTitle.textContent=t("libraryTitle"); refs.passportIntro.textContent=t("passportIntro"); refs.search.placeholder=t("search");
-    refs.statWatchedLabel.textContent=t("statsWatched"); refs.statFavoritesLabel.textContent=t("statsFavorites"); refs.statDecadesLabel.textContent=t("statsDecades"); refs.statTop25Label.textContent=t("statsTop25"); refs.achievementsTitle.textContent=t("achievements");
+    refs.statAllLabel.textContent=t("statsAll"); refs.statWatchedLabel.textContent=t("statsWatched"); refs.statFavoritesLabel.textContent=t("statsFavorites"); refs.statDecadesLabel.textContent=t("statsDecades"); refs.statTop25Label.textContent=t("statsTop25"); refs.achievementsTitle.textContent=t("achievements");
     [...refs.filter.options].forEach(o=>o.textContent=t("filters")[o.value]); refs.accountEyebrow.textContent=t("account"); refs.accountCopy.textContent=t("accountCopy"); refs.logout.textContent=t("logout");
     refs.progressCard?.setAttribute("aria-label", lang==="es"?"Progreso":lang==="fr"?"Progression":"Progress");
     refs.favoriteBtn?.setAttribute("aria-label",t("favorite"));
@@ -253,7 +255,7 @@
     const decades=new Set(watchedFilms.map(f=>Math.floor(f.year/10)*10));
     const top25=FILMS.filter(f=>f.rank<=25);
     const top25Seen=top25.filter(f=>state.watched.includes(f.id)).length;
-    refs.statWatched.textContent=state.watched.length; refs.statFavorites.textContent=state.favorites.length;
+    refs.statAll.textContent=FILMS.length; refs.statWatched.textContent=state.watched.length; refs.statFavorites.textContent=state.favorites.length;
     refs.statDecades.textContent=decades.size; refs.statTop25.textContent=`${top25Seen} / ${top25.length}`;
     const unlocked={first:state.watched.length>=1,ten:state.watched.length>=10,time:decades.size>=8,fifty:state.watched.length>=50,century:state.watched.length>=100,top25:top25Seen===top25.length,all:state.watched.length===FILMS.length};
     refs.achievementList.innerHTML=t("badges").map((b,i)=>`<div class="achievement-badge ${unlocked[b.id]?"unlocked":"locked"}"><span class="achievement-seal">${unlocked[b.id]?"✓":String(i+1).padStart(2,"0")}</span><span class="achievement-copy"><strong>${escapeHtml(b.title)}</strong><small>${escapeHtml(b.desc)}</small></span></div>`).join("");
@@ -445,17 +447,44 @@
     return streamingData?.films?.[film.id]?.poster || "";
   }
 
+  function renderDecadeNav(){
+    if(!refs.decadeNav)return;
+    const decades=[...new Set(FILMS.filter(f=>state.watched.includes(f.id)).map(f=>Math.floor(f.year/10)*10))].sort((a,b)=>a-b);
+    refs.decadeNav.classList.toggle("hidden",passportView!=="decades");
+    if(passportView!=="decades")return;
+    refs.decadeNav.innerHTML=`<button type="button" class="decade-chip ${passportDecade===null?"active":""}" data-decade="all">${escapeHtml(t("statsAll"))}</button>`+decades.map(d=>`<button type="button" class="decade-chip ${passportDecade===d?"active":""}" data-decade="${d}">${d}</button>`).join("");
+  }
+  function syncPassportNav(){
+    document.querySelectorAll("[data-passport-view]").forEach(btn=>btn.classList.toggle("active",btn.dataset.passportView===passportView));
+    renderDecadeNav();
+  }
+  function setPassportView(view,{scroll=true}={}){
+    passportView=view;
+    passportDecade=null;
+    if(["all","watched","favorites","unwatched"].includes(view)) refs.filter.value=view;
+    else refs.filter.value="all";
+    syncPassportNav();
+    renderLibrary();
+    if(scroll) document.querySelector(".passport-tools")?.scrollIntoView({behavior:"smooth",block:"start"});
+  }
   function renderLibrary(){
     if(!refs.list)return;
-    const q=refs.search.value.trim().toLowerCase(), filter=refs.filter.value;
+    const q=refs.search.value.trim().toLowerCase();
     const seen=new Set(state.watched), fav=new Set(state.favorites);
-    const rows=FILMS.filter(f=>{
+    let rows=FILMS.filter(f=>{
       if(q && !(f.title+" "+f.director).toLowerCase().includes(q))return false;
-      if(filter==="watched"&&!seen.has(f.id))return false;
-      if(filter==="unwatched"&&seen.has(f.id))return false;
-      if(filter==="favorites"&&!fav.has(f.id))return false;
+      if(passportView==="watched"&&!seen.has(f.id))return false;
+      if(passportView==="unwatched"&&seen.has(f.id))return false;
+      if(passportView==="favorites"&&!fav.has(f.id))return false;
+      if(passportView==="top25"&&f.rank>25)return false;
+      if(passportView==="decades"){
+        if(!seen.has(f.id))return false;
+        if(passportDecade!==null && Math.floor(f.year/10)*10!==passportDecade)return false;
+      }
       return true;
-    }).sort((a,b)=>a.rank-b.rank||a.title.localeCompare(b.title));
+    });
+    rows.sort(passportView==="decades"?(a,b)=>a.year-b.year||a.rank-b.rank||a.title.localeCompare(b.title):(a,b)=>a.rank-b.rank||a.title.localeCompare(b.title));
+    syncPassportNav();
 
     refs.list.innerHTML=rows.map(f=>{
       const isSeen=seen.has(f.id), isFav=fav.has(f.id);
@@ -506,9 +535,26 @@
     refs.closeAbout?.addEventListener("click",()=>refs.about.close());
     refs.about.addEventListener("click",e=>{if(e.target===refs.about)refs.about.close();});
   }
+  document.querySelector(".passport-stats")?.addEventListener("click",e=>{
+    const btn=e.target.closest("[data-passport-view]");
+    if(!btn)return;
+    setPassportView(btn.dataset.passportView);
+  });
+  refs.decadeNav?.addEventListener("click",e=>{
+    const btn=e.target.closest("[data-decade]");
+    if(!btn)return;
+    passportDecade=btn.dataset.decade==="all"?null:Number(btn.dataset.decade);
+    renderLibrary();
+    refs.list.scrollTop=0;
+  });
   refs.libraryBtn.addEventListener("click",()=>{renderLibrary();refs.library.showModal()});
   refs.closeLibrary.addEventListener("click",()=>refs.library.close());
-  refs.search.addEventListener("input",renderLibrary); refs.filter.addEventListener("change",renderLibrary);
+  refs.search.addEventListener("input",renderLibrary);
+  refs.filter.addEventListener("change",()=>{
+    passportView=refs.filter.value;
+    passportDecade=null;
+    renderLibrary();
+  });
 
   function firebaseConfigured(){ return FIREBASE.apiKey && !String(FIREBASE.apiKey).includes("PEGA_AQUI") && FIREBASE.projectId && !String(FIREBASE.projectId).includes("PEGA_AQUI"); }
   async function initFirebase(){
