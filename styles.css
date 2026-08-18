@@ -194,3 +194,694 @@ main{max-width:1080px;margin:auto;padding:48px 24px 72px}.hero{text-align:center
 .name-list strong{color:var(--red-dark);font:900 11px/1.35 Arial,sans-serif;letter-spacing:.08em;text-transform:none}
 .name-list span{color:#766b5e;font-size:12px;line-height:1.45}
 @media(max-width:560px){.name-list li{grid-template-columns:72px 1fr;gap:9px;padding:8px 4px}.name-list strong{font-size:10px}.name-list span{font-size:11px}}
+
+/* =========================================================
+   REELSTUB — EDITORIAL V2
+   Keep the ticket as the visual center; modernize everything
+   around it with flatter surfaces, quieter spacing and rules.
+   ========================================================= */
+html{scroll-behavior:smooth;background:#e9e5de}
+body{
+  background:linear-gradient(180deg,#eeebe5 0%,#e7e2da 100%);
+  color:var(--ink);
+}
+.site-header{
+  border-bottom:1px solid rgba(23,20,17,.16);
+  background:rgba(238,235,229,.86);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.topbar{
+  max-width:1180px;
+  height:64px;
+  padding:0 28px;
+  border-bottom:0;
+  gap:30px;
+}
+.brand{
+  gap:0;
+  font-size:21px;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:-.035em;
+}
+.brand-mark{display:none}
+.brand-wordmark{display:inline-flex;gap:8px;align-items:baseline}
+.brand-wordmark span:last-child{color:var(--red);letter-spacing:-.02em}
+.top-nav{display:flex;align-items:center;gap:22px;margin-right:auto}
+.top-nav a,.header-link{
+  padding:0;
+  border:0;
+  background:transparent;
+  color:#5f584f;
+  text-decoration:none;
+  font-size:11px;
+  font-weight:750;
+  letter-spacing:.02em;
+}
+.top-nav a:hover,.header-link:hover{color:var(--red-dark)}
+.top-actions{gap:14px}
+.login-btn{
+  border-radius:5px;
+  padding:9px 12px;
+  background:var(--ink);
+  color:#f6f1e8;
+  border:1px solid var(--ink);
+  font-size:11px;
+}
+.user-btn{width:34px;height:34px;border-radius:50%;padding:0}
+.lang-switch{
+  gap:0;
+  padding:0;
+  border:0;
+  background:transparent;
+  border-radius:0;
+}
+.lang-btn{
+  min-width:auto;
+  height:auto;
+  padding:3px 7px;
+  border-radius:0;
+  color:#8a8177;
+  font-size:9px;
+  letter-spacing:.08em;
+  border-left:1px solid rgba(23,20,17,.14);
+}
+.lang-btn:first-child{border-left:0}
+.lang-btn:hover{transform:none;color:var(--ink)}
+.lang-btn.active{background:transparent;color:var(--red-dark)}
+
+main{max-width:1180px;padding:0 28px 84px}
+.hero{
+  max-width:760px;
+  margin:0 auto;
+  padding:70px 0 26px;
+  text-align:center;
+}
+.eyebrow{
+  margin:0 0 16px;
+  color:#756c62;
+  font-size:9px;
+  letter-spacing:.24em;
+}
+.hero h1{
+  display:flex;
+  justify-content:center;
+  align-items:baseline;
+  gap:.12em;
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(52px,7vw,76px);
+  line-height:.92;
+  font-weight:900;
+  letter-spacing:-.06em;
+}
+.hero h1 span:last-child{color:var(--red)}
+.hero-admit{
+  margin:15px 0 0;
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:9px;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:.22em;
+}
+.lede{margin:9px auto 0;color:#71695f;font-size:13px}
+
+.progress-card{
+  max-width:760px;
+  margin:17px auto 12px;
+  padding:14px 0 0;
+  gap:14px;
+  border:0;
+  border-top:1px solid rgba(23,20,17,.18);
+  border-radius:0;
+  background:transparent;
+}
+.progress-number{font-size:12px}
+.progress-copy,.progress-pct{font-size:9px;letter-spacing:.03em}
+.progress-track{height:2px;background:rgba(23,20,17,.13);border-radius:0}
+.progress-track span{border-radius:0}
+
+/* The ticket remains the hero object, dead center. */
+.ticket-wrap{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:32px 0 56px;
+}
+.ticket{width:min(840px,calc(100% - 12px))}
+
+.actions{gap:9px;margin:0 auto 7px}
+.primary-btn,.secondary-btn{
+  min-width:132px;
+  padding:11px 15px;
+  border-radius:5px;
+  font-size:10px;
+  font-weight:850;
+  letter-spacing:.025em;
+}
+.secondary-btn{background:transparent;border-color:rgba(23,20,17,.25)}
+.status-msg{margin:8px 0 0;font-size:10px}
+
+/* Revealed title + availability: same center line as the ticket, no floating card. */
+.streaming-panel{max-width:840px;margin:58px auto 0}
+.streaming-card{
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  gap:28px;
+  padding:28px 0 30px;
+  border:0;
+  border-top:1px solid rgba(23,20,17,.22);
+  border-bottom:1px solid rgba(23,20,17,.12);
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+.streaming-poster-wrap{
+  border-radius:2px;
+  border:1px solid rgba(23,20,17,.12);
+  box-shadow:0 10px 26px rgba(48,35,23,.13);
+}
+.streaming-head{padding-bottom:16px;border-bottom:1px solid rgba(23,20,17,.15)}
+.streaming-eyebrow{font-size:8px;letter-spacing:.22em}
+.streaming-head h3{font-size:clamp(25px,3.4vw,36px)}
+.country-picker select{
+  min-width:172px;
+  padding:9px 28px 9px 9px;
+  border-radius:3px;
+  background:transparent;
+}
+.streaming-services{gap:0;margin-top:8px}
+.streaming-service{
+  grid-template-columns:92px minmax(0,1fr) auto;
+  gap:12px;
+  padding:12px 2px;
+  border:0;
+  border-top:1px solid rgba(23,20,17,.10);
+  border-radius:0;
+  background:transparent;
+}
+.streaming-service:first-child{border-top:0}
+.streaming-open,.trailer-fallback-button{
+  border-radius:3px;
+  padding:8px 10px;
+  background:transparent;
+}
+.streaming-attribution{margin-top:12px}
+
+/* About works like an editorial colophon, not another card. */
+.about-section{max-width:840px;margin:90px auto 0;padding-top:0}
+.about-rule{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  margin-bottom:26px;
+  color:#8b8176;
+  font:850 8px/1 Arial,sans-serif;
+  letter-spacing:.24em;
+}
+.about-rule:after{content:"";height:1px;flex:1;background:rgba(23,20,17,.17)}
+.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:54px;align-items:start}
+.about-source,.about-source + .about-source,.name-story{
+  max-width:none;
+  margin:0;
+  color:#6f665c;
+  text-align:left;
+  font-size:11px;
+}
+.about-source summary{
+  display:block;
+  padding:0 0 12px;
+  border:0;
+  border-bottom:1px solid rgba(23,20,17,.15);
+  color:var(--ink);
+  font:800 15px/1.2 Arial,sans-serif;
+  letter-spacing:-.01em;
+}
+.about-source summary:after{content:"+";float:right;color:var(--red);font-weight:500}
+.about-source[open] summary:after{content:"−"}
+.about-source p{margin:14px 0 0;line-height:1.65}
+.name-list{max-width:none;margin:8px 0 0;gap:0}
+.name-list li{
+  grid-template-columns:78px minmax(0,1fr);
+  gap:14px;
+  padding:10px 0;
+  border-top:1px solid rgba(23,20,17,.09);
+}
+.name-list li:first-child{border-top:0}
+.name-list strong{color:var(--red-dark);font-size:10px;letter-spacing:.045em}
+.name-list span{color:#6f665c;font-size:11px;line-height:1.5}
+
+@media(max-width:820px){
+  .topbar{padding:0 18px;gap:18px}
+  .top-nav{gap:14px}
+  main{padding-left:18px;padding-right:18px}
+}
+
+@media(max-width:720px){
+  .site-header{backdrop-filter:none;-webkit-backdrop-filter:none}
+  .topbar{
+    height:auto;
+    min-height:0;
+    padding:13px 14px 12px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:11px 16px;
+  }
+  .brand{width:100%;justify-content:center;font-size:20px}
+  .brand-wordmark{display:inline-flex!important;gap:8px}
+  .top-nav{display:none}
+  .top-actions{width:100%;justify-content:center;gap:11px;flex-wrap:wrap}
+  .header-link{display:inline-block!important;font-size:10px}
+  .login-btn{font-size:10px;padding:8px 10px}
+  .lang-switch{order:3;width:100%;justify-content:center}
+  .lang-btn{font-size:8.5px;padding:3px 9px}
+
+  main{padding:0 12px 58px}
+  .hero{padding:46px 0 20px}
+  .hero h1{font-size:clamp(48px,16vw,62px);gap:.11em}
+  .hero-admit{font-size:8px}
+  .lede{font-size:12px}
+  .progress-card{margin:17px 6px 8px;padding-top:11px}
+
+  .ticket-wrap{padding:28px 2px 46px}
+  .ticket{width:calc(100% - 4px)}
+  .actions{margin-top:4px}
+  .primary-btn,.secondary-btn{border-radius:4px}
+
+  .streaming-panel{margin-top:48px}
+  .streaming-card{
+    grid-template-columns:104px minmax(0,1fr);
+    gap:14px;
+    padding:22px 0 24px;
+  }
+  .streaming-head{display:block}
+  .country-picker{margin-top:13px}
+  .country-picker select{width:100%;min-width:0}
+  .streaming-service{grid-template-columns:1fr auto;gap:8px;padding:11px 0}
+  .streaming-service-brand{grid-column:1/3}
+
+  .about-section{margin-top:68px}
+  .about-grid{grid-template-columns:1fr;gap:30px}
+  .about-rule{margin-bottom:22px}
+  .about-source summary{font-size:14px}
+  .name-list li{grid-template-columns:72px minmax(0,1fr);gap:10px;padding:9px 0}
+}
+
+/* =========================================================
+   REELSTUB — EDITORIAL V3
+   Cleaner header, About as modal, permanent trailer button,
+   and a pilot editorial "Why watch it?" block.
+   ========================================================= */
+.top-actions{margin-left:auto}
+
+/* About is now a modal instead of a page section. */
+.about-dialog{
+  width:min(790px,calc(100% - 26px));
+  max-height:88vh;
+  border:1px solid rgba(23,20,17,.14);
+  border-radius:8px;
+  background:#f3eee5;
+  color:var(--ink);
+  box-shadow:0 28px 90px rgba(30,24,18,.28);
+}
+.about-dialog::backdrop{
+  background:rgba(30,27,23,.58);
+  backdrop-filter:blur(5px);
+  -webkit-backdrop-filter:blur(5px);
+}
+.about-modal-shell{padding:30px 32px 34px}
+.about-modal-head{
+  padding-bottom:22px;
+  border-bottom:1px solid rgba(23,20,17,.16);
+}
+.about-modal-head .eyebrow{margin:0 0 7px;color:#7f766d;font-size:8px;letter-spacing:.22em}
+.about-modal-head h2{
+  margin:0;
+  color:var(--ink);
+  font:900 36px/.95 Arial,Helvetica,sans-serif;
+  letter-spacing:-.055em;
+}
+.about-modal-head h2 span{margin-left:.12em;color:var(--red)}
+.about-dialog .close-btn{color:var(--ink);font-size:29px;opacity:.72}
+.about-dialog .close-btn:hover{opacity:1;color:var(--red-dark)}
+.about-modal-grid{display:grid;gap:28px;padding-top:28px}
+.about-modal-section{margin:0;padding:0;text-align:left;color:#6d645a}
+.about-modal-section + .about-modal-section{padding-top:24px;border-top:1px solid rgba(23,20,17,.11)}
+.about-modal-section h3{
+  margin:0 0 12px;
+  color:var(--ink);
+  font:850 15px/1.2 Arial,Helvetica,sans-serif;
+  letter-spacing:-.01em;
+}
+.about-modal-section p{max-width:680px;margin:0;font-size:11.5px;line-height:1.65}
+.about-dialog .name-story{max-width:none;color:inherit}
+.about-dialog .name-list{max-width:none;margin:4px 0 0}
+.about-dialog .name-list li{grid-template-columns:88px minmax(0,1fr);padding:10px 0}
+.about-data-section p{font-size:10.5px;color:#81776c}
+
+/* Film detail: trailer comes first and stays available even when no service does. */
+.film-detail-head{align-items:center}
+.trailer-primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  min-height:36px;
+  padding:10px 13px;
+  border:1px solid var(--red);
+  border-radius:4px;
+  background:var(--red);
+  color:#fffaf0;
+  text-decoration:none;
+  font:900 8px/1 Arial,sans-serif;
+  letter-spacing:.075em;
+  text-transform:uppercase;
+  transition:transform .15s ease,background .15s ease;
+}
+.trailer-primary:hover{background:var(--red-dark);transform:translateY(-1px)}
+
+.why-watch{
+  padding:21px 0 18px;
+  border-bottom:1px solid rgba(23,20,17,.13);
+}
+.why-watch h4{
+  margin:0 0 11px;
+  color:var(--ink);
+  font:850 14px/1.15 Arial,Helvetica,sans-serif;
+  letter-spacing:-.015em;
+}
+.why-watch-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.why-watch-list li{display:grid;grid-template-columns:92px minmax(0,1fr);gap:13px;align-items:start}
+.why-watch-list strong{
+  color:var(--red-dark);
+  font:850 8px/1.35 Arial,sans-serif;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.why-watch-list span{color:#665d54;font-size:11px;line-height:1.5}
+
+.availability-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:18px;
+  padding:19px 0 8px;
+}
+.availability-head .streaming-eyebrow{margin:0 0 3px}
+.availability-head .country-picker{align-items:flex-start}
+.streaming-empty{margin:11px 0 3px}
+
+@media(max-width:720px){
+  .top-actions{margin-left:0}
+  .about-modal-shell{padding:23px 20px 27px}
+  .about-modal-head h2{font-size:31px}
+  .about-modal-grid{gap:23px;padding-top:23px}
+  .about-dialog .name-list li{grid-template-columns:74px minmax(0,1fr);gap:10px}
+  .film-detail-head{display:block}
+  .trailer-primary{margin-top:13px;width:100%;min-height:34px}
+  .why-watch{padding:18px 0 15px}
+  .why-watch-list li{grid-template-columns:1fr;gap:3px}
+  .availability-head{display:block;padding-top:16px}
+  .availability-head .country-picker{margin-top:11px}
+}
+
+/* =========================================================
+   REELSTUB — readability + mobile ticket comfort patch
+   Larger type, looser spacing, and a less cramped ticket on phone.
+   ========================================================= */
+.top-nav a,.header-link{font-size:12px}
+.login-btn{font-size:12px;padding:10px 14px}
+.lang-btn{font-size:10px;padding:4px 8px}
+.eyebrow{font-size:10px}
+.hero-admit{font-size:10px}
+.lede{font-size:15px;line-height:1.5;max-width:620px}
+.progress-number{font-size:15px}
+.progress-copy,.progress-pct{font-size:11px}
+.primary-btn,.secondary-btn{font-size:12px;padding:13px 18px}
+.status-msg{font-size:12px}
+
+.streaming-eyebrow{font-size:9px}
+.streaming-local-title{font-size:12px}
+.streaming-head h3{font-size:clamp(29px,3.6vw,40px)}
+.country-picker label{font-size:9px}
+.country-picker select{font-size:14px}
+.streaming-service-name{font-size:12px}
+.streaming-offer{font-size:13px;line-height:1.45}
+.streaming-quality{font-size:10px}
+.streaming-open,.trailer-fallback-button{font-size:10px;padding:9px 12px}
+.streaming-empty{font-size:14px;line-height:1.5}
+.streaming-attribution{font-size:8px;line-height:1.45}
+.streaming-loading{font-size:14px}
+.trailer-primary{font-size:10px;padding:11px 15px}
+.why-watch h4{font-size:16px}
+.why-watch-list strong{font-size:9px}
+.why-watch-list span{font-size:13px;line-height:1.65}
+.about-modal-head h2{font-size:40px}
+.about-modal-section h3{font-size:17px}
+.about-modal-section p,.name-list span{font-size:13px;line-height:1.7}
+.name-list strong{font-size:11px}
+
+@media(max-width:720px){
+  .topbar{padding:14px 14px 13px;gap:12px 14px}
+  .brand{font-size:24px}
+  .header-link{font-size:11px}
+  .login-btn{font-size:11px;padding:9px 12px}
+  .lang-btn{font-size:10px;padding:4px 10px}
+
+  .hero{padding:42px 0 18px}
+  .eyebrow{font-size:10px;letter-spacing:.22em}
+  .hero h1{font-size:clamp(50px,17vw,68px)}
+  .hero-admit{font-size:10px;letter-spacing:.18em}
+  .lede{font-size:15px;line-height:1.55;max-width:34ch}
+  .progress-card{margin:18px 2px 10px;padding-top:13px}
+  .progress-number{font-size:15px}
+  .progress-copy,.progress-pct{font-size:11px}
+
+  .ticket-wrap{padding:26px 0 42px}
+  .ticket{
+    width:min(100%,540px);
+    grid-template-columns:34px 1fr 34px;
+    min-height:0;
+  }
+  .ticket-back{
+    width:calc(100% - 12px);
+    top:24px;
+    transform:translateX(-50%) translate(9px,12px) rotate(4deg);
+    opacity:.88;
+  }
+  .ticket-main{padding:8px 0}
+  .ticket-stub{padding:9px 2px;gap:7px}
+  .ticket-stub-left:before,.ticket-stub-right:after{width:14px}
+  .ticket-stub-left:before{left:-7px;background-size:14px 22px}
+  .ticket-stub-right:after{right:-7px;background-size:14px 22px}
+  .ticket-frame{
+    min-height:256px;
+    padding:17px 12px 15px;
+  }
+  .ticket-frame:before{border-width:2.4px}
+  .ticket-frame:after{inset:5px;border-width:1.4px}
+  .ticket-heading{margin-bottom:10px}
+  .ticket-logo{font-size:clamp(36px,13vw,52px);line-height:.92}
+  .ticket-stars:before{font-size:8px}
+  .admit-one{font-size:12px}
+  .reveal-card{
+    min-height:124px;
+    padding:14px 12px;
+    width:min(100%,520px);
+  }
+  .reveal-card h2{font-size:clamp(28px,8.8vw,36px);line-height:1.02}
+  .reveal-card p{font-size:13px}
+  .ticket-foot{font-size:7px;letter-spacing:.1em;margin-top:10px}
+  .stub-label,.stub-code,.stub-ticket{font-size:6.5px;letter-spacing:.09em}
+
+  .actions{max-width:460px;gap:10px;margin-top:6px}
+  .primary-btn,.secondary-btn{font-size:13px;padding:13px 16px}
+  .status-msg{font-size:12px}
+
+  .streaming-panel{margin-top:34px}
+  .streaming-card{
+    grid-template-columns:84px minmax(0,1fr);
+    gap:16px;
+    padding:20px 0 22px;
+  }
+  .streaming-poster-wrap{border-radius:4px}
+  .streaming-head h3{font-size:clamp(30px,9vw,38px);line-height:1.03}
+  .streaming-local-title{font-size:13px}
+  .trailer-primary{font-size:10px;min-height:40px;padding:12px 14px}
+  .why-watch h4{font-size:19px}
+  .why-watch-list{gap:10px}
+  .why-watch-list strong{font-size:10px}
+  .why-watch-list span{font-size:15px;line-height:1.65}
+  .availability-head .streaming-eyebrow{font-size:9px}
+  .country-picker label{font-size:9px}
+  .country-picker select{font-size:15px;padding:10px 28px 10px 10px}
+  .streaming-service{gap:10px;padding:13px 0}
+  .streaming-service-logo{max-width:86px;max-height:26px}
+  .streaming-service-name{font-size:13px}
+  .streaming-offers{gap:6px}
+  .streaming-offer{font-size:15px;line-height:1.45}
+  .streaming-quality{font-size:10px}
+  .streaming-open{font-size:10px;padding:9px 12px}
+  .streaming-empty{font-size:15px;line-height:1.55}
+  .trailer-fallback-copy{font-size:12px}
+  .streaming-attribution{font-size:8px;line-height:1.45}
+
+  .about-modal-head h2{font-size:34px}
+  .about-modal-section h3{font-size:16px}
+  .about-modal-section p,.name-list span{font-size:13px;line-height:1.68}
+}
+
+/* =========================================================
+   REELSTUB — MOBILE VERTICAL TICKET
+   Desktop keeps the classic horizontal ticket.
+   Phones switch to a portrait ticket with top/bottom stubs.
+   ========================================================= */
+@media(max-width:720px){
+  .ticket-wrap{
+    padding:30px 0 50px;
+    overflow:visible;
+  }
+
+  .ticket{
+    width:min(88vw,380px);
+    min-height:0;
+    grid-template-columns:1fr;
+    grid-template-rows:48px minmax(390px,auto) 48px;
+    transform:none;
+  }
+
+  .ticket-main{
+    grid-column:1;
+    grid-row:2;
+    padding:8px 9px;
+  }
+
+  .ticket-stub{
+    grid-column:1;
+    width:100%;
+    min-width:0;
+    padding:8px 18px;
+    flex-direction:row;
+    justify-content:space-between;
+    gap:10px;
+  }
+
+  .ticket-stub-left{
+    grid-row:1;
+    border-right:0;
+    border-bottom:1px dashed rgba(64,48,33,.36);
+  }
+
+  .ticket-stub-right{
+    grid-row:3;
+    border-left:0;
+    border-top:1px dashed rgba(64,48,33,.36);
+  }
+
+  .stub-label,
+  .stub-ticket,
+  .stub-code{
+    writing-mode:horizontal-tb;
+    text-orientation:mixed;
+    transform:none!important;
+    white-space:nowrap;
+    line-height:1;
+  }
+
+  .stub-label{font-size:7px;letter-spacing:.13em}
+  .stub-ticket{font-size:8px;letter-spacing:.10em}
+  .stub-code{font-size:8px;letter-spacing:.08em}
+  .stub-star{font-size:13px}
+
+  /* scalloped top and bottom edges */
+  .ticket-stub-left:before,
+  .ticket-stub-right:after{
+    top:auto;
+    bottom:auto;
+    left:0;
+    right:0;
+    width:100%;
+    height:14px;
+  }
+
+  .ticket-stub-left:before{
+    top:-7px;
+    background:
+      radial-gradient(circle at 11px 0,transparent 0 5px,var(--cream) 5.5px) 0 0/22px 14px repeat-x;
+  }
+
+  .ticket-stub-right:after{
+    bottom:-7px;
+    background:
+      radial-gradient(circle at 11px 14px,transparent 0 5px,var(--cream) 5.5px) 0 0/22px 14px repeat-x;
+  }
+
+  .ticket-frame{
+    min-height:390px;
+    padding:25px 19px 20px;
+    justify-content:center;
+  }
+
+  .ticket-heading{margin-bottom:19px}
+  .ticket-logo{font-size:clamp(45px,14vw,58px)}
+  .ticket-stars:before{font-size:8px}
+  .admit-one{font-size:13px}
+
+  .reveal-card{
+    width:100%;
+    min-height:205px;
+    padding:25px 18px;
+  }
+
+  .film-meta{
+    gap:10px;
+    font-size:8px;
+    letter-spacing:.15em;
+  }
+
+  .reveal-card h2{
+    max-width:280px;
+    margin:12px auto 8px;
+    font-size:clamp(29px,9vw,38px);
+    line-height:1.04;
+  }
+
+  .reveal-card p{font-size:13px}
+  .favorite-btn{right:9px;top:8px;font-size:27px}
+  .scratch-hint{padding:0 22px;text-align:center;font-size:9px;letter-spacing:.15em;line-height:1.35}
+  .ticket-foot{margin:17px 3px 0;font-size:7px;line-height:1.3}
+
+  .ticket-back{
+    top:42px;
+    width:min(88vw,380px);
+    transform:translateX(-50%) translate(12px,16px) rotate(4.5deg);
+    opacity:.82;
+  }
+
+  .ticket-back .ticket-frame{min-height:390px}
+  .ticket-back .back-ticket-copy{
+    width:84%;
+    margin-top:15px;
+    padding:18px 12px;
+    font-size:8px;
+    line-height:1.35;
+  }
+
+  .ticket-back .ticket-foot{margin-top:22px}
+}
+
+@media(max-width:390px){
+  .ticket,
+  .ticket-back{width:min(90vw,345px)}
+  .ticket{grid-template-rows:44px minmax(370px,auto) 44px}
+  .ticket-frame,.ticket-back .ticket-frame{min-height:370px}
+  .ticket-main{padding:7px}
+  .ticket-stub{padding:7px 14px}
+  .ticket-logo{font-size:43px}
+  .reveal-card{min-height:194px;padding:22px 14px}
+  .reveal-card h2{font-size:clamp(28px,9vw,34px)}
+}

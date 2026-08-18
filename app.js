@@ -12,43 +12,43 @@
   if(!localStorage.getItem(LANG_KEY) && localStorage.getItem(LEGACY_LANG_KEY)) localStorage.setItem(LANG_KEY, localStorage.getItem(LEGACY_LANG_KEY));
   const I18N = {
     es:{
-      heroEyebrow:"TU LOTERÍA PERSONAL DE CINE", heroAdmit:"UNA ENTRADA", heroLede:"Raspa para descubrir la película de esta noche.",
+      heroEyebrow:"TU LOTERÍA PERSONAL DE CINE", heroAdmit:"UNA ENTRADA", heroLede:"Raspa para descubrir la película de esta noche.", aboutNav:"Acerca de", aboutEyebrow:"ACERCA DE", filmDetailsEyebrow:"LA PELÍCULA", whyWatchTitle:"¿Por qué verla?", whyImportantLabel:"Por qué importa", whatToWatchLabel:"Qué observar",
       passport:"Mi pasaporte", login:"Entrar con Google", watched:"✓ Ya la vi", another:"↻ Dame otra", progressCopy:"películas vistas",
       admitOne:"UNA ENTRADA", ticketWord:"BOLETO", tonightsScreening:"FUNCIÓN DE ESTA NOCHE", oneFilmOneNight:"UNA PELÍCULA · UNA NOCHE",
       scratch:"RASPA PARA REVELAR", tonightFilm:"Película de esta noche", scratchToReveal:"Raspa para revelar", director:"Dir. ", rank:"PUESTO #",
       nameSummary:"¿Por qué ReelStub?", nameText:`<li><strong>Reel</strong><span>hace referencia al rollo de película del cine tradicional.</span></li><li><strong>Stub</strong><span>es el talón que queda de un boleto después de entrar a una función.</span></li><li><strong>ReelStub</strong><span>une ambas ideas: descubrir grandes películas y guardar un pequeño recuerdo de cada una.</span></li>`,
-      aboutSummary:"Acerca de la selección", aboutText:"La selección inicial de ReelStub corresponde a las 264 películas incluidas en el Top 250 de la encuesta de críticos de Sight & Sound 2022, conservando los empates del ranking.",
+      aboutSummary:"Acerca de la selección", aboutText:"La selección inicial de ReelStub corresponde a las 264 películas incluidas en el Top 250 de la encuesta de críticos de Sight & Sound 2022, conservando los empates del ranking.", aboutDataSummary:"Datos y disponibilidad", aboutDataText:"La disponibilidad de streaming se consulta por país y puede cambiar con el tiempo. Los datos son proporcionados por Streaming Availability API by Movie of the Night.",
       libraryEyebrow:"Mi pasaporte", libraryTitle:"Las 264 películas", passportIntro:"Cada película vista se convierte en un talón coleccionable dentro de tu pasaporte.", passportStamp:"VISTA", passportPending:"PENDIENTE", dateUnknown:"SIN FECHA", statsWatched:"VISTAS", statsFavorites:"FAVORITAS", statsDecades:"DÉCADAS", statsTop25:"TOP 25", achievements:"LOGROS", search:"Buscar película o director…", filters:{all:"Todas",unwatched:"Pendientes",watched:"Vistas",favorites:"Favoritas"},
       seenCount:n=>`${n} vistas`, favCount:n=>`${n} favoritas`, seen:"Vista ✓", markSeen:"Marcar vista", favorite:"Favorita",
       account:"Cuenta", accountCopy:"Tu progreso está sincronizado con esta cuenta.", logout:"Cerrar sesión",
       completed:"¡Completaste las 264! Puedes seguir revisando tu pasaporte.", markedSeen:"Marcada como vista ✓",
-      whereToWatch:"DÓNDE VERLA", countryLabel:"País", streamingLoading:"Buscando disponibilidad…", streamingNone:"No encontramos opciones disponibles para este país.", trailerFallback:"Mientras tanto, puedes buscar el tráiler en YouTube.", trailerButton:"Ver tráiler en YouTube", subscription:"Incluida con suscripción", free:"Gratis", rent:"Renta", buy:"Compra", from:"desde", qualityAvailable:"disponible", openService:"Abrir", streamingSource:"Disponibilidad proporcionada por Streaming Availability API by Movie of the Night.", firebaseFail:"No se pudo iniciar Firebase. El modo invitado sigue funcionando.", synced:"Progreso sincronizado con tu cuenta.", configFirebase:"Primero pega la configuración de Firebase en firebase-config.js.", firebaseNotReady:"Firebase aún no está listo.", loginFail:"No se pudo iniciar sesión con Google.", loggedOut:"Sesión cerrada. Ahora estás en modo invitado.", badges:[{id:"first",title:"Primera función",desc:"1 película"},{id:"ten",title:"Diez boletos",desc:"10 películas"},{id:"time",title:"Viajero del tiempo",desc:"8 décadas"},{id:"fifty",title:"Media centena",desc:"50 películas"},{id:"century",title:"Club de las 100",desc:"100 películas"},{id:"top25",title:"Top 25 completo",desc:"Todos los puestos 1–25"},{id:"all",title:"Pasaporte completo",desc:"264 películas"}]
+      whereToWatch:"DÓNDE VERLA", countryLabel:"País", streamingLoading:"Buscando disponibilidad…", streamingNone:"No encontramos opciones disponibles para este país.", trailerFallback:"", trailerButton:"Ver tráiler en YouTube", subscription:"Incluida con suscripción", free:"Gratis", rent:"Renta", buy:"Compra", from:"desde", qualityAvailable:"disponible", openService:"Abrir", streamingSource:"Disponibilidad proporcionada por Streaming Availability API by Movie of the Night.", firebaseFail:"No se pudo iniciar Firebase. El modo invitado sigue funcionando.", synced:"Progreso sincronizado con tu cuenta.", configFirebase:"Primero pega la configuración de Firebase en firebase-config.js.", firebaseNotReady:"Firebase aún no está listo.", loginFail:"No se pudo iniciar sesión con Google.", loggedOut:"Sesión cerrada. Ahora estás en modo invitado.", badges:[{id:"first",title:"Primera función",desc:"1 película"},{id:"ten",title:"Diez boletos",desc:"10 películas"},{id:"time",title:"Viajero del tiempo",desc:"8 décadas"},{id:"fifty",title:"Media centena",desc:"50 películas"},{id:"century",title:"Club de las 100",desc:"100 películas"},{id:"top25",title:"Top 25 completo",desc:"Todos los puestos 1–25"},{id:"all",title:"Pasaporte completo",desc:"264 películas"}]
     },
     en:{
-      heroEyebrow:"YOUR PERSONAL FILM LOTTERY", heroAdmit:"ADMIT ONE", heroLede:"Scratch to reveal tonight’s film.",
+      heroEyebrow:"YOUR PERSONAL FILM LOTTERY", heroAdmit:"ADMIT ONE", heroLede:"Scratch to reveal tonight’s film.", aboutNav:"About", aboutEyebrow:"ABOUT", filmDetailsEyebrow:"THE FILM", whyWatchTitle:"Why watch it?", whyImportantLabel:"Why it matters", whatToWatchLabel:"What to notice",
       passport:"My passport", login:"Sign in with Google", watched:"✓ Seen it", another:"↻ Another film", progressCopy:"films watched",
       admitOne:"ADMIT ONE", ticketWord:"TICKET", tonightsScreening:"TONIGHT'S SCREENING", oneFilmOneNight:"ONE FILM · ONE NIGHT",
       scratch:"SCRATCH TO REVEAL", tonightFilm:"Tonight’s film", scratchToReveal:"Scratch to reveal", director:"Dir. ", rank:"RANK #",
       nameSummary:"Why ReelStub?", nameText:`<li><strong>Reel</strong><span>refers to the roll of film traditionally used in cinema.</span></li><li><strong>Stub</strong><span>is the part of a ticket you keep after entering a screening.</span></li><li><strong>ReelStub</strong><span>brings both ideas together: discovering great films and keeping a small memento of each one.</span></li>`,
-      aboutSummary:"About the selection", aboutText:"ReelStub begins with the 264 films included in the Sight & Sound 2022 critics’ Top 250, preserving the ranking ties.",
+      aboutSummary:"About the selection", aboutText:"ReelStub begins with the 264 films included in the Sight & Sound 2022 critics’ Top 250, preserving the ranking ties.", aboutDataSummary:"Data and availability", aboutDataText:"Streaming availability is checked by country and can change over time. Data is provided by Streaming Availability API by Movie of the Night.",
       libraryEyebrow:"My passport", libraryTitle:"The 264 films", passportIntro:"Every film you watch becomes a collectible ticket stub inside your passport.", passportStamp:"WATCHED", passportPending:"TO WATCH", dateUnknown:"NO DATE", statsWatched:"WATCHED", statsFavorites:"FAVORITES", statsDecades:"DECADES", statsTop25:"TOP 25", achievements:"ACHIEVEMENTS", search:"Search film or director…", filters:{all:"All",unwatched:"To watch",watched:"Watched",favorites:"Favorites"},
       seenCount:n=>`${n} watched`, favCount:n=>`${n} favorites`, seen:"Watched ✓", markSeen:"Mark watched", favorite:"Favorite",
       account:"Account", accountCopy:"Your progress is synced with this account.", logout:"Sign out",
       completed:"You completed all 264! You can keep browsing your passport.", markedSeen:"Marked as watched ✓",
-      whereToWatch:"WHERE TO WATCH", countryLabel:"Country", streamingLoading:"Checking availability…", streamingNone:"No viewing options were found for this country.", trailerFallback:"In the meantime, you can look for the trailer on YouTube.", trailerButton:"Watch trailer on YouTube", subscription:"Included with subscription", free:"Free", rent:"Rent", buy:"Buy", from:"from", qualityAvailable:"available", openService:"Open", streamingSource:"Streaming availability provided by Streaming Availability API by Movie of the Night.", firebaseFail:"Firebase could not start. Guest mode still works.", synced:"Progress synced with your account.", configFirebase:"First add your Firebase configuration in firebase-config.js.", firebaseNotReady:"Firebase is not ready yet.", loginFail:"Could not sign in with Google.", loggedOut:"Signed out. You are now using guest mode.", badges:[{id:"first",title:"First screening",desc:"1 film"},{id:"ten",title:"Ten tickets",desc:"10 films"},{id:"time",title:"Time traveller",desc:"8 decades"},{id:"fifty",title:"Half century",desc:"50 films"},{id:"century",title:"The 100 club",desc:"100 films"},{id:"top25",title:"Top 25 complete",desc:"All ranks 1–25"},{id:"all",title:"Passport complete",desc:"264 films"}]
+      whereToWatch:"WHERE TO WATCH", countryLabel:"Country", streamingLoading:"Checking availability…", streamingNone:"No viewing options were found for this country.", trailerFallback:"", trailerButton:"Watch trailer on YouTube", subscription:"Included with subscription", free:"Free", rent:"Rent", buy:"Buy", from:"from", qualityAvailable:"available", openService:"Open", streamingSource:"Streaming availability provided by Streaming Availability API by Movie of the Night.", firebaseFail:"Firebase could not start. Guest mode still works.", synced:"Progress synced with your account.", configFirebase:"First add your Firebase configuration in firebase-config.js.", firebaseNotReady:"Firebase is not ready yet.", loginFail:"Could not sign in with Google.", loggedOut:"Signed out. You are now using guest mode.", badges:[{id:"first",title:"First screening",desc:"1 film"},{id:"ten",title:"Ten tickets",desc:"10 films"},{id:"time",title:"Time traveller",desc:"8 decades"},{id:"fifty",title:"Half century",desc:"50 films"},{id:"century",title:"The 100 club",desc:"100 films"},{id:"top25",title:"Top 25 complete",desc:"All ranks 1–25"},{id:"all",title:"Passport complete",desc:"264 films"}]
     },
     fr:{
-      heroEyebrow:"VOTRE LOTERIE PERSONNELLE DE CINÉMA", heroAdmit:"UNE PLACE", heroLede:"Grattez pour découvrir le film de ce soir.",
+      heroEyebrow:"VOTRE LOTERIE PERSONNELLE DE CINÉMA", heroAdmit:"UNE PLACE", heroLede:"Grattez pour découvrir le film de ce soir.", aboutNav:"À propos", aboutEyebrow:"À PROPOS", filmDetailsEyebrow:"LE FILM", whyWatchTitle:"Pourquoi le voir ?", whyImportantLabel:"Pourquoi il compte", whatToWatchLabel:"À observer",
       passport:"Mon passeport", login:"Continuer avec Google", watched:"✓ Déjà vu", another:"↻ Un autre film", progressCopy:"films vus",
       admitOne:"UNE PLACE", ticketWord:"BILLET", tonightsScreening:"SÉANCE DE CE SOIR", oneFilmOneNight:"UN FILM · UNE SOIRÉE",
       scratch:"GRATTEZ POUR RÉVÉLER", tonightFilm:"Film de ce soir", scratchToReveal:"Grattez pour révéler", director:"Réal. ", rank:"RANG #",
       nameSummary:"Pourquoi ReelStub ?", nameText:`<li><strong>Reel</strong><span>fait référence à la bobine de film du cinéma traditionnel.</span></li><li><strong>Stub</strong><span>désigne la partie du billet que l’on conserve après être entré à une séance.</span></li><li><strong>ReelStub</strong><span>réunit ces deux idées : découvrir de grands films et garder un petit souvenir de chacun.</span></li>`,
-      aboutSummary:"À propos de la sélection", aboutText:"La sélection initiale de ReelStub reprend les 264 films du Top 250 des critiques de Sight & Sound 2022, en conservant les ex æquo du classement.",
+      aboutSummary:"À propos de la sélection", aboutText:"La sélection initiale de ReelStub reprend les 264 films du Top 250 des critiques de Sight & Sound 2022, en conservant les ex æquo du classement.", aboutDataSummary:"Données et disponibilité", aboutDataText:"La disponibilité en streaming est consultée par pays et peut évoluer. Les données sont fournies par Streaming Availability API by Movie of the Night.",
       libraryEyebrow:"Mon passeport", libraryTitle:"Les 264 films", passportIntro:"Chaque film vu devient un talon de billet à collectionner dans votre passeport.", passportStamp:"VU", passportPending:"À VOIR", dateUnknown:"SANS DATE", statsWatched:"VUS", statsFavorites:"FAVORIS", statsDecades:"DÉCENNIES", statsTop25:"TOP 25", achievements:"SUCCÈS", search:"Rechercher un film ou un réalisateur…", filters:{all:"Tous",unwatched:"À voir",watched:"Vus",favorites:"Favoris"},
       seenCount:n=>`${n} vus`, favCount:n=>`${n} favoris`, seen:"Vu ✓", markSeen:"Marquer comme vu", favorite:"Favori",
       account:"Compte", accountCopy:"Votre progression est synchronisée avec ce compte.", logout:"Se déconnecter",
       completed:"Vous avez terminé les 264 ! Vous pouvez continuer à parcourir votre passeport.", markedSeen:"Marqué comme vu ✓",
-      whereToWatch:"OÙ LE VOIR", countryLabel:"Pays", streamingLoading:"Recherche des disponibilités…", streamingNone:"Aucune option de visionnage trouvée pour ce pays.", trailerFallback:"En attendant, vous pouvez rechercher la bande-annonce sur YouTube.", trailerButton:"Voir la bande-annonce sur YouTube", subscription:"Inclus avec l’abonnement", free:"Gratuit", rent:"Location", buy:"Achat", from:"à partir de", qualityAvailable:"disponible", openService:"Ouvrir", streamingSource:"Disponibilité fournie par Streaming Availability API by Movie of the Night.", firebaseFail:"Impossible de démarrer Firebase. Le mode invité reste disponible.", synced:"Progression synchronisée avec votre compte.", configFirebase:"Ajoutez d’abord la configuration Firebase dans firebase-config.js.", firebaseNotReady:"Firebase n’est pas encore prêt.", loginFail:"Impossible de se connecter avec Google.", loggedOut:"Déconnecté. Vous êtes maintenant en mode invité.", badges:[{id:"first",title:"Première séance",desc:"1 film"},{id:"ten",title:"Dix billets",desc:"10 films"},{id:"time",title:"Voyageur du temps",desc:"8 décennies"},{id:"fifty",title:"Demi-centaine",desc:"50 films"},{id:"century",title:"Le club des 100",desc:"100 films"},{id:"top25",title:"Top 25 terminé",desc:"Tous les rangs 1–25"},{id:"all",title:"Passeport complet",desc:"264 films"}]
+      whereToWatch:"OÙ LE VOIR", countryLabel:"Pays", streamingLoading:"Recherche des disponibilités…", streamingNone:"Aucune option de visionnage trouvée pour ce pays.", trailerFallback:"", trailerButton:"Voir la bande-annonce sur YouTube", subscription:"Inclus avec l’abonnement", free:"Gratuit", rent:"Location", buy:"Achat", from:"à partir de", qualityAvailable:"disponible", openService:"Ouvrir", streamingSource:"Disponibilité fournie par Streaming Availability API by Movie of the Night.", firebaseFail:"Impossible de démarrer Firebase. Le mode invité reste disponible.", synced:"Progression synchronisée avec votre compte.", configFirebase:"Ajoutez d’abord la configuration Firebase dans firebase-config.js.", firebaseNotReady:"Firebase n’est pas encore prêt.", loginFail:"Impossible de se connecter avec Google.", loggedOut:"Déconnecté. Vous êtes maintenant en mode invité.", badges:[{id:"first",title:"Première séance",desc:"1 film"},{id:"ten",title:"Dix billets",desc:"10 films"},{id:"time",title:"Voyageur du temps",desc:"8 décennies"},{id:"fifty",title:"Demi-centaine",desc:"50 films"},{id:"century",title:"Le club des 100",desc:"100 films"},{id:"top25",title:"Top 25 terminé",desc:"Tous les rangs 1–25"},{id:"all",title:"Passeport complet",desc:"264 films"}]
     }
   };
   function initialLang(){
@@ -57,6 +57,50 @@
   }
   let lang=initialLang();
   const t=(key)=>I18N[lang][key];
+
+  // Pilot editorial notes: start small, validate the tone, then expand to all 264 films.
+  const WHY_WATCH = {
+    "film-001": {
+      es:{important:"Una obra decisiva del cine moderno que convierte la rutina doméstica en tensión, tiempo y significado.",observe:"La duración de los planos, la repetición de los gestos y cómo los pequeños cambios alteran todo el ritmo."},
+      en:{important:"A landmark of modern cinema that turns domestic routine into tension, time and meaning.",observe:"The duration of the shots, repeated gestures, and how tiny changes disturb the entire rhythm."},
+      fr:{important:"Une œuvre majeure du cinéma moderne qui transforme la routine domestique en tension, temps et sens.",observe:"La durée des plans, la répétition des gestes et la façon dont de petits écarts bouleversent tout le rythme."}
+    },
+    "film-002": {
+      es:{important:"Hitchcock lleva la obsesión romántica y la identidad a uno de los relatos visuales más influyentes del cine.",observe:"El color, los movimientos de cámara, los espejos y la manera en que San Francisco se vuelve parte del estado mental del protagonista."},
+      en:{important:"Hitchcock turns romantic obsession and identity into one of cinema’s most influential visual narratives.",observe:"Color, camera movement, mirrors, and the way San Francisco becomes part of the protagonist’s state of mind."},
+      fr:{important:"Hitchcock transforme l’obsession amoureuse et l’identité en l’un des récits visuels les plus influents du cinéma.",observe:"La couleur, les mouvements de caméra, les miroirs et la façon dont San Francisco devient le reflet de l’état mental du protagoniste."}
+    },
+    "film-003": {
+      es:{important:"Su estructura narrativa y su inventiva visual ampliaron de forma duradera las posibilidades del cine de estudio.",observe:"La profundidad de campo, los ángulos bajos, el montaje y cómo distintos testimonios construyen —y contradicen— a Kane."},
+      en:{important:"Its narrative structure and visual invention permanently expanded what studio filmmaking could do.",observe:"Deep focus, low angles, editing, and how conflicting testimonies build —and undermine— our idea of Kane."},
+      fr:{important:"Sa structure narrative et son invention visuelle ont durablement élargi les possibilités du cinéma de studio.",observe:"La profondeur de champ, les contre-plongées, le montage et la façon dont les témoignages construisent — puis contredisent — l’image de Kane."}
+    },
+    "film-005": {
+      es:{important:"Una historia de deseo contenido donde lo que no ocurre pesa tanto como lo que vemos.",observe:"Los encuadres parciales, los pasillos, la música repetida, el vestuario y el uso extraordinario del color."},
+      en:{important:"A story of restrained desire in which what does not happen carries as much weight as what we see.",observe:"Partial framing, corridors, recurring music, costumes, and the extraordinary use of color."},
+      fr:{important:"Une histoire de désir retenu où ce qui n’arrive pas compte autant que ce que l’on voit.",observe:"Les cadrages partiels, les couloirs, la musique répétée, les costumes et l’usage exceptionnel de la couleur."}
+    },
+    "film-006": {
+      es:{important:"Redefinió la escala, la ambición visual y la seriedad filosófica de la ciencia ficción cinematográfica.",observe:"La composición, los efectos prácticos, los silencios, el diseño sonoro y el contraste entre música clásica y tecnología."},
+      en:{important:"It redefined the scale, visual ambition and philosophical seriousness of science-fiction cinema.",observe:"Composition, practical effects, silence, sound design, and the contrast between classical music and technology."},
+      fr:{important:"Il a redéfini l’échelle, l’ambition visuelle et la portée philosophique de la science-fiction au cinéma.",observe:"La composition, les effets pratiques, les silences, le design sonore et le contraste entre musique classique et technologie."}
+    },
+    "film-024": {
+      es:{important:"Spike Lee convierte un solo día de verano en una mirada vibrante y todavía incómodamente vigente sobre comunidad, racismo y tensión social.",observe:"El color, los encuadres frontales, la música y cómo el calor se vuelve una presión física que aumenta durante toda la película."},
+      en:{important:"Spike Lee turns one summer day into a vibrant, still urgently relevant look at community, racism and social tension.",observe:"Color, frontal framing, music, and the way the heat becomes a physical pressure that builds throughout the film."},
+      fr:{important:"Spike Lee transforme une journée d’été en un regard vibrant, toujours actuel, sur la communauté, le racisme et la tension sociale.",observe:"La couleur, les cadrages frontaux, la musique et la façon dont la chaleur devient une pression physique qui monte tout au long du film."}
+    },
+    "film-077": {
+      es:{important:"Miyazaki construye una aventura iniciática accesible y, al mismo tiempo, llena de ideas sobre identidad, trabajo, codicia y crecimiento.",observe:"La animación de los pequeños gestos, los momentos de calma y cómo el mundo fantástico evita dividirse simplemente entre buenos y malos."},
+      en:{important:"Miyazaki builds an accessible coming-of-age adventure that is also rich with ideas about identity, work, greed and growing up.",observe:"The animation of tiny gestures, moments of stillness, and how the fantasy world refuses a simple good-versus-evil divide."},
+      fr:{important:"Miyazaki construit une aventure initiatique accessible, riche en idées sur l’identité, le travail, l’avidité et le passage à l’âge adulte.",observe:"L’animation des petits gestes, les moments de calme et la manière dont le monde fantastique échappe à une simple opposition entre bien et mal."}
+    },
+    "film-091": {
+      es:{important:"Combina comedia, thriller y drama social con una precisión extraordinaria para hablar de clase sin perder impulso narrativo.",observe:"La arquitectura de la casa, escaleras y niveles, y cómo el espacio visualiza constantemente quién está arriba y quién está abajo."},
+      en:{important:"It combines comedy, thriller and social drama with remarkable precision to explore class without losing narrative momentum.",observe:"The architecture of the house, stairs and levels, and how space constantly visualizes who is above and who is below."},
+      fr:{important:"Il mêle comédie, thriller et drame social avec une précision remarquable pour parler de classe sans perdre son élan narratif.",observe:"L’architecture de la maison, les escaliers et les niveaux, et la façon dont l’espace montre sans cesse qui est en haut et qui est en bas."}
+    }
+  };
 
   const SUPPORTED_COUNTRIES=["MX","US","GB","FR","ES","CA"];
   const DEFAULT_COUNTRY="MX";
@@ -78,36 +122,44 @@
     canvas:$("scratchCanvas"), hint:$("scratchHint"), scratchHintText:$("scratchHintText"),
     title:$("filmTitle"), director:$("filmDirector"), rank:$("filmRank"), year:$("filmYear"),
     no:$("ticketNo"), status:$("statusMsg"),
-    heroEyebrow:$("heroEyebrow"), heroAdmit:$("heroAdmit"), heroLede:$("heroLede"),
+    heroEyebrow:$("heroEyebrow"), heroAdmit:$("heroAdmit"), heroLede:$("heroLede"), aboutNav:$("aboutNav"),
     progressCard:$("progressCard"), progressLabel:$("progressLabel"), progressCopy:$("progressCopy"),
     progressBar:$("progressBar"), progressPct:$("progressPct"),
     nameSummary:$("nameSummary"), nameText:$("nameText"),
-    aboutSummary:$("aboutSummary"), aboutText:$("aboutText"),
+    aboutSummary:$("aboutSummary"), aboutText:$("aboutText"), aboutDataSummary:$("aboutDataSummary"), aboutDataText:$("aboutDataText"), aboutEyebrow:$("aboutEyebrow"),
+    about:$("aboutDialog"), closeAbout:$("closeAboutBtn"),
     library:$("libraryDialog"), closeLibrary:$("closeLibraryBtn"), list:$("filmList"),
     libraryEyebrow:$("libraryEyebrow"), libraryTitle:$("libraryTitle"), passportIntro:$("passportIntro"),
     search:$("searchInput"), filter:$("libraryFilter"), dialogProgress:$("dialogProgress"),
     dialogFavorites:$("dialogFavorites"), statWatched:$("statWatched"), statFavorites:$("statFavorites"), statDecades:$("statDecades"), statTop25:$("statTop25"), statWatchedLabel:$("statWatchedLabel"), statFavoritesLabel:$("statFavoritesLabel"), statDecadesLabel:$("statDecadesLabel"), statTop25Label:$("statTop25Label"), achievementsTitle:$("achievementsTitle"), achievementList:$("achievementList"), account:$("accountDialog"), closeAccount:$("closeAccountBtn"),
     accountEyebrow:$("accountEyebrow"), accountName:$("accountName"), accountEmail:$("accountEmail"),
     accountCopy:$("accountCopy"), logout:$("logoutBtn"),
-    streamingPanel:$("streamingPanel"), streamingPoster:$("streamingPoster"), streamingEyebrow:$("streamingEyebrow"), streamingOriginalTitle:$("streamingOriginalTitle"), streamingLocalTitle:$("streamingLocalTitle"), countryLabel:$("countryLabel"), countrySelect:$("countrySelect"), streamingServices:$("streamingServices"), streamingEmpty:$("streamingEmpty"), streamingAttribution:$("streamingAttribution")
+    streamingPanel:$("streamingPanel"), streamingPoster:$("streamingPoster"), streamingEyebrow:$("streamingEyebrow"), streamingOriginalTitle:$("streamingOriginalTitle"), streamingLocalTitle:$("streamingLocalTitle"), countryLabel:$("countryLabel"), countrySelect:$("countrySelect"), streamingServices:$("streamingServices"), streamingEmpty:$("streamingEmpty"), streamingAttribution:$("streamingAttribution"),
+    filmDetailsEyebrow:$("filmDetailsEyebrow"), trailerPrimary:$("trailerPrimary"), whyWatchSection:$("whyWatchSection"), whyWatchTitle:$("whyWatchTitle"), whyImportantLabel:$("whyImportantLabel"), whyImportantText:$("whyImportantText"), whatToWatchLabel:$("whatToWatchLabel"), whatToWatchText:$("whatToWatchText")
   };
 
   function applyLanguage(){
     document.documentElement.lang=lang;
     document.querySelectorAll(".lang-btn").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
-    refs.heroEyebrow.textContent=t("heroEyebrow"); refs.heroAdmit.textContent=t("heroAdmit"); refs.heroLede.textContent=t("heroLede");
+    refs.heroEyebrow.textContent=t("heroEyebrow"); refs.heroAdmit.textContent=t("heroAdmit"); refs.heroLede.textContent=t("heroLede"); if(refs.aboutNav) refs.aboutNav.textContent=t("aboutNav");
     refs.libraryBtn.textContent=t("passport"); refs.loginBtn.textContent=t("login"); refs.watchedBtn.textContent=t("watched"); refs.anotherBtn.textContent=t("another"); refs.progressCopy.textContent=t("progressCopy");
     document.querySelectorAll('[data-i18n="admitOne"]').forEach(el=>el.textContent=t("admitOne"));
     document.querySelectorAll('[data-i18n="ticketWord"]').forEach(el=>el.textContent=t("ticketWord"));
     document.querySelectorAll('[data-i18n="tonightsScreening"]').forEach(el=>el.textContent=t("tonightsScreening"));
     document.querySelectorAll('[data-i18n="oneFilmOneNight"]').forEach(el=>el.textContent=t("oneFilmOneNight"));
     refs.scratchHintText.textContent=t("scratch"); refs.nameSummary.textContent=t("nameSummary"); refs.nameText.innerHTML=t("nameText"); refs.aboutSummary.textContent=t("aboutSummary"); refs.aboutText.textContent=t("aboutText");
+    if(refs.aboutDataSummary) refs.aboutDataSummary.textContent=t("aboutDataSummary"); if(refs.aboutDataText) refs.aboutDataText.textContent=t("aboutDataText"); if(refs.aboutEyebrow) refs.aboutEyebrow.textContent=t("aboutEyebrow");
     refs.libraryEyebrow.textContent=t("libraryEyebrow"); refs.libraryTitle.textContent=t("libraryTitle"); refs.passportIntro.textContent=t("passportIntro"); refs.search.placeholder=t("search");
     refs.statWatchedLabel.textContent=t("statsWatched"); refs.statFavoritesLabel.textContent=t("statsFavorites"); refs.statDecadesLabel.textContent=t("statsDecades"); refs.statTop25Label.textContent=t("statsTop25"); refs.achievementsTitle.textContent=t("achievements");
     [...refs.filter.options].forEach(o=>o.textContent=t("filters")[o.value]); refs.accountEyebrow.textContent=t("account"); refs.accountCopy.textContent=t("accountCopy"); refs.logout.textContent=t("logout");
     refs.progressCard?.setAttribute("aria-label", lang==="es"?"Progreso":lang==="fr"?"Progression":"Progress");
     refs.favoriteBtn?.setAttribute("aria-label",t("favorite"));
     if(refs.streamingEyebrow) refs.streamingEyebrow.textContent=t("whereToWatch");
+    if(refs.filmDetailsEyebrow) refs.filmDetailsEyebrow.textContent=t("filmDetailsEyebrow");
+    if(refs.trailerPrimary) refs.trailerPrimary.textContent=`▶ ${t("trailerButton")}`;
+    if(refs.whyWatchTitle) refs.whyWatchTitle.textContent=t("whyWatchTitle");
+    if(refs.whyImportantLabel) refs.whyImportantLabel.textContent=t("whyImportantLabel");
+    if(refs.whatToWatchLabel) refs.whatToWatchLabel.textContent=t("whatToWatchLabel");
     if(refs.countryLabel) refs.countryLabel.textContent=t("countryLabel");
     if(refs.countrySelect){[...refs.countrySelect.options].forEach(o=>{o.textContent=`${COUNTRY_FLAGS[o.value]||""} ${countryName(o.value)}`.trim()});refs.countrySelect.setAttribute("aria-label",t("countryLabel"));}
     if(currentFilm){
@@ -258,6 +310,7 @@
     refs.streamingServices.innerHTML="";
     refs.streamingEmpty.classList.add("hidden");
     refs.streamingPoster.removeAttribute("src");
+    if(refs.whyWatchSection) refs.whyWatchSection.classList.add("hidden");
   }
   async function loadStreamingData(){
     if(streamingData)return streamingData;
@@ -309,8 +362,25 @@
     const query=`${title} ${year} trailer`.trim();
     return `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
   }
+  function renderWhyWatch(){
+    if(!refs.whyWatchSection || !currentFilm)return;
+    const note=WHY_WATCH[currentFilm.id]?.[lang] || WHY_WATCH[currentFilm.id]?.en;
+    if(!note){refs.whyWatchSection.classList.add("hidden");return;}
+    refs.whyWatchTitle.textContent=t("whyWatchTitle");
+    refs.whyImportantLabel.textContent=t("whyImportantLabel");
+    refs.whatToWatchLabel.textContent=t("whatToWatchLabel");
+    refs.whyImportantText.textContent=note.important;
+    refs.whatToWatchText.textContent=note.observe;
+    refs.whyWatchSection.classList.remove("hidden");
+  }
+  function renderEditorialDetails(){
+    if(!currentFilm)return;
+    if(refs.filmDetailsEyebrow) refs.filmDetailsEyebrow.textContent=t("filmDetailsEyebrow");
+    if(refs.trailerPrimary){refs.trailerPrimary.href=trailerSearchUrl();refs.trailerPrimary.textContent=`▶ ${t("trailerButton")}`;}
+    renderWhyWatch();
+  }
   function renderStreamingFallback(){
-    refs.streamingEmpty.innerHTML=`<span>${escapeHtml(t("streamingNone"))}</span><span class="trailer-fallback-copy">${escapeHtml(t("trailerFallback"))}</span><a class="trailer-fallback-button" href="${escapeHtml(trailerSearchUrl())}" target="_blank" rel="noopener noreferrer">▶ ${escapeHtml(t("trailerButton"))}</a>`;
+    refs.streamingEmpty.textContent=t("streamingNone");
     refs.streamingEmpty.classList.remove("hidden");
   }
 
@@ -340,6 +410,7 @@
   async function renderStreamingDetails(){
     if(!refs.streamingPanel||!revealed||!currentFilm){hideStreamingDetails();return;}
     refs.streamingPanel.classList.remove("hidden");
+    renderEditorialDetails();
     refs.streamingOriginalTitle.textContent=currentFilm.title;
     refs.streamingLocalTitle.classList.add("hidden");
     refs.streamingServices.innerHTML=`<div class="streaming-loading">${escapeHtml(t("streamingLoading"))}</div>`;
@@ -430,6 +501,11 @@
       await saveState();renderLibrary();
     }
   });
+  if(refs.aboutNav && refs.about){
+    refs.aboutNav.addEventListener("click",()=>refs.about.showModal());
+    refs.closeAbout?.addEventListener("click",()=>refs.about.close());
+    refs.about.addEventListener("click",e=>{if(e.target===refs.about)refs.about.close();});
+  }
   refs.libraryBtn.addEventListener("click",()=>{renderLibrary();refs.library.showModal()});
   refs.closeLibrary.addEventListener("click",()=>refs.library.close());
   refs.search.addEventListener("input",renderLibrary); refs.filter.addEventListener("change",renderLibrary);

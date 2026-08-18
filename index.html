@@ -3,30 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f4efe3">
+<meta name="theme-color" content="#eeebe5">
 <title>ReelStub — Admit One</title>
 <meta name="description" content="Raspa tu boleto de ReelStub y descubre la película de esta noche.">
-<link rel="stylesheet" href="styles.css?v=uk-1">
+<link rel="stylesheet" href="styles.css?v=mobile-vertical-ticket-v1">
 </head>
 <body>
-<header class="topbar">
-  <a class="brand" href="#" aria-label="ReelStub"><span class="brand-mark">RS</span><span class="brand-wordmark" aria-hidden="true"><span>Reel</span><span>Stub</span></span></a>
-  <div class="top-actions">
-    <div class="lang-switch" aria-label="Idioma">
-      <button class="lang-btn" data-lang="es" type="button">ES</button>
-      <button class="lang-btn" data-lang="en" type="button">EN</button>
-      <button class="lang-btn" data-lang="fr" type="button">FR</button>
+<header class="site-header">
+  <div class="topbar">
+    <a class="brand" href="#discover" aria-label="ReelStub">
+      <span class="brand-wordmark" aria-hidden="true"><span>Reel</span><span>Stub</span></span>
+    </a>
+    <div class="top-actions">
+      <button id="libraryBtn" class="header-link" type="button">Mi pasaporte</button>
+      <button id="aboutNav" class="header-link" type="button">Acerca de</button>
+      <div class="lang-switch" aria-label="Idioma">
+        <button class="lang-btn" data-lang="es" type="button">ES</button>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <button class="lang-btn" data-lang="fr" type="button">FR</button>
+      </div>
+      <button id="loginBtn" class="login-btn">Entrar con Google</button>
+      <button id="userBtn" class="user-btn hidden" aria-label="Cuenta"></button>
     </div>
-    <button id="libraryBtn" class="ghost-btn">Mi pasaporte</button>
-    <button id="loginBtn" class="login-btn">Entrar con Google</button>
-    <button id="userBtn" class="user-btn hidden" aria-label="Cuenta"></button>
   </div>
 </header>
 
 <main>
-  <section class="hero">
+  <section id="discover" class="hero">
     <p id="heroEyebrow" class="eyebrow">TU LOTERÍA PERSONAL DE CINE</p>
-    <h1>ReelStub</h1>
+    <h1 aria-label="ReelStub"><span>Reel</span><span>Stub</span></h1>
     <p id="heroAdmit" class="hero-admit">UNA ENTRADA</p>
     <p id="heroLede" class="lede">Raspa para descubrir la película de esta noche.</p>
   </section>
@@ -117,12 +122,25 @@
         <img id="streamingPoster" class="streaming-poster" alt="" loading="lazy">
       </div>
       <div class="streaming-content">
-        <div class="streaming-head">
+        <div class="streaming-head film-detail-head">
           <div>
-            <p id="streamingEyebrow" class="streaming-eyebrow">DÓNDE VERLA</p>
+            <p id="filmDetailsEyebrow" class="streaming-eyebrow">LA PELÍCULA</p>
             <h3 id="streamingOriginalTitle">Do the Right Thing</h3>
             <p id="streamingLocalTitle" class="streaming-local-title hidden"></p>
           </div>
+          <a id="trailerPrimary" class="trailer-primary" href="#" target="_blank" rel="noopener noreferrer">▶ VER TRÁILER</a>
+        </div>
+
+        <section id="whyWatchSection" class="why-watch hidden" aria-labelledby="whyWatchTitle">
+          <h4 id="whyWatchTitle">¿Por qué verla?</h4>
+          <ul class="why-watch-list">
+            <li><strong id="whyImportantLabel">Por qué importa</strong><span id="whyImportantText"></span></li>
+            <li><strong id="whatToWatchLabel">Qué observar</strong><span id="whatToWatchText"></span></li>
+          </ul>
+        </section>
+
+        <div class="availability-head">
+          <p id="streamingEyebrow" class="streaming-eyebrow">DÓNDE VERLA</p>
           <label class="country-picker">
             <span id="countryLabel">País</span>
             <select id="countrySelect" aria-label="País">
@@ -142,17 +160,34 @@
     </div>
   </section>
 
-  <details class="about-source name-story">
-    <summary id="nameSummary">¿Por qué ReelStub?</summary>
-    <p id="nameText"><em>Reel</em> hace referencia al rollo de película del cine tradicional, y <em>stub</em> al talón que queda de un boleto después de entrar a una función. ReelStub une ambas ideas: descubrir grandes películas y conservar un pequeño recuerdo de cada una que vas viendo.</p>
-  </details>
 
-  <details class="about-source">
-    <summary id="aboutSummary">Acerca de la selección</summary>
-    <p id="aboutText">La selección inicial de ReelStub corresponde a las 264 películas incluidas en el Top 250 de la encuesta de críticos de Sight &amp; Sound 2022, conservando los empates del ranking.</p>
-  </details>
 </main>
 
+
+<dialog id="aboutDialog" class="dialog about-dialog"><div class="dialog-shell about-modal-shell">
+  <div class="dialog-head about-modal-head">
+    <div><p id="aboutEyebrow" class="eyebrow">ACERCA DE</p><h2>Reel<span>Stub</span></h2></div>
+    <button id="closeAboutBtn" class="close-btn" aria-label="Cerrar">×</button>
+  </div>
+  <div class="about-modal-grid">
+    <section class="about-modal-section name-story">
+      <h3 id="nameSummary">¿Por qué ReelStub?</h3>
+      <ul id="nameText" class="name-list">
+        <li><strong>Reel</strong><span>hace referencia al rollo de película del cine tradicional.</span></li>
+        <li><strong>Stub</strong><span>es el talón que queda de un boleto después de entrar a una función.</span></li>
+        <li><strong>ReelStub</strong><span>une ambas ideas: descubrir grandes películas y guardar un pequeño recuerdo de cada una.</span></li>
+      </ul>
+    </section>
+    <section class="about-modal-section">
+      <h3 id="aboutSummary">Acerca de la selección</h3>
+      <p id="aboutText">La selección inicial de ReelStub corresponde a las 264 películas incluidas en el Top 250 de la encuesta de críticos de Sight &amp; Sound 2022, conservando los empates del ranking.</p>
+    </section>
+    <section class="about-modal-section about-data-section">
+      <h3 id="aboutDataSummary">Datos y disponibilidad</h3>
+      <p id="aboutDataText">La disponibilidad de streaming se consulta por país y puede cambiar con el tiempo. Los datos son proporcionados por Streaming Availability API by Movie of the Night.</p>
+    </section>
+  </div>
+</div></dialog>
 <dialog id="libraryDialog" class="dialog passport-dialog"><div class="dialog-shell passport-shell">
 <div class="dialog-head passport-head">
   <div class="passport-heading-group"><span class="passport-emblem" aria-hidden="true">RS</span><div><p id="libraryEyebrow" class="eyebrow">Mi pasaporte</p><h2 id="libraryTitle">Las 264 películas</h2></div></div>
@@ -180,6 +215,6 @@
 <p id="accountEmail" class="account-email"></p><p id="accountCopy" class="account-copy">Tu progreso está sincronizado con esta cuenta.</p>
 <button id="logoutBtn" class="secondary-btn full">Cerrar sesión</button></div></dialog>
 
-<script src="films.js"></script><script src="firebase-config.js"></script><script src="app.js?v=uk-1"></script>
+<script src="films.js"></script><script src="firebase-config.js"></script><script src="app.js?v=editorial-v3"></script>
 </body>
 </html>
